@@ -36,23 +36,23 @@ const Contador = () => {
         <div className="time-wrapper">
           <div className="time-box">
             <h2>{timeLeft.days}</h2>
-            <span>Days</span>
+            <span>Dias</span>
           </div>
           <div className="time-box">
             <h2>{timeLeft.hours}</h2>
-            <span>Hours</span>
+            <span>Horas</span>
           </div>
           <div className="time-box">
             <h2>{timeLeft.minutes}</h2>
-            <span>Minutes</span>
+            <span>Minutos</span>
           </div>
           <div className="time-box">
             <h2>{timeLeft.seconds}</h2>
-            <span>Seconds</span>
+            <span>Segundos</span>
           </div>
         </div>
       ) : (
-        <h2>Countdown Complete!</h2>
+        <h2>Contador completo!</h2>
       )}
     </div>
   );

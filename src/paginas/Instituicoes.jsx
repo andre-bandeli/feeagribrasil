@@ -138,7 +138,7 @@ export default function
             </h3>
             </div>
             <div className="container">
-            <h2>Instituições de Ensino</h2>
+            <h2>Instituições</h2>
             <p>
                 Conheça nossa trajetória e compromisso com o fortalecimento da
                 Engenharia Agrícola, promovendo a união entre os estudantes e o

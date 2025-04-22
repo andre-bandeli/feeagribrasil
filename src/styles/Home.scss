@@ -51,15 +51,17 @@ p {
 
 .content {
   width: 100%;
-  height: 400px;
+  height: auto;
   display: flex;
   margin-top: 75px;
 
   .cardContent {
     width: 90%;
-    height: 90%;
+    height: auto;
     display: flex;
     margin: auto;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
@@ -69,11 +71,15 @@ p {
 
     .text {
       width: 45%;
+      padding: 2rem;
       display: flex;
       flex-wrap: wrap;
       height: 80%;
       align-items: center;
 
+      .mobile {
+        display: none;
+      }
       h2,
       h3 {
         text-align: left;
@@ -95,6 +101,7 @@ p {
         font-size: $p-font-size;
         line-height: $line-height-normal;
         font-family: $p-font-family;
+        color: #555;
       }
     }
     &:hover {
@@ -633,6 +640,38 @@ p {
   }
 }
 
+@media (max-width: 976px) {
+  .content {
+
+    .cardContent {
+      display: inline-block;
+
+      .text {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+        margin: auto;
+
+        .mobile {
+          display: flex;
+          line-height: normal;
+          margin-bottom: 0;
+          letter-spacing: 0;
+          font-size: 3rem;
+          strong {
+            margin-left: 25px;
+          }
+        }
+
+        h2,
+        h3 {
+          display: none;
+      }
+    }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .stats-section {
     height: auto;
@@ -656,8 +695,8 @@ p {
         width: 80%;
         margin-bottom: 15px;
 
-        h2 {
-          font-size: $h2-font-size-responsivo;
+        .mobile {
+          font-size: 2rem;
         }
 
         p {
@@ -729,21 +768,25 @@ p {
 
     .cardContent {
       height: auto;
-      display: inline;
+      width: 100%;
+      border-radius: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
 
       .text {
-        padding: 10px;
-        margin-bottom: 10px;
+
         display: inline-block;
         width: 90%;
+        margin: auto;
 
-        h2 {
-          font-size: 2.3rem;
+        .mobile {
+          font-size: 1.7rem;
           margin-left: 20px;
           line-height: 2.5rem;
 
           strong {
-            margin-left: 50px;
+            margin-left: 5px;
           }
         }
 
@@ -752,11 +795,12 @@ p {
           line-height: $line-height-normal;
           margin-top: -35px;
           padding: 20px;
-          width: 100%;
+          width: 95%;
         }
 
         button {
           margin-left: 20px;
+          margin-bottom: 25px;
         }
       }
     }
@@ -856,6 +900,11 @@ p {
       margin-top: 100px;
     }
 
+    h3 {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
     button {
       margin-left: 22%;
     }
@@ -902,13 +951,6 @@ p {
   .content {
     .cardContent {
       .text {
-        h2 {
-          font-size: 2.5rem;
-
-          strong {
-            font-size: 2.5rem;
-          }
-        }
       }
     }
   }

@@ -106,6 +106,10 @@ export default function Home() {
               FEEAGRI <br />
               <strong>NACIONAL</strong>
             </h2>
+
+            <h2 className="mobile">
+              FEEAGRI <strong>NACIONAL</strong>
+            </h2>
           </div>
           <div className="text">
             <p>

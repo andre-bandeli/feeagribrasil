@@ -10,6 +10,7 @@ import Imagem4 from "../../assets/c3.jpeg";
 import Imagem5 from "../../assets/c4.png";
 import Imagem6 from "../../assets/c5.jpeg";
 import Footer from "../../componentes/Footer";
+import WidgetCongressos from '../../componentes/WidgetCongressos.jsx'
 
 const congressosData = [
   {
@@ -110,10 +111,20 @@ export default function CongressosPage() {
       <Header />
       <div className="secundaryPage"></div>
       <div className="containerSecundaryPage">
+      <h2>{Congressos.title}</h2>
+      <h3>{Congressos.description}</h3>
         <img src={Congressos.image} alt="" />
-        <h1>{Congressos.title}</h1>
-        <p>{Congressos.description}</p>
-        <p>{Congressos.text}</p>
+        <div className="container">
+                  <div className="content">
+                    <h2>{Congressos.edicao} CONEEAGRI</h2>
+                    <p>{Congressos.text}</p>
+                  </div>
+                  <div className="widgets">
+                  <WidgetCongressos />
+                </div>
+                </div>
+
+        
       </div>
 
       <Footer />

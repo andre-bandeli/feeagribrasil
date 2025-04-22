@@ -198,12 +198,12 @@
       height: calc(100vh - 35px);
       ul {
         flex-direction: column;
-        gap: 2rem;
+        gap: .5rem;
 
         li {
-          margin-top: 55px;
+          margin-top: 25px;
           a {
-            font-size: 2rem;
+            font-size: 1.5rem;
           }
         }
       }
@@ -239,6 +239,7 @@
     .hamburger {
       width: 25px;
       height: 15px;
+      margin-right: 50px;
       .close-icon {
         font-size: 1.7rem;
         margin-top: -10px;
@@ -250,7 +251,7 @@
 @media screen and (max-width: 344px) {
   .navbar {
     .hamburger {
-      margin-right: 105px;
+      margin-right: 50px;
     }
   }
 }

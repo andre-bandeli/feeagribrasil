@@ -118,12 +118,9 @@ export default function Events() {
                 Agrícola e Ambiental e de Biossistemas
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
-                dolorem alias. Aperiam ducimus, debitis autem atque voluptatibus
-                sunt officia placeat reiciendis est soluta, earum optio nisi
-                expedita ut quod. Placeat.
+                O CONEEAGRI - Congresso Nacional dos Estudantes de Engenharia Agrícola, Engenharia Agrícola e Ambiental e Engenharia de Biossistemas é o maior evento acadêmico, a nível de graduação, das áreas relatadas. 
               </p>
-              <span>by FEEAGRI • December 20, 2024</span>
+              <span>by FEEAGRI • Mai 01, 2025</span>
             </div>
             <img src={Imagem1} alt="Main Feature" />
           </div>

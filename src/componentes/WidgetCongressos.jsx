@@ -10,23 +10,24 @@ export default function WidgetCongressos() {
     {
       slug: "organizacao-de-eventos",
       title: "Organização",
-      text: "Uma das principais atividades da FEEAGRI consiste em atuar na manutenção do CONEEAGRI, garantindo, junto a outras intituiçõpes, a continuidade do maior congresso de estudantes de ENgenharia Agrícola, Engenharia Agrícola e Ambiental e Engenharia de Biosistemass",
+      text: "A organização do CONEEAGRI envolve o apoio da ABEAG, a comissão organizadora local, a instituição sede e a FEEAGRI, que atuam em conjunto para garantir o sucesso do congresso.",
     },
     {
-      slug: "incentivo-a-pesquisa-e-extensao",
+      slug: "empresas-parceiras",
       title: "Empresas Parceiras",
-      text: "Todas as edições do CONEEAGRI são pensadas para alcançar o maior número de estudantes, incentivando a apresentação de trabalhos acadêmicos e networking entre pesquisadores-profissionais. ",
+      text: "Todos os anos diversas empresas financiam o congresso, contribuindo para a realização das atividades e o fortalecimento da Engenharia Agrícola.",
     },
     {
-      slug: "capacitacao-e-desenvolvimento",
+      slug: "instituicoes-sede",
       title: "Instituições",
-      text: "Atravérs de iniciativas envolvendo intituições e professores, atuamos na promoção de seminários e mini-cursos dos mais diversos tipos, buscando levar atualizações técnicas da área de maneira democrática. ",
+      text: "Para ser sede de um CONEEAGRI, basta entrar em contato com o Conselho Diretivo da FEEAGRI e demonstrar interesse e capacidade de organização.",
     },
   ];
+
   return (
     <div className="widget">
       {contentData.map((card, index) => (
-        <div className="contentWidget">
+        <div className="contentWidget" key={index}>
           <h2>{card.title}</h2>
           <p>{card.text}</p>
         </div>

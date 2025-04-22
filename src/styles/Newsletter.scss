@@ -102,6 +102,10 @@
   border-bottom: 1px solid rgb(165, 165, 165);
 }
 
+.newsletter-posts p {
+  width: 90%;
+}
+
 .newsletter-posts .post {
   background-color: #1d1d1d;
   width: 25%;
@@ -157,7 +161,9 @@
     width: 80%;
 
   }
-
+  .newsletter-posts p {
+    width: 100%;
+  }
   .newsletter-posts h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;

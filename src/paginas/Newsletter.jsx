@@ -26,7 +26,7 @@ export default function Newsletter() {
 
       <section className="newsletter-posts">
         <h2>Veja todas nossas publicações e atualizações. Inscreva-se para ficar por dentro de novidades da área agrícola, estágios, eventos futuros e comunicação acadêmica</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ab maxime est ullam quisquam, dicta necessitatibus autem aperiam accusamus sequi dolorem aliquam ratione accusantium doloribus nulla itaque totam? Tenetur, quae?</p>
+        <p>A newsletter da FEEAGRI é um canal direto com estudantes e profissionais da Engenharia Agrícola. Aqui você encontra notícias sobre o CONEEAGRI, oportunidades de estágio, cursos, chamadas de trabalhos e tudo que movimenta nossa área. Não perca nenhuma edição!        </p>
         
         <div className="post">
           <h3>

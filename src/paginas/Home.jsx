@@ -95,7 +95,7 @@ export default function Home() {
             <strong>+</strong>
             <StatsCounter finalNumber={12} />
           </h2>
-          <p>Anos de História e Contribuição</p>
+          <p>Anos de História</p>
         </div>
       </div>
 

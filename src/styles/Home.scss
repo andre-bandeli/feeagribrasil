@@ -764,9 +764,12 @@ p {
   .container {
     margin-top: 50px;
     .textContainer {
-      height: auto;
+            height: auto;
+            margin-bottom: 25px;
       h2 {
         font-size: $h2-font-size-responsivo;
+        font-size: 2.3rem;
+        margin-left: 0;
       }
     }
   }
@@ -906,6 +909,14 @@ p {
             font-size: 2.5rem;
           }
         }
+      }
+    }
+  }
+
+  .container {
+    .textContainer {
+      h2 {
+        font-size: 2rem;
       }
     }
   }

@@ -60,19 +60,19 @@ const membrosData = [
 ];
 
 
-const membrosFundadoresData = [
-  {
-    nome: "Membro 1",
-    instituicao: "Engenharia Agrícola UFPEL",
-    foto: Imagem1,
-  },
-  {
-    nome: "Membro 2",
-    instituicao: "Engenharia Agrícola UFPR",
-    foto: Imagem1,
-  },
+// const membrosFundadoresData = [
+//   {
+//     nome: "Membro 1",
+//     instituicao: "Engenharia Agrícola UFPEL",
+//     foto: Imagem1,
+//   },
+//   {
+//     nome: "Membro 2",
+//     instituicao: "Engenharia Agrícola UFPR",
+//     foto: Imagem1,
+//   },
 
-];
+// ];
 
 
 export default function Membros() {
@@ -106,22 +106,6 @@ export default function Membros() {
             <h2>Gestão 2025</h2>
             <div className="membros">
               {membrosData.map((membro, index) => (
-                <div key={index} className="cardMembro">
-                  <img
-                    src={membro.foto}
-                    alt={membro.nome}
-                    className="fotoMembro"
-                  />
-                  <h4>{membro.nome}</h4>
-                  <p>{membro.instituicao}</p>
-                  <p>{membro.cargo}</p>
-                </div>
-              ))}
-            </div>
-
-            <h2>Fundadores</h2>
-            <div className="membros">
-              {membrosFundadoresData.map((membro, index) => (
                 <div key={index} className="cardMembro">
                   <img
                     src={membro.foto}

@@ -82,8 +82,7 @@ export default function Membros() {
       <div className="HeaderSecundario">
         <div className="links">
           <h3>
-            {" "}
-            <a href="">Home</a> | <a href="">Membros</a>
+            <Link to={`/`} className="">Home</Link> | <Link to={`/membros`} className="">Membros</Link>
           </h3>
         </div>
         <div className="container">

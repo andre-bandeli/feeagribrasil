@@ -4,6 +4,8 @@ import "../styles/HeaderSecundario.scss";
 import "../styles/About.scss";
 import Footer from "../componentes/Footer";
 import WidgetCustom from "../componentes/WidgetCustom";
+import { Link } from "react-router-dom";
+
 
 export default function About() {
   return (
@@ -12,7 +14,7 @@ export default function About() {
       <div className="HeaderSecundario">
         <div className="links">
           <h3>
-            <a href="">Home</a> | <a href="">About</a>
+            <Link to={`/`} className="">Home</Link> | <Link to={`/about`} className="">Sobre</Link>
           </h3>
         </div>
         <div className="container">

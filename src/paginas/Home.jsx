@@ -159,7 +159,7 @@ export default function Home() {
                   almoço, engajando o networking entre estudantes e
                   profissionais de todo o Brasil.
                 </p>
-                <span>by FEEAGRI • December 20, 2024</span>
+          
               </div>
               <img src={Imagem1} alt="Main Feature" />
             </div>

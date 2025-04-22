@@ -3,6 +3,7 @@ import Header from "../componentes/Header";
 import "../styles/Parceiros.scss";
 import abeag from "../assets/abeag.png";
 import Footer from "../componentes/Footer";
+import { Link } from "react-router-dom";
 
 export default function Parceiros() {
   return (
@@ -11,8 +12,7 @@ export default function Parceiros() {
       <div className="HeaderSecundario">
         <div className="links">
           <h3>
-            {" "}
-            <a href="">Home</a> | <a href="">Parceiros</a>
+          <Link to={`/`} className="">Home</Link> | <Link to={`/parceiros`} className="">Parceiros</Link>
           </h3>
         </div>
         <div className="container">

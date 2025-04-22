@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Navbar.scss';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo"> 
-        <h2>FEEAGRI BRASIL</h2> 
+        <h2><Link to={`/`} className="">FEEAGRI BRASIL</Link></h2> 
         <h3>Federação Brasileira dos Estudantes de Engenharia Agrícola, Ambiental e de Biossistemas</h3>
       </div>
       <div className={`menu-links ${isOpen ? 'active' : ''}`}>

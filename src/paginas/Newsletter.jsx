@@ -12,8 +12,7 @@ export default function Newsletter() {
       <div className="HeaderSecundario">
         <div className="links">
           <h3>
-            {" "}
-            <a href="">Home</a> | <a href="">Newsletter</a>
+            <Link to={`/`} className="">Home</Link> | <Link to={`/newsletter`} className="">Newsletter</Link>
           </h3>
         </div>
         <div className="container">

@@ -19,6 +19,14 @@
       margin-top: 10px;
       margin-bottom: 0;
       letter-spacing: 1px;
+
+      a {
+        color: yellow;
+        text-decoration: none;
+      }:hover {
+        color: #fc1d00;
+        transition: .4s;
+      }
     }
     h3 {
       font-size: 0.9rem;
@@ -53,7 +61,7 @@
       letter-spacing: 1px;
 
       &:hover {
-        color: #fa420a;
+        color: #f72b11;
         transition: 0.2s;
       }
     }

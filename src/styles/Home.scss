@@ -841,15 +841,11 @@ p {
 
   .featured {
     width: 100%;
-
     .featured-main {
       display: inline;
       margin: auto;
       width: 90%;
-
       img {
-        width: 80%;
-        margin-left: 25px;
         display: none;
       }
 
@@ -859,18 +855,22 @@ p {
         h2 {
           width: 90%;
           font-size: $h2-font-size-responsivo;
-          margin-left: 25px;
+          margin: auto;
+          padding-bottom: 1rem;
         }
         h3 {
-          margin-left: 25px;
+          margin: auto;
+          width: 90%;
+          padding-bottom: 1rem;
         }
 
         p {
-          margin-left: 25px;
+          margin: auto;
           width: 90%;
+          padding-bottom: 1rem;
         }
         span {
-          margin-left: 25px;
+          margin: auto;
           margin-top: 15px;
           font-weight: bold;
           width: 90%;
@@ -881,10 +881,11 @@ p {
     .featured-secondary {
       display: inline;
       width: 90%;
-      margin-left: 45px;
+      margin: auto;
 
       .card {
-        width: 90%;
+        width: 95%;
+        margin: auto;
       }
     }
   }

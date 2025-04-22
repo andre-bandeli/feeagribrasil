@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../componentes/Header'
 import '../styles/instituicoes.scss'
 import Footer from '../componentes/Footer';
+import { Link } from "react-router-dom";
 
 const institutionsData = [
     {
@@ -133,9 +134,8 @@ export default function
         <Header />
         <div className="HeaderSecundario">
             <div className="links">
-            <h3>
-                <a href="">Home</a> | <a href="">About</a>
-            </h3>
+              <h3><Link to={`/`} className="">Home</Link> | <Link to={`/instituicoes`} className="">Instituições</Link></h3>
+            
             </div>
             <div className="container">
             <h2>Instituições</h2>

@@ -23,9 +23,6 @@
       a {
         color: yellow;
         text-decoration: none;
-      }:hover {
-        color: #fc1d00;
-        transition: .4s;
       }
     }
     h3 {
@@ -163,13 +160,13 @@
       .bar {
         width: 100%;
         height: 3px;
-        background-color: rgb(175, 175, 175);
+        background-color: rgb(90, 88, 88);
         border-radius: 4px;
       }
 
       .close-icon {
         font-size: 1.5rem;
-        color: rgb(255, 94, 0);
+        color: rgba(190, 188, 186, 0.616);
         z-index: 999;
         margin-top: -25px;
       }

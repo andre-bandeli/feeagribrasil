@@ -73,6 +73,14 @@
 }
 
 @media (max-width: 550px) {
+  .Hero {
+    height: 100vh;
+    .Hero__item {
+      img {
+        height: 100vh;
+      }
+    }
+
   .Hero__content {
     bottom: 5px;
     left: 5px;
@@ -83,4 +91,4 @@
       line-height: 40px;
     }
   }
-}
+}  }

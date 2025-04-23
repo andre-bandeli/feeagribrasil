@@ -27,16 +27,13 @@ export default function Parceiros() {
         <div className="parceiros parceiro1">
           <div className="text">
             <h2>ABEAG NACIONAL</h2>
+            <p>Associação Brasileira dos Profissionais de Engenharia Agrícola</p>
           </div>
         </div>
         <div className="parceiros parceiro2">
           <div className="text">
             <h2>ABEAG PR</h2>
-          </div>
-        </div>
-        <div className="parceiros parceiro3">
-          <div className="text">
-            <h2>CREA JOVEM</h2>
+            <p>Associação Brasileira dos Profissionais de Engenharia Agrícola do Paraná</p>
           </div>
         </div>
       </main>

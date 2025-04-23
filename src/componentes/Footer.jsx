@@ -61,7 +61,9 @@ export default function Footer() {
       <div className="footer-copyright">
         <p>
           &copy; {new Date().getFullYear()} FEEAGRI. Todos os direitos
-          reservados. Website desenvolvido por André Bandeli
+          reservados. Website desenvolvido por <Link target='_blank'
+                to={`https://www.linkedin.com/in/andrebandeli/` }
+              >andrebandeli</Link>
         </p>
       </div>
     </footer>

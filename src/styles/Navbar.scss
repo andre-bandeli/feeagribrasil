@@ -61,6 +61,10 @@
         color: #f72b11;
         transition: 0.2s;
       }
+
+      .fa {
+        display: none;
+      }
     }
 
     &.active {
@@ -129,16 +133,26 @@
         gap: .5rem;
         width: 80%;
         margin: auto;
-        margin-top: 25px;
+        margin-left: 33px;
+        margin-top: 20px;
         padding: 20px 0;
-        
+
         li {
-          margin-top: 15px;
-          text-align: center;
+          margin-top: 1rem;
+          text-align: left;
+          margin-left: 0;
+          display: flex;
           
           a {
-            font-size: 1.5rem;
-            padding: 15px 0;
+            font-size: 1.3rem;
+            padding: 10px 0;
+            margin-left: 15px;
+
+            .fa {
+              display:inline-block;
+              color: rgb(75, 255, 129);
+              margin-right: 15px;
+            }
           }
         }
       }
@@ -234,7 +248,7 @@
       ul {
 
         li {
-          margin-top: 15px;
+          margin-top: 2rem;
           a {
             font-size: 1.3rem;
           }

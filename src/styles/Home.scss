@@ -578,6 +578,8 @@ p {
     }
   }
 
+  .stats-section  {display: none;}
+
   .parceiros-section {
     .parceiros-content {
       .parceiros-imagem {
@@ -674,10 +676,7 @@ p {
 
 @media (max-width: 768px) {
   .stats-section {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
     .card {
       width: 50%;
       margin-bottom: 0px;

@@ -51,10 +51,17 @@
 }
 
 @media (max-width: 1024px) {
-
-  .Hero__content {
-    margin-left: -75px;
-  }
+  .Hero {
+    height: 100vh;
+    .Hero__item {
+      img {
+        height: 100vh;
+      }
+    }
+    .Hero__content {
+      margin-left: -75px;
+    }}
+    
 }
 
 @media (max-width: 768px) {

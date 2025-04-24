@@ -6,7 +6,14 @@ import Footer from "../componentes/Footer";
 import "../styles/buttons.scss";
 import { Link } from "react-router-dom";
 
-import Imagem1 from "../assets/user.jpg";
+import Imagem1 from "../assets/membros/7.jpg";
+import Imagem2 from "../assets/membros/1.jpg";
+import Imagem3 from "../assets/membros/2.png";
+import Imagem4 from "../assets/membros/8.jpg";
+import Imagem5 from "../assets/membros/3.jpg";
+import Imagem6 from "../assets/membros/4.jpg";
+import Imagem7 from "../assets/membros/5.png";
+import Imagem8 from "../assets/membros/6.jpeg";
 
 const membrosData = [
   {
@@ -19,43 +26,43 @@ const membrosData = [
     nome: "Emanuelly Souza",
     instituicao: "Engenharia Agrícola UFPR",
     cargo: "Vice-Presidente",
-    foto: Imagem1,
+    foto: Imagem2,
   },
   {
     nome: "Felipe Borges",
     instituicao: "Engenharia Agrícola UEG",
     cargo: "Secretário Geral",
-    foto: Imagem1,
+    foto: Imagem3,
   },
   {
     nome: "Talisson Natan",
     instituicao: "Engenharia Agrícola UFPEL",
     cargo: "Coordenador Financeiro",
-    foto: Imagem1,
+    foto: Imagem4,
   },
   {
     nome: "Kamylla Farias",
     instituicao: "Engenharia Agrícola UFMA",
     cargo: "Coordenadora Científica",
-    foto: Imagem1,
+    foto: Imagem5,
   },
   {
     nome: "Luan Henrique",
     instituicao: "Engenharia Agrícola UFPEL",
     cargo: "1º Suplente",
-    foto: Imagem1,
+    foto: Imagem6,
   },
   {
     nome: "Mariane Oliveira",
     instituicao: "Engenharia Agrícola UFVJM",
     cargo: "2º Suplente",
-    foto: Imagem1,
+    foto: Imagem7,
   },
   {
     nome: "Matheus Meireles",
     instituicao: "Engenharia Agrícola UFPR",
     cargo: "3º Suplente",
-    foto: Imagem1,
+    foto: Imagem8,
   },
 ];
 

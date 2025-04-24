@@ -176,7 +176,7 @@ export default function Delegacao() {
           </h3>
         </div>
         <div className="container">
-          <h2>Delegados de Instituições</h2>
+          <h2>Delegados</h2>
           <p>
             Conheça as pessoas que contribuem para a consolidação da Federação.
           </p>

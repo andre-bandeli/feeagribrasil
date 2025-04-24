@@ -113,6 +113,10 @@
 
       a {
         width: 90%;
+        display: inline-block;
+        word-break: break-all;
+        overflow-wrap: break-word;
+        white-space: normal; 
       }
     }
 

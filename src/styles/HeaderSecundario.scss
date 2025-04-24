@@ -78,6 +78,25 @@
 }
 
 
+@media (max-width: 650px) {
+  .HeaderSecundario {
+
+    .container {
+
+      h2 {
+        font-size: 2rem;
+        letter-spacing: 0;
+      }
+
+      p {
+        line-height: normal;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+
 @media (max-width: 550px) {
   .HeaderSecundario {
     .links {

@@ -14,14 +14,14 @@ export default function Hero() {
       image: Hero1,
       title: "Entidade Estudantil Nacional nas Ciências Agrárias",
       description:
-        "A FEEAGRI atua para fortalecer os laços entre estudantes de Engenharia Agrícola em todo o Brasil, promovendo eventos e defendendo seus interesses.",
+        "A FEEAGRI atua para fortalecer os laços entre estudantes de Engenharia Agrícola, Agrícola e Ambiental e Engenharia de Biossistemas em todo o Brasil, promovendo eventos e defendendo seus interesses.",
       slug: "federacao-brasileira",
     },
     {
       image: Hero2,
       title: "Transformando o Futuro da Engenharia Agrícola",
       description:
-        "Juntos, estamos inovando no campo e impulsionando práticas sustentáveis que moldam o futuro da Engenharia Agrícola no Brasil.",
+        "Juntos, estamos inovando no campo e impulsionando práticas sustentáveis que moldam o futuro da Engenharia Agrícola no Brasil. Unindo as próximas gerações de profissionais do setor.",
       slug: "futuro-engenharia-agricola",
     },
     {

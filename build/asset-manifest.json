@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0bbda0a1.css",
-    "main.js": "/static/js/main.85d50b86.js",
+    "main.css": "/static/css/main.be220f2e.css",
+    "main.js": "/static/js/main.781c8ec2.js",
     "static/media/21.jpg": "/static/media/21.29352b525d29ab131f4d.jpg",
     "static/media/6.jpg": "/static/media/6.82690cab991dde7b43d1.jpg",
     "static/media/11.jpg": "/static/media/11.4c0381b148a924cde8b4.jpg",
@@ -20,7 +20,9 @@
     "static/media/coneeagri2.jpeg": "/static/media/coneeagri2.cb9fd03a43475618e15d.jpeg",
     "static/media/5.png": "/static/media/5.fb1603fe71c76092d9ac.png",
     "static/media/7.jpg": "/static/media/7.56c1ebbfb1dcf3a8b892.jpg",
+    "static/media/c2.jpeg": "/static/media/c2.58c1617f05ec30971a5d.jpeg",
     "static/media/3.jpg": "/static/media/3.0f319eae3ba2fe1a7e2b.jpg",
+    "static/media/c4.jpeg": "/static/media/c4.222477d7877511a840e5.jpeg",
     "static/media/coneeagri.jpeg": "/static/media/coneeagri.34e5c27edc0f66c53e27.jpeg",
     "static/media/leaf.png": "/static/media/leaf.8c1087b3de3347569167.png",
     "static/media/6.jpeg": "/static/media/6.27cedb442b4dc7d8dacf.jpeg",
@@ -36,11 +38,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.0bbda0a1.css.map": "/static/css/main.0bbda0a1.css.map",
-    "main.85d50b86.js.map": "/static/js/main.85d50b86.js.map"
+    "main.be220f2e.css.map": "/static/css/main.be220f2e.css.map",
+    "main.781c8ec2.js.map": "/static/js/main.781c8ec2.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bbda0a1.css",
-    "static/js/main.85d50b86.js"
+    "static/css/main.be220f2e.css",
+    "static/js/main.781c8ec2.js"
   ]
 }

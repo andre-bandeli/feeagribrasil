@@ -10,6 +10,8 @@ import Imagem3 from "../assets/coneeagri2.jpeg";
 import Imagem4 from "../assets/21.jpg";
 import Imagem5 from "../assets/7.jpeg";
 import Imagem6 from "../assets/8.jpg";
+import Imagem8 from "../assets/c2.jpeg";
+import Imagem9 from "../assets/c4.jpeg";
 import Imagem7 from "../assets/13.jpg";
 import abeag from "../assets/abeag.png";
 import crea from "../assets/crea.png";
@@ -147,17 +149,10 @@ export default function Home() {
                 <h3>Nossas atividades</h3>
 
                 <h2>
-                  A última edição do CONEEAGRI foi marcada pela realização do I
-                  ENPEAG, reunindo profissionais e estudantes do setor agrícola
-                  de todo o Brasil.
+                  A Federação dos Estudantes atua na representação estudantil, promovendo assembléias gerais, representação em eventos e na promoção do CONEEAGRI.
                 </h2>
                 <p>
-                  O XXXVII CONEEAGRI, realizado na UFPR - Campus Jandaia do Sul,
-                  foi marcada pela realização do I Encontro Nacional dos
-                  Profissionais de Engenharia Agrícola. O encontro ocorreu no
-                  último dia do evento, em uma celebração comemorada com um
-                  almoço, engajando o networking entre estudantes e
-                  profissionais de todo o Brasil.
+                A Federação é composta, essencialmente, pelo Conselho Diretivo e pela Delegação de Estudantes. Anualmente, são realizadas eleições para a renovação do Conselho. O Conselho Diretivo é formado pelo Presidente, Vice-Presidente, Secretário-Geral, Coordenador Financeiro, Coordenadora Científica e seus respectivos suplentes. Cada instituição ativa possui um delegado representante na Delegação de Estudantes.
                 </p>
           
               </div>
@@ -224,12 +219,12 @@ export default function Home() {
               <img src={Imagem6} alt="Irrigation System" />
               <img src={Imagem7} alt="Crop Management" />
               <img
-                src={Imagem6}
+                src={Imagem8}
                 className="mobile-remove"
                 alt="Irrigation System"
               />
               <img
-                src={Imagem7}
+                src={Imagem9}
                 className="mobile-remove"
                 alt="Crop Management"
               />

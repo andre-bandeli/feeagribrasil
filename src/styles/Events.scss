@@ -42,9 +42,15 @@
       width: 100%;
       font-size: 1rem;
       letter-spacing: 0.5rem;
+      line-height: 1.5rem;
       text-align: center;
       margin-top: 15px;
       color: whitesmoke;
+      font-weight: bold;
+
+      strong {
+        letter-spacing: .3rem;
+      }
     }
   }
 }

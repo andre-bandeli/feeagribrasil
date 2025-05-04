@@ -101,7 +101,7 @@ export default function Events() {
             <strong>SAVE THE DATE</strong>
           </h2>
           <h3>XXXVIII CONEEAGRI & II ENPEAG</h3>
-          <p>Universidade Federal de Pelotas - UFPEL</p>
+          <p>Universidade Federal de Pelotas - UFPEL <br /><strong> De 27 à 30 de outubro de 2025</strong></p>
           <div className="contador">
             <Contador />
           </div>
@@ -120,7 +120,6 @@ export default function Events() {
               <p>
                 O CONEEAGRI - Congresso Nacional dos Estudantes de Engenharia Agrícola, Engenharia Agrícola e Ambiental e Engenharia de Biossistemas é o maior evento acadêmico, a nível de graduação, das áreas relatadas. 
               </p>
-              <span>by FEEAGRI • Mai 01, 2025</span>
             </div>
             <img src={Imagem1} alt="Main Feature" />
           </div>

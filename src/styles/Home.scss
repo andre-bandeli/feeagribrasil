@@ -435,9 +435,7 @@ p {
 .contato-section {
   padding: 40px;
   height: 600px;
-  background-color: #f8f8f8;
-  background-image: url("../assets/5.jpg");
-
+  background-image: linear-gradient(to right top, #070809, #080d12, #091118, #0a141d, #0b1723);
   h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -731,7 +729,7 @@ p {
   .container {
     .textContainer {
       h2 {
-        font-size: 4rem;
+        font-size: 3rem;
         line-height: normal;
       }
     }

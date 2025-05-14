@@ -23,15 +23,15 @@ export default function ConselhoDiretivo() {
           <h3>📅 Datas importantes:</h3>
           <ul>
             <li>
-              <strong>27 de novembro de 2024:</strong> Prazo final para
+              <strong>27 de novembro de 2025:</strong> Prazo final para
               inscrição das chapas.
             </li>
             <li>
-              <strong>28 de novembro de 2024:</strong> Divulgação das
+              <strong>28 de novembro de 2025:</strong> Divulgação das
               candidaturas homologadas.
             </li>
             <li>
-              <strong>5 de dezembro de 2024 - 19h:</strong> Realização da
+              <strong>5 de dezembro de 2025 - 19h:</strong> Realização da
               eleição (formato virtual).
             </li>
           </ul>
@@ -48,7 +48,7 @@ export default function ConselhoDiretivo() {
           <h3>📑 Documentos necessários:</h3>
           <p>
             Para homologar sua candidatura, a chapa deve enviar até o dia{" "}
-            <strong>27 de novembro de 2024</strong> um e-mail para{" "}
+            <strong>27 de novembro de 2025</strong> um e-mail para{" "}
             <strong>abeagnacional@gmail.com</strong> com os seguintes
             documentos:
           </p>
@@ -66,11 +66,11 @@ export default function ConselhoDiretivo() {
           <h3>📢 Como será a votação?</h3>
           <p>
             A eleição ocorrerá de forma <strong>virtual</strong> no dia{" "}
-            <strong>5 de dezembro de 2024, às 19h (horário de Brasília)</strong>
+            <strong>5 de dezembro de 2025, às 19h (horário de Brasília)</strong>
             . Apenas os delegados oficialmente reconhecidos poderão votar,
             mediante comprovação enviada para{" "}
             <strong>abeagnacional@gmail.com</strong> até o dia{" "}
-            <strong>3 de dezembro de 2024</strong>.
+            <strong>3 de dezembro de 2025</strong>.
           </p>
 
           <h3>📊 Apuração e resultado:</h3>

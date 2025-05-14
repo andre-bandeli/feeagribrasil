@@ -193,6 +193,8 @@ export default function Home() {
               Conheça as últimas edições do CONEEAGRI e a edição especial do I
               ENPEAG.
             </h2>
+          </div>
+            <div className="congressos-content">
             <p>
               <strong>Unindo estudantes de todo o Brasil</strong>
               <br />
@@ -213,22 +215,23 @@ export default function Home() {
           </div>
           <div className="congressos-images">
             <div className="main-image">
-              <img src={Imagem5} alt="Main Field" />
-            </div>
-            <div className="side-images">
-              <img src={Imagem6} alt="Irrigation System" />
-              <img src={Imagem7} alt="Crop Management" />
-              <img
-                src={Imagem8}
-                className="mobile-remove"
-                alt="Irrigation System"
-              />
-              <img
+            <img
                 src={Imagem9}
                 className="mobile-remove"
                 alt="Crop Management"
               />
+              
             </div>
+            <div className="main-image">
+            <img
+                src={Imagem8}
+                className="mobile-remove"
+                alt="Crop Management"
+              />
+
+            </div>
+          
+            
           </div>
         </div>
 

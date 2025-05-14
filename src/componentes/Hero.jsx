@@ -4,6 +4,9 @@ import "../styles/Hero.scss";
 import { Link } from "react-router-dom";
 import "../styles/buttons.scss";
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import Hero1 from "../assets/6.jpg";
 import Hero2 from "../assets/5.jpg";
 import Hero3 from "../assets/9.jpg";
@@ -38,16 +41,19 @@ export default function Hero() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    pauseOnDotsHover: false,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
   };
   return (
     <div className="Hero">
-      <Slider>
+      <Slider {...settings}>
         {slides.map((slide, index) => (
           <div key={index} className="Hero__item">
             <img src={slide.image} alt={slide.title} />

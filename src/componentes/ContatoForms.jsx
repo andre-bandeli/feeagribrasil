@@ -49,7 +49,7 @@ const ContatoForms = () => {
       <h2>Entre em Contato</h2>
       <p className="desktop">
         Tem alguma dúvida, sugestão ou gostaria de saber mais sobre nossas
-        atividades?...
+        atividades?
       </p>
       <p className="mobile">
         Tem alguma dúvida, sugestão ou gostaria de saber mais sobre nossas

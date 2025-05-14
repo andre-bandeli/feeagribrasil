@@ -203,10 +203,9 @@ p {
       }
 
       h3 {
-        font-size: $h3-font-size;
+        font-size: 1rem;
         margin-top: -25px;
-        letter-spacing: 1px;
-        color: orangered;
+        letter-spacing: 2px;
         background: linear-gradient(45deg, #01ad88, #00a179);
         -webkit-background-clip: text;
         background-clip: text;
@@ -288,6 +287,7 @@ p {
   flex-wrap: wrap;
   width: 80%;
   margin: auto;
+  margin-top: 75px;
   border-bottom: 1px solid black;
 
   .congressos-content {
@@ -398,6 +398,8 @@ p {
   display: flex;
   width: 100%;
   height: auto;
+  margin-top: 75px;
+  margin-bottom: 75px;
   align-items: center;
 
   .parceiros-content {

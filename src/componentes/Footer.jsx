@@ -46,11 +46,11 @@ export default function Footer() {
           <h4>Redes Sociais</h4>
           <ul>
             <li>
-              <Link to={`https://www.instagram.com/feeagri/`}>Instagram</Link>
+              <Link to={`https://www.instagram.com/feeagri/`} target='_blank'>Instagram</Link>
             </li>
             <li>
               <Link
-                to={`https://www.linkedin.com/company/feeagri-brasil/?originalSubdomain=br`}
+                to={`https://www.linkedin.com/company/feeagri-brasil/?originalSubdomain=br`} target='_blank'
               >
                 LinkedIn
               </Link>

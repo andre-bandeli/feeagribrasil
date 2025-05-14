@@ -422,11 +422,13 @@ p {
       width: 50%;
       height: auto;
       margin: auto;
+      display: flex;
       border-radius: 10px;
 
       img {
         width: 40%;
         margin-left: 45px;
+        margin: auto;
       }
     }
   }
@@ -584,8 +586,7 @@ p {
     .parceiros-content {
       .parceiros-imagem {
         img {
-          width: 250px;
-          padding: 15px;
+
         }
       }
     }
@@ -829,11 +830,9 @@ p {
       .parceiros-imagem {
         width: 100%;
         margin: auto;
-        margin-top: 75px;
         img {
           padding: 0;
           margin-left: 0;
-          margin-top: 25px;
         }
       }
     }

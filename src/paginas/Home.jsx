@@ -14,7 +14,7 @@ import Imagem8 from "../assets/c2.jpeg";
 import Imagem9 from "../assets/c4.jpeg";
 import Imagem7 from "../assets/13.jpg";
 import abeag from "../assets/abeag.png";
-import crea from "../assets/crea.png";
+import crea from "../assets/sbea.png";
 import Contador from "../componentes/Contador";
 import Footer from "../componentes/Footer";
 import NewsletterComponent from "../componentes/NewsletterComponent";
@@ -240,8 +240,7 @@ export default function Home() {
             <div className="parceiros-texto">
               <h2>Nossos Parceiros</h2>
               <p>
-                Contamos com o apoio das principais instituições agrárias e
-                empresas que acreditam na nossa missão de promover a engenharia
+                Contamos com o apoio das principais instituições agrárias que acreditam na nossa missão de promover a engenharia
                 agrícola e ambiental.
               </p>
             </div>

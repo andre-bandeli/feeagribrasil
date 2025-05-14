@@ -4,12 +4,14 @@ import "../styles/Parceiros.scss";
 import abeag from "../assets/abeag.png";
 import Footer from "../componentes/Footer";
 import { Link } from "react-router-dom";
+import '../styles/buttons.scss'
+
 
 export default function Parceiros() {
   return (
     <div>
       <Header />
-      <div className="HeaderSecundario">
+      <div className="HeaderSecundario custom-background-parceiros">
         <div className="links">
           <h3>
           <Link to={`/`} className="">Home</Link> | <Link to={`/parceiros`} className="">Parceiros</Link>
@@ -28,12 +30,46 @@ export default function Parceiros() {
           <div className="text">
             <h2>ABEAG NACIONAL</h2>
             <p>Associação Brasileira dos Profissionais de Engenharia Agrícola</p>
+            <button className="yellow-btn">
+                              <Link
+                                to={`https://abeag.org.br/`}
+                                className="Hero__button"
+                                target='_blank'
+                              >
+                                saiba mais
+                              </Link>
+                            </button>
           </div>
         </div>
         <div className="parceiros parceiro2">
           <div className="text">
             <h2>ABEAG PR</h2>
             <p>Associação Brasileira dos Profissionais de Engenharia Agrícola do Paraná</p>
+          <button className="yellow-btn">
+                            <Link
+                              to={`https://www.instagram.com/abeagpr/`}
+                              className="Hero__button"
+                              target='_blank'
+                            >
+                              saiba mais
+                            </Link>
+                          </button>
+          </div>
+        </div>
+        <div className="parceiros parceiro3">
+          <div className="text">
+            <h2>SBEA</h2>
+            <p>Associação Brasileira de Engenharia Agrícola</p>
+          <button className="yellow-btn">
+                            <Link
+                              to={'https://www.sbea.org.br/'}
+                              className="Hero__button"
+                              target='_blank'
+                    
+                            >
+                              saiba mais
+                            </Link>
+                          </button>
           </div>
         </div>
       </main>

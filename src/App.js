@@ -17,6 +17,7 @@ import DelegacaoSup from "./paginas/DelegacaoSup";
 import ConselhoDiretivo from "./paginas/ConselhoDiretivo";
 import NewsletterPost from "./paginas/NewsletterPosts";
 import Instituicoes from "./paginas/Instituicoes";
+import Cursos from "./paginas/Cursos";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/About" element={<About />} />
+      <Route path="/cursos" element={<Cursos />} />
       <Route path="/atividades/:slug" element={<Content />} />
       <Route path="/:slug" element={<SlidePage />} />
       <Route path="/congressos" element={<Events />} />

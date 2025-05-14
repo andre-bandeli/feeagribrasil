@@ -20,6 +20,7 @@ const Navbar = () => {
         <ul>
           <li><a href="/"><FaHome className='fa' /> Home</a></li>
           <li><a href="/about"><FaInfoCircle className='fa' /> Sobre</a></li>
+          <li><a href="/cursos"><FaInfoCircle className='fa' /> Cursos</a></li>
           <li><a href="/congressos"><FaCalendarAlt className='fa' /> Congressos</a></li>
           <li><a href="/membros"><FaUsers className='fa' /> Membros</a></li>
           <li><a href="/instituicoes"><FaUniversity className='fa' /> Instituições</a></li>

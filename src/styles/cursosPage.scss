@@ -1,0 +1,173 @@
+.cursos-page {
+    display: block;
+  
+    .cursos {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 75px;
+  
+      h1 {
+        margin: 0;
+        color: black;
+        margin-top: 75px;
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        color: rgb(40, 41, 39);
+        margin-bottom: 25px;
+        margin-top: 25px;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        width: 80%;
+        text-align: center;
+        margin: 0.5rem 0 0;
+        color: black;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        gap: 25px;
+
+        .custom-box {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;            padding: 1rem;
+            margin-top: 0px;
+        }
+
+        li {
+            width: 100%;
+            text-align: center;
+            font-size: .9rem;
+            list-style: none;
+            // border-bottom: 1.5px solid rgb(10, 10, 10);
+            // padding-bottom: 1rem;
+
+
+            p {
+                width: 100%;
+                text-align: left;
+                font-size: 1rem;
+                padding: .1rem;
+                line-height: 1.5rem;
+            }
+        }
+      }
+
+      .fotos {
+        width: 100%;
+        height: auto;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+            width: 33.3%;
+            height: 450px;
+        }
+      }
+    }
+  }
+
+
+@media (max-width: 1024px) {
+    .cursos-page {
+
+        .cursos {
+      
+          h1 {
+            font-size: 1.5rem;
+          }
+    
+          h2 {
+            
+          }
+      
+          p {
+
+          }
+    
+          ul {
+            display: inline-block;
+            gap: 0;
+            width: 80%;
+            padding: 0;
+            .custom-box {
+                margin: 0;
+                padding-bottom: 10px;
+            }
+            li {
+                margin: 0;
+                padding-bottom: 10px;
+    
+    
+                p {
+                   padding: 0;
+                }
+            }
+          }
+    
+          .fotos {
+    
+            img {
+                width: 33.3%;
+                height: 250px;
+            }
+          }
+        }
+      }
+}
+
+
+@media (max-width: 550px) {
+    .cursos-page {
+
+        .cursos {
+      
+          h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            white-space: normal;
+            max-width: 100%;
+            padding: 5px;
+          }
+      
+          p {
+            font-size: 1rem;
+            text-align: left;
+          }
+    
+          ul {
+            display: inline;
+            .custom-box {
+                padding: 0;
+                padding-bottom: 5px;
+            }
+            li {
+    
+            }
+          }
+    
+          .fotos {
+    
+            img {
+                width: 50%;
+                height: 250px;
+            }
+          }
+        }
+      }
+}

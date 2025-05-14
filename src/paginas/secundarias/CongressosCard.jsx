@@ -18,8 +18,8 @@ const congressosData = [
     title: "XXXVII CONEEAGRI e I ENPEAG (2024) UFPR - Jandaia do Sul/PR",
     edicao: "XXXVII",
     description:
-      "Ocorre de 22 a 26 de outubro de 2024 na UFPR - Campus Jandaia do Sul, promovendo inovação e integração entre estudantes de todo o Brasil.",
-    text: "A edição de 2024 do CONEEAGRI marca um novo capítulo na história do congresso, trazendo o I ENPEAG (Encontro Nacional de Pesquisa em Engenharia Agrícola) para enriquecer a troca de conhecimentos. O evento contará com palestras de renomados especialistas, mesas-redondas sobre os desafios da engenharia agrícola no Brasil e apresentações de trabalhos acadêmicos. Além disso, haverá visitas técnicas a propriedades e indústrias da região, permitindo que os participantes tenham uma experiência prática do que há de mais moderno no setor. Essa edição se destaca pela forte presença de inovação e tecnologia, conectando estudantes e profissionais com as tendências do futuro.",
+      "Ocorreu de 22 a 26 de outubro de 2024 na UFPR - Campus Jandaia do Sul, promovendo inovação e integração entre estudantes de todo o Brasil.",
+    text: "A edição de 2024 do CONEEAGRI marcou um novo capítulo na história do congresso, trazendo o I ENPEAG (Encontro Nacional dos Profissionais de Engenharia Agrícola) para enriquecer a troca de conhecimentos. O evento contou com palestras de renomados especialistas, mesas-redondas sobre os desafios da engenharia agrícola no Brasil e apresentações de trabalhos acadêmicos. Além disso, houve visitas técnicas a propriedades e indústrias da região, permitindo que os participantes obtivessem uma experiência prática do que há de mais moderno no setor. Essa edição se destacou pela forte presença de inovação e tecnologia, conectando estudantes e profissionais com as tendências do futuro.",
     slug: "coneeagri-2024",
   },
   {

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.23624147.css",
+    "main.css": "/static/css/main.b965d5e6.css",
     "main.js": "/static/js/main.6f4e086e.js",
     "static/media/back2.png": "/static/media/back2.c1ff30fad78736c53473.png",
     "static/media/back7.jpg": "/static/media/back7.d99e31c69000ad704a22.jpg",
@@ -21,6 +21,7 @@
     "static/media/17.jpg": "/static/media/17.59e0d7bbe7b5641499f1.jpg",
     "static/media/back8.jpg": "/static/media/back8.49c410d20b3b50d0066c.jpg",
     "static/media/9.jpg": "/static/media/9.7ef05ec11dfa60923191.jpg",
+    "static/media/back.jpg": "/static/media/back.f3cf42bcb47adc66d97d.jpg",
     "static/media/5.jpg": "/static/media/5.ba4c31e3cba52df46781.jpg",
     "static/media/19.jpg": "/static/media/19.6be7a157559e4c405769.jpg",
     "static/media/10.jpg": "/static/media/10.ac79a32158cc69e52089.jpg",
@@ -30,7 +31,6 @@
     "static/media/back14.jpg": "/static/media/back14.a9ca2062e38dbc71e9bf.jpg",
     "static/media/coneeagri2.jpeg": "/static/media/coneeagri2.cb9fd03a43475618e15d.jpeg",
     "static/media/5.png": "/static/media/5.fb1603fe71c76092d9ac.png",
-    "static/media/back3.png": "/static/media/back3.b0b37c09c3cf6d5b896c.png",
     "static/media/back15.jpg": "/static/media/back15.e20fc2c4358e0b8a39f4.jpg",
     "static/media/7.jpg": "/static/media/7.56c1ebbfb1dcf3a8b892.jpg",
     "static/media/c2.jpeg": "/static/media/c2.58c1617f05ec30971a5d.jpeg",
@@ -52,11 +52,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.23624147.css.map": "/static/css/main.23624147.css.map",
+    "main.b965d5e6.css.map": "/static/css/main.b965d5e6.css.map",
     "main.6f4e086e.js.map": "/static/js/main.6f4e086e.js.map"
   },
   "entrypoints": [
-    "static/css/main.23624147.css",
+    "static/css/main.b965d5e6.css",
     "static/js/main.6f4e086e.js"
   ]
 }

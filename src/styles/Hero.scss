@@ -61,7 +61,7 @@
     .Hero__content {
             img {
               margin-top: 55px;
-              right: -10rem;
+              right: -15rem;
               width: 120px;
               height: 50px;
 
@@ -70,7 +70,7 @@
     }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .Hero {
     height: 100vh;
     .Hero__item {
@@ -80,6 +80,10 @@
 
       .Hero__content {
       margin-left: -75px;
+
+      img {
+        right: -8rem;
+      }
 
     }}
     }
@@ -95,7 +99,7 @@
 
 
      img {
-                    right: -5rem;
+                    right: -7rem;
 
      }
     h1 {

@@ -11,6 +11,8 @@ import Hero1 from "../assets/6.jpg";
 import Hero2 from "../assets/5.jpg";
 import Hero3 from "../assets/9.jpg";
 
+import logo_white from '../assets/logo_white.png'
+
 export default function Hero() {
   const slides = [
     {
@@ -64,6 +66,7 @@ export default function Hero() {
                 {" "}
                 <Link to={`/${slide.slug}`}>Saiba mais</Link>{" "}
               </button>
+              <img src={logo_white} alt="" />
             </div>
           </div>
         ))}

@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo"> 
         <h2><Link to="/">FEEAGRI BRASIL</Link></h2> 
-        <h3>Federação Brasileira dos Estudantes de Engenharia Agrícola, Ambiental e de Biossistemas</h3>
+        <h3>Federação Brasileira dos Estudantes de Engenharia Agrícola, Agrícola e Ambiental e de Biossistemas</h3>
       </div>
       <div className={`menu-links ${isOpen ? 'active' : ''}`}>
         <ul>

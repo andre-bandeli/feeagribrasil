@@ -46,11 +46,14 @@ export default function Footer() {
           <h4>Redes Sociais</h4>
           <ul>
             <li>
-              <Link to={`https://www.instagram.com/feeagri/`} target='_blank'>Instagram</Link>
+              <Link to={`https://www.instagram.com/feeagri/`} target="_blank">
+                Instagram
+              </Link>
             </li>
             <li>
               <Link
-                to={`https://www.linkedin.com/company/feeagri-brasil/?originalSubdomain=br`} target='_blank'
+                to={`https://www.linkedin.com/company/feeagri-brasil/?originalSubdomain=br`}
+                target="_blank"
               >
                 LinkedIn
               </Link>
@@ -61,9 +64,13 @@ export default function Footer() {
       <div className="footer-copyright">
         <p>
           &copy; {new Date().getFullYear()} FEEAGRI. Todos os direitos
-          reservados. Website desenvolvido por <Link target='_blank'
-                to={`https://www.linkedin.com/in/andrebandeli/` }
-              >andrebandeli</Link>
+          reservados. Website desenvolvido por{" "}
+          <Link
+            target="_blank"
+            to={`https://www.linkedin.com/in/andrebandeli/`}
+          >
+            andrebandeli
+          </Link>
         </p>
       </div>
     </footer>

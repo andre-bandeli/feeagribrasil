@@ -67,21 +67,6 @@ const membrosData = [
 ];
 
 
-// const membrosFundadoresData = [
-//   {
-//     nome: "Membro 1",
-//     instituicao: "Engenharia Agrícola UFPEL",
-//     foto: Imagem1,
-//   },
-//   {
-//     nome: "Membro 2",
-//     instituicao: "Engenharia Agrícola UFPR",
-//     foto: Imagem1,
-//   },
-
-// ];
-
-
 export default function Membros() {
   return (
     <div>

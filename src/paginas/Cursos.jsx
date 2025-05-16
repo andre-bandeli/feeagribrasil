@@ -9,18 +9,11 @@ import { FaBook, FaBriefcase, FaLightbulb, FaChartLine } from "react-icons/fa";
 import imagem1 from "../assets/7.jpeg";
 import imagem2 from "../assets/back1.jpg";
 import imagem3 from "../assets/3.png";
-import imagem4 from "../assets/back4.jpg";
-import imagem5 from "../assets/back6.jpg";
-import imagem6 from "../assets/back5.jpg";
 
 import imagem7 from "../assets/back8.jpg";
 import imagem8 from "../assets/back7.jpg";
 import imagem9 from "../assets/back9.jpg";
-import imagem10 from "../assets/back10.jpg";
-import imagem11 from "../assets/5.jpg";
-import imagem12 from "../assets/12.jpg";
 
-import logo from '../assets/logo_colored.png'
 
 export default function Cursos() {
   return (
@@ -50,9 +43,7 @@ export default function Cursos() {
         </div>
       </div>
       <main>
-        <div className="logo_page">
-          <img src={logo} alt="" />
-        </div>
+    
         <div className="cursos">
           <h1>Engenharia Agrícola (EA)</h1>
           <p>

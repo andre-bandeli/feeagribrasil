@@ -5,6 +5,7 @@ import "../styles/About.scss";
 import Footer from "../componentes/Footer";
 import WidgetCustom from "../componentes/WidgetCustom";
 import { Link } from "react-router-dom";
+import logo from '../assets/logo_colored.png'
 
 
 export default function About() {
@@ -114,6 +115,9 @@ export default function About() {
             <WidgetCustom />
           </div>
         </div>
+            <div className="logo_page">
+                <img src={logo} alt="" />
+              </div>
       </main>
       <Footer />
     </div>

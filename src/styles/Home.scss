@@ -122,7 +122,7 @@ p {
     height: auto;
     margin: auto;
     margin-top: 75px;
-    margin-bottom: 75px;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
 
@@ -497,13 +497,13 @@ p {
   .featured {
     .featured-main {
       height: auto;
-      display: inline-block;
+
 
       img {
         margin-top: 45px;
-        width: 100%;
-        border-radius: 2px;
-        height: 450px;
+        width: 450px;
+        height: 320px;
+        border-radius: 10px;
         margin: auto;
         margin-top: 3rem;
       }
@@ -512,7 +512,10 @@ p {
         width: 100%;
 
         h2 {
-          font-size: $h2-font-size;
+          font-size: 2rem;
+        }
+        p {
+          font-size: .9rem;
         }
       }
     }
@@ -537,6 +540,30 @@ p {
   }
 }
 
+@media (max-width: 1250px) {
+  .featured {
+    .featured-main {
+
+
+      img {
+        width: 370px;
+        height: 270px;
+      }
+
+      .featured-main-content {
+        width: 100%;
+
+        h2 {
+          font-size: 1.7rem;
+        }
+        p {
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     .textContainer {
@@ -553,11 +580,44 @@ p {
     }
   }
   .featured {
+     .featured-main {
+      display: inline-block;
+
+      img {
+        width: 100%;
+        height: 270px;
+      }
+
+      .featured-main-content {
+        width: 100%;
+
+        h2 {
+          font-size: 1.7rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
     .featured-secondary {
       .card {
         gap: 5px;
         padding: 0;
         width: 98%;
+        border-bottom: 1px solid rgba(3, 3, 3, 0.123);
+
+        h3 {
+          a {
+            font-size: 1rem;
+            line-height: 110%;
+          }
+        }
+
+
+        p {
+          font-size: .9rem;
+          line-height: 120%;
+        }
       }
     }
   }
@@ -583,16 +643,6 @@ p {
   }
 
   .stats-section  {display: none;}
-
-  .parceiros-section {
-    .parceiros-content {
-      .parceiros-imagem {
-        img {
-
-        }
-      }
-    }
-  }
 
   .congressos-section {
     padding: 0;

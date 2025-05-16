@@ -6,9 +6,6 @@ import "../../styles/SecundaryPage.scss";
 import Imagem1 from "../../assets/coneeagri.webp";
 import Imagem2 from "../../assets/c1.jpeg";
 import Imagem3 from "../../assets/c2.png";
-import Imagem4 from "../../assets/c3.jpeg";
-import Imagem5 from "../../assets/c4.png";
-import Imagem6 from "../../assets/c5.jpeg";
 import Footer from "../../componentes/Footer";
 import WidgetCongressos from '../../componentes/WidgetCongressos.jsx'
 

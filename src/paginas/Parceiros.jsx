@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../componentes/Header";
 import "../styles/Parceiros.scss";
-import abeag from "../assets/abeag.png";
 import Footer from "../componentes/Footer";
 import { Link } from "react-router-dom";
 import '../styles/buttons.scss'

@@ -1,10 +1,6 @@
 import React from "react";
 import "../styles/widget.scss";
 
-import Imagem4 from "../assets/21.jpg";
-import Imagem2 from "../assets/19.jpg";
-import Imagem3 from "../assets/17.jpg";
-
 export default function Widget() {
   const contentData = [
     {

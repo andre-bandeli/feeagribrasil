@@ -7,9 +7,9 @@ import "../styles/buttons.scss";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import Hero1 from "../assets/6.jpg";
-import Hero2 from "../assets/5.jpg";
-import Hero3 from "../assets/9.jpg";
+import Hero1 from "../assets/6.webp";
+import Hero2 from "../assets/5.webp";
+import Hero3 from "../assets/9.webp";
 
 import logo_white from '../assets/logo_white.png'
 

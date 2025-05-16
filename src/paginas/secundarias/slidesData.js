@@ -1,6 +1,6 @@
-import Hero1 from '../../assets/6.jpg';
-import Hero2 from '../../assets/5.jpg';
-import Hero3 from '../../assets/9.jpg';
+import Hero1 from '../../assets/6.webp';
+import Hero2 from '../../assets/5.webp';
+import Hero3 from '../../assets/9.webp';
 
 const slidesData = [
   {

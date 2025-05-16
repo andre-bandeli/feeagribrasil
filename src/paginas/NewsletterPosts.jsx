@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../componentes/Header";
 import Footer from "../componentes/Footer";
 import "../styles/auxiliar.scss";
-import imagem from '../assets/9.jpg';
+import imagem from '../assets/9.webp';
 import imagem2 from '../assets/10.jpg';
 
 export default function NewsletterPost() {

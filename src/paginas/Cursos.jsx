@@ -4,10 +4,9 @@ import Header from "../componentes/Header";
 import Footer from "../componentes/Footer";
 import { Link } from "react-router-dom";
 import "../styles/HeaderSecundario.scss";
-import { FaBook, FaBriefcase, FaLightbulb, FaChartLine } from "react-icons/fa";
 
 import imagem1 from "../assets/7.jpeg";
-import imagem2 from "../assets/back1.jpg";
+import imagem2 from "../assets/back2.webp";
 import imagem3 from "../assets/3.png";
 
 import imagem7 from "../assets/back8.jpg";

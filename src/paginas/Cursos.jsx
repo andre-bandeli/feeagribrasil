@@ -20,9 +20,7 @@ import imagem10 from "../assets/back10.jpg";
 import imagem11 from "../assets/5.jpg";
 import imagem12 from "../assets/12.jpg";
 
-import imagem13 from "../assets/back13.jpg";
-import imagem14 from "../assets/back14.jpg";
-import imagem15 from "../assets/back15.jpg";
+import logo from '../assets/logo_colored.png'
 
 export default function Cursos() {
   return (
@@ -52,6 +50,9 @@ export default function Cursos() {
         </div>
       </div>
       <main>
+        <div className="logo_page">
+          <img src={logo} alt="" />
+        </div>
         <div className="cursos">
           <h1>Engenharia Agrícola (EA)</h1>
           <p>
@@ -151,9 +152,6 @@ export default function Cursos() {
             <img src={imagem1} alt="Imagem relacionada à Engenharia Agrícola" />
             <img src={imagem2} alt="Imagem relacionada à Engenharia Agrícola" />
             <img src={imagem3} alt="Imagem relacionada à Engenharia Agrícola" />
-            <img src={imagem4} alt="Imagem relacionada à Engenharia Agrícola" />
-            <img src={imagem5} alt="Imagem relacionada à Engenharia Agrícola" />
-            <img src={imagem6} alt="Imagem relacionada à Engenharia Agrícola" />
           </div>
         </div>
 
@@ -216,9 +214,6 @@ export default function Cursos() {
     <img src={imagem7} alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
     <img src={imagem8} alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
     <img src={imagem9} alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
-    <img src={imagem10} alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
-    <img src={imagem11} alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
-    <img src={imagem12} alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
   </div>
 </div>
 <div className="cursos">

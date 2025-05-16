@@ -1,5 +1,16 @@
 .cursos-page {
     display: block;
+
+    .logo_page {
+      display: flex;
+      margin: auto;
+      margin-top: 75px;
+          img {
+      width: 270px;
+      height: auto;
+      margin: auto;
+    }
+    }
   
     .cursos {
       width: 100%;

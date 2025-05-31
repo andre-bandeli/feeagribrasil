@@ -7,11 +7,11 @@ import "../styles/HeaderSecundario.scss";
 
 import imagem1 from "../assets/7.jpeg";
 import imagem2 from "../assets/back2.webp";
-import imagem3 from "../assets/3.png";
+import imagem3 from "../assets/back6.jpg";
 
 import imagem7 from "../assets/back8.jpg";
-import imagem8 from "../assets/back7.jpg";
-import imagem9 from "../assets/back9.jpg";
+import imagem8 from "../assets/4.jpg";
+import imagem9 from "../assets/back13.jpg";
 
 
 export default function Cursos() {

@@ -102,18 +102,23 @@
   border-bottom: 1px solid rgb(165, 165, 165);
 }
 
+.newsletter-posts .postagens {
+  display: flex;
+}
+
 .newsletter-posts p {
   width: 90%;
 }
 
 .newsletter-posts .post {
   background-color: #1d1d1d;
-  width: 25%;
+  width: 23%;
   margin-bottom: 20px;
   padding: 35px;
   border-radius: 5px;
   margin-top: 75px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
 }
 
 
@@ -157,9 +162,11 @@
 }
 
 @media (max-width: 550px) {
+  .newsletter-posts .postagens {
+  display: inline-block;
+}
   .newsletter-posts .post {
     width: 80%;
-
   }
   .newsletter-posts p {
     width: 100%;

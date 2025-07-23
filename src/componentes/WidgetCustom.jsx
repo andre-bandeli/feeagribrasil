@@ -1,5 +1,8 @@
 import React from "react";
 import "../styles/widget.scss";
+import drive from '../assets/googledrive.png'
+import { Link } from "react-router-dom";
+
 
 export default function WidgetCustom() {
   const contentData = [
@@ -18,13 +21,24 @@ export default function WidgetCustom() {
       title: "Capacitação e Desenvolvimento",
       text: "Atravérs de iniciativas envolvendo intituições e professores, atuamos na promoção de seminários e mini-cursos dos mais diversos tipos, buscando levar atualizações técnicas da área de maneira democrática. ",
     },
+    {
+      slug: "baixe-nossa-logo",
+      title: "Nossas Logos",
+      text: "Tenha acesso à nossas logos e utilize em suas postagens. Vamos juntos popularizar a FEEAGRI",
+      image: drive,
+      button: "https://drive.google.com/drive/folders/1nRV3bUmhvaExS85r5YKvfgQpKaVhM60D",
+    },
   ];
   return (
     <div className="widget">
       {contentData.map((card, index) => (
-        <div className="contentWidget">
+        <div className="contentWidget" key={index}> {/* Added key for list items */}
           <h2 className="custom">{card.title}</h2>
           <p>{card.text}</p>
+          {card.image ? ( // If card.image exists (is not null or undefined)
+            <Link to={card.button} target="__blank" className="text-sm font-medium"><button><img src={card.image} alt="" /> Google Drive  </button> </Link>
+            
+          ) : null} {/* Otherwise, render nothing */}
         </div>
       ))}
     </div>

@@ -27,8 +27,8 @@ export default function Newsletter() {
       <section className="newsletter-posts">
         <h2>Veja todas nossas publicações e atualizações. Inscreva-se para ficar por dentro de novidades da área agrícola, estágios, eventos futuros e comunicação acadêmica</h2>
         <p>A newsletter da FEEAGRI é um canal direto com estudantes e profissionais da Engenharia Agrícola. Aqui você encontra notícias sobre o CONEEAGRI, oportunidades de estágio, cursos, chamadas de trabalhos e tudo que movimenta nossa área. Não perca nenhuma edição!        </p>
-        
-        <div className="post">
+        <div className="postagens">
+<div className="post">
           <h3>
             <Link to={`/post`}> #1 Newsletter</Link>
           </h3>
@@ -38,6 +38,22 @@ export default function Newsletter() {
           </p>
           <span className="date">March 3, 2025</span>
         </div>
+
+        <div className="post">
+          <h3>
+            <Link to={`/post2`}> #2 Newsletter</Link>
+          </h3>
+          <p>
+            Confira as novidades do CONEEAGRI, a importância de impulsionar lideranças jovens e outras notícias do mundo agrícola. 
+          </p>
+          <span className="date">Jul 23, 2025</span>
+        </div>
+
+
+
+        
+        </div>
+        
       </section>
 
       <main>

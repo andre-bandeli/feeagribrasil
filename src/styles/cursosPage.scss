@@ -155,14 +155,23 @@
             .custom-box {
                 padding: 0;
                 margin-bottom: 5px;
-                padding: 1rem;
-            }
-            li {
+                padding: .2rem;
+                background-color: rgb(243, 243, 243);
+                margin-bottom: 10px;
         
+            }
+
+            li {
+              border-bottom: 1px solid rgba(0, 0, 0, 0.295);
+              margin-bottom: 15px;
             }
           }
     
           .fotos {
+
+            .mobile-remove {
+              display: none;
+            }
     
             img {
                 width: 50%;

@@ -141,7 +141,7 @@ export default function Cursos() {
           <div className="fotos">
             <img src={imagem1} alt="Imagem relacionada à Engenharia Agrícola" />
             <img src={imagem2} alt="Imagem relacionada à Engenharia Agrícola" />
-            <img src={imagem3} alt="Imagem relacionada à Engenharia Agrícola" />
+            <img src={imagem3} className="mobile-remove" alt="Imagem relacionada à Engenharia Agrícola" />
           </div>
         </div>
 
@@ -203,7 +203,7 @@ export default function Cursos() {
   <div className="fotos">
     <img src={imagem7} alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
     <img src={imagem8} alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
-    <img src={imagem9} alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
+    <img src={imagem9} className="mobile-remove" alt="Imagem relacionada à Engenharia Agrícola e Ambiental" />
   </div>
 </div>
 <div className="cursos">

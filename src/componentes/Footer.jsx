@@ -47,7 +47,12 @@ export default function Footer() {
           <ul>
             <li>
               <Link to={`https://www.instagram.com/feeagri/`} target="_blank">
-                Instagram
+                Instagram Feeagri
+              </Link>
+            </li>
+            <li>
+              <Link to={`https://www.instagram.com/coneeagri/?hl=en`} target="_blank">
+                Instagram Cooneagri
               </Link>
             </li>
             <li>
@@ -55,7 +60,7 @@ export default function Footer() {
                 to={`https://www.linkedin.com/company/feeagri-brasil/?originalSubdomain=br`}
                 target="_blank"
               >
-                LinkedIn
+                LinkedIn Feeagri
               </Link>
             </li>
           </ul>

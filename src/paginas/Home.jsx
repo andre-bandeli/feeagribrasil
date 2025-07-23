@@ -180,7 +180,9 @@ export default function Home() {
           </h3>
           <Contador />
           <button className="button_secundary_red">
-            Inscreva-se [em breve]
+            <Link to={`https://www.instagram.com/coneeagri/?hl=en`} target="__blank"> Saiba mais</Link>
+
+           
           </button>
         </div>
 

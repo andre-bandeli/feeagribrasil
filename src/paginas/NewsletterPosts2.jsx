@@ -18,7 +18,7 @@ export default function NewsletterPost() {
           <img src={logo} alt="Logo FEEAGRI" />
           <h2>Federação Brasileira dos Estudantes de Engenharia Agrícola, Engenharia Agrícola e Ambiental e Engenharia de Biossistemas</h2>
           <h2 className="custom"><strong>Newsletter #2</strong></h2>
-          <p>Fique por dentro das transformações que estão moldando o futuro da agricultura brasileira. Nesta edição, abordamos temas que unem tecnologia, sustentabilidade e inovação: uso de combustíveis e eficiência energética na mecanização agrícola, machine learning como ferramenta decisória no agro, os impactos já sentidos das mudanças climáticas na produção rural e as novidades sobre o maior congresso estudantil da área: o CONEEAGRI 2024.</p>
+          <p>Fique por dentro das transformações que estão moldando o futuro da agricultura brasileira. Nesta edição, abordamos temas que unem tecnologia, sustentabilidade e inovação: uso de combustíveis e eficiência energética na mecanização agrícola, machine learning como ferramenta decisória no agro, os impactos já sentidos das mudanças climáticas na produção rural e as novidades sobre o maior congresso estudantil da área: o CONEEAGRI 2025 na UFPel.</p>
 
           <div className="resume">
             <h2>Resumo da Edição</h2>
@@ -76,10 +76,10 @@ export default function NewsletterPost() {
             </div>
 
             <div className="conteudo">
-              <h2>CONAEAGRI 2024: O Encontro Que Une o Agro com Ciência</h2>
+              <h2>CONAEAGRI 2025: O Encontro Que Une o Agro com Ciência</h2>
               <h3>A Universidade de Pelotas (UFPel) se prepara para o maior congresso estudantil da Engenharia Agrícola, Engenharia Agrícola e Ambiental e Engenharia de Biossistemas!</h3>
               <div className="imagem-container">
-                <img src={imagem4} alt="CONEEAGRI 2024" />
+                <img src={imagem4} alt="CONEEAGRI 2025" />
                 <img className="logo" src={logo_branco} alt="Logo FEEAGRI" />
               </div>
               <p>O XXXVII CONEEAGRI e o I ENPEAG se aproximam, prometendo reunir estudantes, professores, pesquisadores e profissionais de todo o país em uma experiência imersiva no universo da engenharia agrícola. O evento será realizado de 27 a 30 de outubro de 2025, no campus de Pelotas, na Universidade Federal de Pelotas (UFPel).</p>

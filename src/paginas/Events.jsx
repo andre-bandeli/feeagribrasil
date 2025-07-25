@@ -73,7 +73,7 @@ export default function Events() {
     {
       image: Imagem1,
       title: "XXX CONEEAGRI (2017) UFLA - Lavras MG",
-      edicao: "XXXI",
+      edicao: "XXX",
       description:
         "Realizado na Universidade Federal de Lavras (UFLA) entre 8 e 15 de outubro de 2017, reunindo acadêmicos e profissionais do setor.",
       slug: "coneeagri-2017",
@@ -81,7 +81,7 @@ export default function Events() {
     {
       image: Imagem2,
       title: "XXXIX CONEEAGRI (2016) UFF - Rio de Janeiro RJ",
-      edicao: "XXX",
+      edicao: "XXXIX",
       description:
         "Ocorreu de 17 a 23 de abril de 2016 na Universidade Federal Fluminense (UFF) em Niterói, com programação voltada ao desenvolvimento agrícola.",
       slug: "coneeagri-2016",

@@ -64,15 +64,15 @@ export default function Events() {
     },
     {
       image: Imagem1,
-      title: "XXXI CONEEAGRI (2018) UNICAMP - Campinas SP",
+      title: "XXXI CONEEAGRI (2018) UFPR - Jandaia do Sul",
       edicao: "XXXI",
       description:
-        "Realizado na Universidade Estadual de Campinas UNICAMP entre 8 e 15 de outubro de 2017, reunindo acadêmicos e profissionais do setor.",
+        "Realizado na Universidade Federal do Paraná (UFPR), Campus Jandaia do Sul, nos dias 26/08 a 01/09 de 2018.",
       slug: "coneeagri-2017",
     },
     {
       image: Imagem1,
-      title: "XXXI CONEEAGRI (2017) UFLA - Lavras MG",
+      title: "XXX CONEEAGRI (2017) UFLA - Lavras MG",
       edicao: "XXXI",
       description:
         "Realizado na Universidade Federal de Lavras (UFLA) entre 8 e 15 de outubro de 2017, reunindo acadêmicos e profissionais do setor.",
@@ -80,7 +80,7 @@ export default function Events() {
     },
     {
       image: Imagem2,
-      title: "XXX CONEEAGRI (2016) UFF - Rio de Janeiro RJ",
+      title: "XXXIX CONEEAGRI (2016) UFF - Rio de Janeiro RJ",
       edicao: "XXX",
       description:
         "Ocorreu de 17 a 23 de abril de 2016 na Universidade Federal Fluminense (UFF) em Niterói, com programação voltada ao desenvolvimento agrícola.",

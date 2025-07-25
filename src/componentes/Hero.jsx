@@ -24,14 +24,14 @@ export default function Hero() {
     },
     {
       image: Hero2,
-      title: "Transformando o Futuro da Engenharia Agrícola",
+      title: "Transformando o Futuro da Engenharia Agrícola, Ambiental e de Biossistemas",
       description:
         "Juntos, estamos inovando no campo e impulsionando práticas sustentáveis que moldam o futuro da Engenharia Agrícola no Brasil. Unindo as próximas gerações de profissionais do setor.",
       slug: "futuro-engenharia-agricola",
     },
     {
       image: Hero3,
-      title: "Participe do XXXVII CONEEAGRI e I ENPEAG",
+      title: "Participe do XXXVII CONEEAGRI e II ENPEAG",
       description:
         "Uma oportunidade única para se conectar com estudantes e profissionais da área, e explorar as mais recentes inovações e desafios da Engenharia Agrícola.",
       slug: "coneeagri-enpeag",

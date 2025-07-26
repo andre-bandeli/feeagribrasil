@@ -30,18 +30,18 @@ export default function Newsletter() {
         <div className="postagens">
 <div className="post">
           <h3>
-            <Link to={`/post`}> #1 Newsletter</Link>
+            <Link to={`/publicacao/1`}> #1 Newsletter</Link>
           </h3>
           <p>
             Confira as novidades que os membros do conselho diretivo prepararam
             para garantir maior representatividade nas eleições.
           </p>
-          <span className="date">March 3, 2025</span>
+          <span className="date">Mar 3, 2025</span>
         </div>
 
         <div className="post">
           <h3>
-            <Link to={`/post2`}> #2 Newsletter</Link>
+            <Link to={`/publicacao/2`}> #2 Newsletter</Link>
           </h3>
           <p>
             Confira as novidades do CONEEAGRI, a importância de impulsionar lideranças jovens e outras notícias do mundo agrícola. 

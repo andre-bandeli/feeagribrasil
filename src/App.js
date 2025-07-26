@@ -38,8 +38,8 @@ function App() {
       <Route path="/suporte" element={<Suporte />} />
       <Route path="/delegacao" element={<DelegacaoSup />} />
       <Route path="/conselho-diretivo" element={<ConselhoDiretivo />} />
-      <Route path="/post" element={<NewsletterPost />} />
-      <Route path="/post2" element={<NewsletterPost2 />} />
+      <Route path="/publicacao/1" element={<NewsletterPost />} />
+      <Route path="/publicacao/2" element={<NewsletterPost2 />} />
       <Route path="/instituicoes" element={<Instituicoes />} />
 
 

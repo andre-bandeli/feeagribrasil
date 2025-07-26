@@ -26,7 +26,7 @@ export default function NewsletterPost() {
               <li><p>Eficiência energética e combustíveis na mecanização agrícola</p></li>
               <li><p>Aplicações de machine learning no agro</p></li>
               <li><p>Mudanças climáticas e impactos reais no campo</p></li>
-              <li><p>O que esperar do CONEEAGRI 2024</p></li>
+              <li><p>O que esperar do CONEEAGRI 2025</p></li>
             </ul>
           </div>
 

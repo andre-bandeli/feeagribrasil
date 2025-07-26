@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../componentes/Header";
 import Footer from "../componentes/Footer";
+import { Link } from "react-router-dom";
+
 import "../styles/auxiliar.scss";
 import imagem from '../assets/combustivel.jpeg';
 import imagem2 from '../assets/ml_agro.jpg';
@@ -99,7 +101,9 @@ export default function NewsletterPost() {
               <p>O XXXVII CONEEAGRI e o II ENPEAG se aproximam, prometendo reunir estudantes, professores, pesquisadores e profissionais de todo o país em uma experiência imersiva no universo da engenharia agrícola. O evento será realizado de 27 a 30 de outubro de 2025, no campus de Pelotas, na Universidade Federal de Pelotas (UFPel).</p>
               <p>A programação será pautada por debates sobre inovação, sustentabilidade, inclusão e o futuro das profissões no agro. Estão previstas palestras, minicursos, visitas técnicas, mostra científica, feira de estágios e painéis com especialistas renomados.</p>
               <p>O CONEEAGRI é também um espaço de fortalecimento do movimento estudantil, permitindo a articulação entre centros e diretórios acadêmicos, além da discussão de pautas importantes como currículo, políticas públicas e representatividade da engenharia agrícola nos diferentes espaços de decisão.</p>
-              <p>A organização do evento tem buscado garantir estrutura acessível, alojamento solidário, alimentação a preços populares e uma experiência acolhedora para todos os participantes. As inscrições estão abertas e as vagas são limitadas, com descontos para grupos e possibilidade de submissão de trabalhos científicos.</p>
+              <p>A organização do evento tem buscado garantir estrutura acessível, alojamento solidário, alimentação a preços populares e uma experiência acolhedora para todos os participantes. As inscrições estarão abertas em breve, com submissão de trabalhos científicos. Siga as redes sociais do <Link to={`https://www.instagram.com/coneeagri/?hl=en`} className="">
+                              CONEEAGRI
+                            </Link> para saber mais</p>
               <p>Mais do que um congresso técnico, o CONEEAGRI é um espaço de encontro, aprendizado, troca de vivências e fortalecimento da identidade da engenharia agrícola. Uma oportunidade única de fazer parte da história e contribuir com os rumos do agro brasileiro.</p>
             </div>
           </div>

@@ -3,15 +3,22 @@ import { useParams } from "react-router-dom";
 import Header from "../../componentes/Header";
 import "../../styles/CongressosPage.scss";
 import "../../styles/SecundaryPage.scss";
-import Imagem1 from "../../assets/coneeagri.webp";
-import Imagem2 from "../../assets/c1.jpeg";
-import Imagem3 from "../../assets/c2.png";
+import coneeagri2018 from "../../assets/coneeagri/c2018_1.jpeg";
+import coneeagri2016 from "../../assets/coneeagri/coneeagri2016.jpeg";
+import coneeagri2019 from "../../assets/coneeagri/coneeagri2019.png";
+import coneeagri2020 from "../../assets/coneeagri/coneeagri2020.png";
+import coneeagri2022 from "../../assets/coneeagri/coneeagri2022.jpeg";
+import coneeagri2024 from "../../assets/coneeagri/coneeagri2024.jpeg";
+import coneeagri2023 from "../../assets/coneeagri/coneeagri2023.webp";
+import coneeagri2021 from "../../assets/coneeagri/coneeagri2021.jpeg";
+
+import coneeagri2017 from "../../assets/coneeagri/coneeagri2017.png";
 import Footer from "../../componentes/Footer";
 import WidgetCongressos from '../../componentes/WidgetCongressos.jsx'
 
 const congressosData = [
   {
-    image: Imagem1,
+    image: coneeagri2024,
     title: "XXXVII CONEEAGRI e I ENPEAG (2024) UFPR - Jandaia do Sul/PR",
     edicao: "XXXVII",
     description:
@@ -20,7 +27,7 @@ const congressosData = [
     slug: "coneeagri-2024",
   },
   {
-    image: Imagem2,
+    image: coneeagri2023,
     title: "XXXVI CONEEAGRI (2023) Especial Online",
     edicao: "XXXVI",
     description:
@@ -29,7 +36,7 @@ const congressosData = [
     slug: "coneeagri-2023",
   },
   {
-    image: Imagem3,
+    image: coneeagri2022,
     title: "XXXV CONEEAGRI (2022) Especial Online",
     edicao: "XXXV",
     description:
@@ -38,7 +45,7 @@ const congressosData = [
     slug: "coneeagri-2022",
   },
   {
-    image: Imagem1,
+    image: coneeagri2021,
     title: "XXXIV CONEEAGRI (2021) Especial Online",
     edicao: "XXXIV",
     description:
@@ -47,7 +54,7 @@ const congressosData = [
     slug: "coneeagri-2021",
   },
   {
-    image: Imagem2,
+    image: coneeagri2020,
     title: "XXXIII CONEEAGRI (2020) Especial Online",
     edicao: "XXXIII",
     description:
@@ -56,7 +63,7 @@ const congressosData = [
     slug: "coneeagri-2020",
   },
   {
-    image: Imagem3,
+    image: coneeagri2019,
     title: "XXXII CONEEAGRI (2019) UFPel - Pelotas RS",
     edicao: "XXXII",
     description:
@@ -65,27 +72,27 @@ const congressosData = [
     slug: "coneeagri-2019",
   },
   {
-    image: Imagem1,
-    title: "XXXI CONEEAGRI (2018) UNICAMP - Campinas SP",
+    image: coneeagri2018,
+    title: "XXXI CONEEAGRI (2018) UFPR - Campus Jandaia do Sul",
     edicao: "XXXI",
     description:
-      "Realizado na Universidade Estadual de Campinas UNICAMP entre 8 e 15 de outubro de 2018, reunindo acadêmicos e profissionais do setor.",
-    text: "A UNICAMP foi o palco do CONEEAGRI 2018, que trouxe uma programação repleta de atividades acadêmicas e práticas para os estudantes de engenharia agrícola. Com foco na integração entre pesquisa e inovação, o evento abordou temas como o uso de sensores na agricultura de precisão, as novas tendências em mecanização agrícola e os impactos das mudanças climáticas na produção agrícola. Além das palestras e mesas-redondas, os participantes tiveram a oportunidade de realizar visitas técnicas a centros de pesquisa e empresas do setor, ampliando sua visão sobre as possibilidades da carreira.",
+      "Realizado na Universidade Federal do Paraná UFPR entre 26/08 a 01/09 de 2018, reunindo acadêmicos e profissionais do setor.",
+    text: "A UFPR foi o palco do CONEEAGRI 2018, que trouxe uma programação repleta de atividades acadêmicas e práticas para os estudantes de engenharia agrícola. Com foco na integração entre pesquisa e inovação, o evento abordou temas como o uso de sensores na agricultura de precisão, as novas tendências em mecanização agrícola e os impactos das mudanças climáticas na produção agrícola. Além das palestras e mesas-redondas, os participantes tiveram a oportunidade de realizar visitas técnicas a centros de pesquisa e empresas do setor, ampliando sua visão sobre as possibilidades da carreira.",
     slug: "coneeagri-2018",
   },
   {
-    image: Imagem1,
-    title: "XXXI CONEEAGRI (2017) UFLA - Lavras MG",
-    edicao: "XXXI",
+    image: coneeagri2017,
+    title: "XXX CONEEAGRI (2017) UFLA - Lavras MG",
+    edicao: "XXX",
     description:
       "Realizado na Universidade Federal de Lavras (UFLA) entre 8 e 15 de outubro de 2017, reunindo acadêmicos e profissionais do setor.",
     text: "A Universidade Federal de Lavras (UFLA) recebeu a edição de 2017 do CONEEAGRI, que trouxe um olhar detalhado sobre as inovações e desafios enfrentados pela engenharia agrícola no Brasil. O evento promoveu palestras sobre gestão de recursos hídricos, inovação na mecanização agrícola e avanços na área de energias renováveis aplicadas ao setor agropecuário. Os participantes puderam interagir com especialistas renomados e visitar laboratórios da universidade, conhecendo de perto pesquisas de ponta desenvolvidas na área.",
     slug: "coneeagri-2017",
   },
   {
-    image: Imagem2,
-    title: "XXX CONEEAGRI (2016) UFF - Rio de Janeiro RJ",
-    edicao: "XXX",
+    image: coneeagri2016,
+    title: "XXIX CONEEAGRI (2016) UFF - Rio de Janeiro RJ",
+    edicao: "XXIX",
     description:
       "Ocorreu de 17 a 23 de abril de 2016 na Universidade Federal Fluminense (UFF) em Niterói, com programação voltada ao desenvolvimento agrícola.",
     text: "O CONEEAGRI 2016 aconteceu na UFF, trazendo uma programação diversificada voltada ao desenvolvimento agrícola. O evento abordou temas como irrigação eficiente, sustentabilidade na produção de alimentos e as novas demandas do mercado agrícola brasileiro. Com painéis interativos e visitas técnicas, os participantes puderam trocar experiências e ampliar seus conhecimentos sobre as inovações que estavam moldando o futuro do setor.",

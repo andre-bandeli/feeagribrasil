@@ -8,6 +8,8 @@ import Footer from "../componentes/Footer";
 import Contador from "../componentes/Contador";
 import '../styles/buttons.scss'
 
+import coneeagri2018 from '../assets/coneeagri/c2018_1.jpeg'
+
 import Imagem1 from "../assets/coneeagri.jpeg";
 import Imagem2 from "../assets/c1.jpeg";
 import Imagem3 from "../assets/c2.png";
@@ -63,12 +65,12 @@ export default function Events() {
       slug: "coneeagri-2019",
     },
     {
-      image: Imagem1,
+      image: coneeagri2018,
       title: "XXXI CONEEAGRI (2018) UFPR - Jandaia do Sul",
       edicao: "XXXI",
       description:
         "Realizado na Universidade Federal do Paraná (UFPR), Campus Jandaia do Sul, nos dias 26/08 a 01/09 de 2018.",
-      slug: "coneeagri-2017",
+      slug: "coneeagri-2018",
     },
     {
       image: Imagem1,

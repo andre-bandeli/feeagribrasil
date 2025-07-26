@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b7cfaddf.css",
-    "main.js": "/static/js/main.5b7636b3.js",
+    "main.js": "/static/js/main.6dd5c73b.js",
     "static/media/fertilizante.jpg": "/static/media/fertilizante.5be5ea0d6ae599780027.jpg",
     "static/media/back6.jpg": "/static/media/back6.eaad83db72eee222bb54.jpg",
     "static/media/irrigation.jpg": "/static/media/irrigation.62e76645ea8f644da55b.jpg",
@@ -17,6 +17,7 @@
     "static/media/ml_agro.jpg": "/static/media/ml_agro.e603421e6eb401edf64d.jpg",
     "static/media/2.png": "/static/media/2.5f0ad6868dceccc2f22c.png",
     "static/media/assembleia.jpg": "/static/media/assembleia.4411971912629560c3d0.jpg",
+    "static/media/coneeagri2020.png": "/static/media/coneeagri2020.03f33e577fbe7fadb263.png",
     "static/media/1.jpg": "/static/media/1.261aa86a17fefaf4c5c8.jpg",
     "static/media/back3.jpg": "/static/media/back3.9fb02b09c18088d3b3c8.jpg",
     "static/media/combustivel.jpeg": "/static/media/combustivel.685709b7073ce2c66100.jpeg",
@@ -35,25 +36,30 @@
     "static/media/3.jpg": "/static/media/3.0f319eae3ba2fe1a7e2b.jpg",
     "static/media/c4.jpeg": "/static/media/c4.222477d7877511a840e5.jpeg",
     "static/media/coneeagri.jpeg": "/static/media/coneeagri.34e5c27edc0f66c53e27.jpeg",
+    "static/media/coneeagri2019.png": "/static/media/coneeagri2019.9d3029b9075e6fbdee9b.png",
+    "static/media/coneeagri2017.png": "/static/media/coneeagri2017.6bb75bdd8ec592e380e4.png",
     "static/media/leaf.png": "/static/media/leaf.8c1087b3de3347569167.png",
     "static/media/5.webp": "/static/media/5.e469e6ffaee2b37918cd.webp",
+    "static/media/coneeagri2024.jpeg": "/static/media/coneeagri2024.58bd5b4233295d811b5c.jpeg",
     "static/media/6.jpeg": "/static/media/6.27cedb442b4dc7d8dacf.jpeg",
     "static/media/7.jpeg": "/static/media/7.5b2f496f7a93d9693cb1.jpeg",
     "static/media/abeag.png": "/static/media/abeag.cec2bc6a5c9bb0ad303c.png",
+    "static/media/coneeagri2023.webp": "/static/media/coneeagri2023.fbcb3f3e2e3fc8f60e0d.webp",
+    "static/media/coneeagri2021.jpeg": "/static/media/coneeagri2021.83b3447b6bc164682e1c.jpeg",
     "static/media/user.jpg": "/static/media/user.27857b76db7bf0121f74.jpg",
+    "static/media/c2018_1.jpeg": "/static/media/c2018_1.7918c7e9122266fbfab0.jpeg",
     "static/media/sbea.png": "/static/media/sbea.f7ce2691bbe1c9cf9ecc.png",
     "static/media/googledrive.png": "/static/media/googledrive.dc5af3573a26c699ae73.png",
-    "static/media/coneeagri.webp": "/static/media/coneeagri.a8979890806854645dba.webp",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.b7cfaddf.css.map": "/static/css/main.b7cfaddf.css.map",
-    "main.5b7636b3.js.map": "/static/js/main.5b7636b3.js.map"
+    "main.6dd5c73b.js.map": "/static/js/main.6dd5c73b.js.map"
   },
   "entrypoints": [
     "static/css/main.b7cfaddf.css",
-    "static/js/main.5b7636b3.js"
+    "static/js/main.6dd5c73b.js"
   ]
 }

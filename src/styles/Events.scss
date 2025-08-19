@@ -55,6 +55,18 @@
   }
 }
 
+.btn {
+  width: 350px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  .button_secundary_red {
+  margin: auto;
+  margin-top: 15px;
+}
+}
+
 .featuredSec {
   display: flex;
   flex-direction: column;

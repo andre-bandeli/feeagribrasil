@@ -13,6 +13,7 @@ import coneeagri2018 from '../assets/coneeagri/c2018_1.jpeg'
 import Imagem1 from "../assets/coneeagri.jpeg";
 import Imagem2 from "../assets/c1.jpeg";
 import Imagem3 from "../assets/c2.png";
+import Banner_coneeagri from "../componentes/Banner_coneeagri";
 
 export default function Events() {
   const congressos = [
@@ -108,6 +109,18 @@ export default function Events() {
       </div>
 
       <main>
+        <div>
+          <Banner_coneeagri/>
+          <div className="btn">
+            <button className="button_secundary_red">
+                      <Link to={`https://www.even3.com.br/38-coneeagri-e-2-enpeag-611476/`} target="__blank"> Página do Evento</Link>
+                    </button>
+                    <button className="button_secundary_red">
+                      <Link to={`https://drive.google.com/file/d/1pjyp4IczYHwohWZKW0ebNX-YHxAfIaRu/view`} target="__blank"> Edital Submissão </Link>
+                    </button>
+          </div>
+        </div>
+      
         <div className="featuredSec">
           <div className="featuredSec-main">
             <div className="featuredSec-main-content">
@@ -122,8 +135,9 @@ export default function Events() {
             </div>
             <img src={Imagem1} alt="Main Feature" />
           </div>
-
+          
           <div className="featuredSec-secondary">
+
             {congressos.map((congresso, index) => (
               <div className="card">
                 <div className="img">

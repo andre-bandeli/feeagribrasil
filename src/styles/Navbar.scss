@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: .5rem 2rem;
   background-color: rgb(19, 19, 19);
   color: yellow;
   position: fixed;
   width: 100%;
-  min-height: 55px;
   z-index: 10;
 
   .logo {
@@ -115,11 +114,10 @@
 @media screen and (max-width: 1440px) {
   .navbar {
     height: 50px;
-    min-height: 30px;
 
     .logo {
       h2 {
-        margin-top: 0px;
+        margin-top: 5px;
       }
       h3 {
         font-size: .8rem;
@@ -250,18 +248,20 @@
 
 @media screen and (max-width: 550px) {
   .navbar {
-    height: 30px;
+    height: auto;
+    padding: 1rem 1rem;
     .logo {
       h2 {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin-top: 5px;
+        margin-left: 25px;
       }
       h3 {
         display: none;
       }
     }
     .menu-links {
-      top: 60px;
+      top: 40px;
       height: calc(100vh - 45px);
       ul {
         margin-top: 15px;

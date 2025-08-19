@@ -18,6 +18,7 @@ import NewsletterComponent from "../componentes/NewsletterComponent";
 import "../styles/buttons.scss";
 
 import ContatoForms from "../componentes/ContatoForms";
+import Banner_coneeagri from "../componentes/Banner_coneeagri";
 
 const cardsData = [
   {
@@ -170,6 +171,8 @@ export default function Home() {
           </div>
         </div>
 
+        <Banner_coneeagri/>
+
         <div className="contadorSection">
           <h2>
             <strong>XXXVIII</strong> CONEEAGRI & II ENPEAG
@@ -180,9 +183,10 @@ export default function Home() {
           </h3>
           <Contador />
           <button className="button_secundary_red">
-            <Link to={`https://www.instagram.com/coneeagri/?hl=en`} target="__blank"> Saiba mais</Link>
-
-           
+            <Link to={`https://www.even3.com.br/38-coneeagri-e-2-enpeag-611476/`} target="__blank"> Página do Evento</Link>
+          </button>
+          <button className="button_secundary_red">
+            <Link to={`https://drive.google.com/file/d/1pjyp4IczYHwohWZKW0ebNX-YHxAfIaRu/view`} target="__blank"> Edital Submissão </Link>
           </button>
         </div>
 

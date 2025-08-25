@@ -15,8 +15,7 @@ export default function Rifa() {
         <p>
           A FEEAGRI está em um momento crucial: precisamos garantir o registro
           oficial da nossa Federação. Por isso, lançamos uma rifa solidária
-          para tornar esse sonho uma realidade! Cada bilhete que você compra é um passo em direção à história das
-          Engenharias no Brasil.
+          para tornar esse sonho uma realidade! Cada bilhete que você compra é um passo em direção à história da Federação.
         </p>
         <div className="button-container">
           <a

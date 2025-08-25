@@ -101,7 +101,7 @@ export default function Home() {
       </div>
 
       <Rifa />
-      <div className="content">
+      {/* <div className="content">
         <div className="cardContent">
           <div className="text title">
             <h2>
@@ -131,7 +131,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <main>
         <div className="container">

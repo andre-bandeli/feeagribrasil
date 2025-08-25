@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.17de5afd.css",
-    "main.js": "/static/js/main.13a41fab.js",
+    "main.js": "/static/js/main.c7b9e33f.js",
     "static/media/fertilizante.jpg": "/static/media/fertilizante.5be5ea0d6ae599780027.jpg",
     "static/media/back6.jpg": "/static/media/back6.eaad83db72eee222bb54.jpg",
     "static/media/irrigation.jpg": "/static/media/irrigation.62e76645ea8f644da55b.jpg",
@@ -55,10 +55,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.17de5afd.css.map": "/static/css/main.17de5afd.css.map",
-    "main.13a41fab.js.map": "/static/js/main.13a41fab.js.map"
+    "main.c7b9e33f.js.map": "/static/js/main.c7b9e33f.js.map"
   },
   "entrypoints": [
     "static/css/main.17de5afd.css",
-    "static/js/main.13a41fab.js"
+    "static/js/main.c7b9e33f.js"
   ]
 }

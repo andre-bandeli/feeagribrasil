@@ -24,8 +24,9 @@ const Navbar = () => {
           <li><a href="/congressos"><FaCalendarAlt className='fa' /> Congressos</a></li>
           <li><a href="/membros"><FaUsers className='fa' /> Membros</a></li>
           <li><a href="/instituicoes"><FaUniversity className='fa' /> Instituições</a></li>
+                    <li><a href="/newsletter"><FaNewspaper className='fa' />   Publicações</a></li>
           <li><a href="/parceiros"><FaHandshake className='fa' /> Parceiros</a></li>
-          <li><a href="/newsletter"><FaNewspaper className='fa' /> Newsletter</a></li>
+
         </ul>
       </div>
       <div className="hamburger" onClick={toggleMenu}>

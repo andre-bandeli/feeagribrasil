@@ -14,12 +14,12 @@
     h2 {
       margin: auto;
       font-size: 3rem;
-      color: white;
+      color: black;
       text-align: center;
       letter-spacing: 1rem;
     }
     p {
-      color: wheat;
+      color: black;
       text-align: center;
       font-weight: 400;
       letter-spacing: 2px;
@@ -30,16 +30,11 @@
 .parceiro1 {
   width: 45%;
   margin: auto;
-  background-color: rgb(1, 196, 196);
-  background-image: url("../assets/back5.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  border-bottom: 1px solid black;
   display: flex;
   padding: 2rem;
   margin-top: 125px;
   margin-bottom: 25px;
-  border-radius: 15px;
 
   .text {
 
@@ -56,19 +51,14 @@
 }
 
 .parceiro2 {
-  background-color: rgb(243, 243, 243);
-  background-image: url("../assets/back2.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 
+  border-bottom: 1px solid black;
   width: 45%;
   margin: auto;
   display: flex;
   padding: 2rem;
   margin-top: 45px;
   margin-bottom: 25px;
-  border-radius: 15px;
 
   .text {
 
@@ -85,11 +75,6 @@
 }
 
 .parceiro3 {
-  background-color: rgb(0, 221, 210);
-  background-image: url("../assets/back3.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 
   width: 45%;
   margin: auto;
@@ -97,7 +82,7 @@
   padding: 2rem;
   margin-top: 45px;
   margin-bottom: 125px;
-  border-radius: 15px;
+  border-bottom: 1px solid black;
 
   .text {
 
@@ -139,7 +124,7 @@
         letter-spacing: .5rem;
       }
       p {
-        color: white;
+        color: black;
         text-align: center;
         width: 90%;
         margin: auto;

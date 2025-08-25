@@ -16,10 +16,10 @@ export default function Newsletter() {
           </h3>
         </div>
         <div className="container">
-          <h2>Newsletter</h2>
+          <h2>Publicações</h2>
           <p>
-            Acompanhe nossas atualizações quinzenais e fique por dentro das
-            atualizações no setor agrícola.
+            Acompanhe nossas atualizações e fique por dentro das
+            novidades no setor agrícola, agrícola e ambiental e tecnologias de biossistemas.
           </p>
         </div>
       </div>

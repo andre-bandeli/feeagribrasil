@@ -19,6 +19,7 @@ import "../styles/buttons.scss";
 
 import ContatoForms from "../componentes/ContatoForms";
 import Banner_coneeagri from "../componentes/Banner_coneeagri";
+import Rifa from "../componentes/Rifa";
 
 const cardsData = [
   {
@@ -99,6 +100,7 @@ export default function Home() {
         </div>
       </div>
 
+      <Rifa />
       <div className="content">
         <div className="cardContent">
           <div className="text title">
@@ -253,13 +255,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+<NewsletterComponent />
         <div className="contato-section">
           <ContatoForms />
         </div>
       </main>
 
-      <NewsletterComponent />
+
       <Footer />
     </div>
   );

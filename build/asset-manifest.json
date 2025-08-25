@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.001ecc5d.css",
-    "main.js": "/static/js/main.2884acbc.js",
+    "main.css": "/static/css/main.17de5afd.css",
+    "main.js": "/static/js/main.13a41fab.js",
     "static/media/fertilizante.jpg": "/static/media/fertilizante.5be5ea0d6ae599780027.jpg",
     "static/media/back6.jpg": "/static/media/back6.eaad83db72eee222bb54.jpg",
     "static/media/irrigation.jpg": "/static/media/irrigation.62e76645ea8f644da55b.jpg",
@@ -54,11 +54,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.001ecc5d.css.map": "/static/css/main.001ecc5d.css.map",
-    "main.2884acbc.js.map": "/static/js/main.2884acbc.js.map"
+    "main.17de5afd.css.map": "/static/css/main.17de5afd.css.map",
+    "main.13a41fab.js.map": "/static/js/main.13a41fab.js.map"
   },
   "entrypoints": [
-    "static/css/main.001ecc5d.css",
-    "static/js/main.2884acbc.js"
+    "static/css/main.17de5afd.css",
+    "static/js/main.13a41fab.js"
   ]
 }

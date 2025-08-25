@@ -19,11 +19,13 @@ import NewsletterPost from "./paginas/NewsletterPosts";
 import NewsletterPost2 from "./paginas/NewsletterPosts2";
 import Instituicoes from "./paginas/Instituicoes";
 import Cursos from "./paginas/Cursos";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
-
   return (
-    <Routes>
+    <>
+      <Analytics />
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/About" element={<About />} />
       <Route path="/cursos" element={<Cursos />} />
@@ -41,10 +43,8 @@ function App() {
       <Route path="/publicacao/1" element={<NewsletterPost />} />
       <Route path="/publicacao/2" element={<NewsletterPost2 />} />
       <Route path="/instituicoes" element={<Instituicoes />} />
-
-
     </Routes>
+   </>
   );
 }
-
 export default App;

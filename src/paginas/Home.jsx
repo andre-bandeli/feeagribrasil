@@ -183,7 +183,7 @@ export default function Home() {
             Universidade Federal de Pelotas - Pelotas/RS <br />
             De 27 à 30 de outubro de 2025
           </h3>
-          <Contador />
+          {/* <Contador /> */}
           <button className="button_secundary_red">
             <Link to={`https://www.even3.com.br/38-coneeagri-e-2-enpeag-611476/`} target="__blank"> Página do Evento</Link>
           </button>

@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.17de5afd.css",
-    "main.js": "/static/js/main.5817496b.js",
+    "main.css": "/static/css/main.ba2e6a2e.css",
+    "main.js": "/static/js/main.8b049fb7.js",
+    "static/media/iot.png": "/static/media/iot.76576b800126a10e3f94.png",
     "static/media/fertilizante.jpg": "/static/media/fertilizante.5be5ea0d6ae599780027.jpg",
     "static/media/back6.jpg": "/static/media/back6.eaad83db72eee222bb54.jpg",
     "static/media/irrigation.jpg": "/static/media/irrigation.62e76645ea8f644da55b.jpg",
@@ -37,6 +38,7 @@
     "static/media/coneeagri2019.png": "/static/media/coneeagri2019.9d3029b9075e6fbdee9b.png",
     "static/media/coneeagri2017.png": "/static/media/coneeagri2017.6bb75bdd8ec592e380e4.png",
     "static/media/leaf.png": "/static/media/leaf.8c1087b3de3347569167.png",
+    "static/media/arduino.png": "/static/media/arduino.79f8f9618148c42407e6.png",
     "static/media/5.webp": "/static/media/5.e469e6ffaee2b37918cd.webp",
     "static/media/coneeagri2024.jpeg": "/static/media/coneeagri2024.58bd5b4233295d811b5c.jpeg",
     "static/media/6.jpeg": "/static/media/6.27cedb442b4dc7d8dacf.jpeg",
@@ -47,6 +49,7 @@
     "static/media/user.jpg": "/static/media/user.27857b76db7bf0121f74.jpg",
     "static/media/c2018_1.jpeg": "/static/media/c2018_1.7918c7e9122266fbfab0.jpeg",
     "static/media/sbea.png": "/static/media/sbea.f7ce2691bbe1c9cf9ecc.png",
+    "static/media/rest.png": "/static/media/rest.678a41d2063bb22629ae.png",
     "static/media/coneeagri2.webp": "/static/media/coneeagri2.c937bd5345c20cefa680.webp",
     "static/media/googledrive.png": "/static/media/googledrive.dc5af3573a26c699ae73.png",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -54,11 +57,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.17de5afd.css.map": "/static/css/main.17de5afd.css.map",
-    "main.5817496b.js.map": "/static/js/main.5817496b.js.map"
+    "main.ba2e6a2e.css.map": "/static/css/main.ba2e6a2e.css.map",
+    "main.8b049fb7.js.map": "/static/js/main.8b049fb7.js.map"
   },
   "entrypoints": [
-    "static/css/main.17de5afd.css",
-    "static/js/main.5817496b.js"
+    "static/css/main.ba2e6a2e.css",
+    "static/js/main.8b049fb7.js"
   ]
 }

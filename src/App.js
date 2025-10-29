@@ -17,6 +17,7 @@ import DelegacaoSup from "./paginas/DelegacaoSup";
 import ConselhoDiretivo from "./paginas/ConselhoDiretivo";
 import NewsletterPost from "./paginas/NewsletterPosts";
 import NewsletterPost2 from "./paginas/NewsletterPosts2";
+import NewsletterPost3 from "./paginas/NewsletterPosts3";
 import Instituicoes from "./paginas/Instituicoes";
 import Cursos from "./paginas/Cursos";
 import { Analytics } from "@vercel/analytics/react"
@@ -42,6 +43,7 @@ function App() {
       <Route path="/conselho-diretivo" element={<ConselhoDiretivo />} />
       <Route path="/publicacao/1" element={<NewsletterPost />} />
       <Route path="/publicacao/2" element={<NewsletterPost2 />} />
+      <Route path="/publicacao/3" element={<NewsletterPost3 />} />
       <Route path="/instituicoes" element={<Instituicoes />} />
     </Routes>
    </>

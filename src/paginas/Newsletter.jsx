@@ -48,6 +48,15 @@ export default function Newsletter() {
           </p>
           <span className="date">Jul 23, 2025</span>
         </div>
+        <div className="post">
+          <h3>
+            <Link to={`/publicacao/3`}> #3 Newsletter</Link>
+          </h3>
+          <p>
+            Confira as novidades do CONEEAGRI, a importância de impulsionar lideranças jovens e outras notícias do mundo agrícola. 
+          </p>
+          <span className="date">Out 07, 2025</span>
+        </div>
 
 
 

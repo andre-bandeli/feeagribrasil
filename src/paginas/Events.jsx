@@ -103,7 +103,7 @@ export default function Events() {
           <h3>XXXVIII CONEEAGRI & II ENPEAG</h3>
           <p>Universidade Federal de Pelotas - UFPEL <br /><strong> De 27 à 30 de outubro de 2025</strong></p>
           <div className="contador">
-            <Contador />
+            {/* <Contador /> */}
           </div>
         </div>
       </div>

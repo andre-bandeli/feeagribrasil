@@ -1,183 +1,187 @@
+@import "variables";
+
 .cursos-page {
-    display: block;
-  
-    .cursos {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 75px;
-  
+  display: block;
+  background-color: #fff;
+
+  .anchor-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+    button {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+
+      &:hover {
+        background: white;
+        color: #000;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .curso-section {
+    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+
+    .curso-header {
+      text-align: center;
+      margin-bottom: 50px;
+
       h1 {
-        margin: 0;
-        color: black;
-        margin-top: 75px;
-        font-size: 2rem;
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        font-weight: 800;
       }
 
-      h2 {
-        font-size: 1.3rem;
-        color: rgb(40, 41, 39);
-        margin-bottom: 25px;
-        margin-top: 25px;
-      }
-  
-      p {
+      .intro {
         font-size: 1.2rem;
-        width: 80%;
-        text-align: center;
-        margin: 0.5rem 0 0;
-        color: black;
-        margin-top: 30px;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .pilar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
+
+    .pilar-card {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 12px;
+      border-left: 5px solid #ccc;
+      transition: transform 0.3s ease;
+
+      h4 {
         margin-bottom: 10px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.4;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+    }
+  }
+
+  .content-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+
+    .info-box {
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
       }
 
       ul {
-        width: 80%;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        align-self: center;
-        gap: 25px;
-
-        .custom-box {
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;            padding: 1rem;
-            margin-top: 0px;
-        }
+        list-style: none;
+        padding: 0;
 
         li {
-            width: 100%;
-            text-align: center;
-            font-size: .9rem;
-            list-style: none;
-            // border-bottom: 1.5px solid rgb(10, 10, 10);
-            // padding-bottom: 1rem;
+          padding: 8px 0;
+          padding-left: 25px;
+          position: relative;
+          font-size: 1.05rem;
+          color: #444;
 
-
-            p {
-                width: 100%;
-                text-align: left;
-                font-size: 1rem;
-                padding: .1rem;
-                line-height: 1.5rem;
-            }
-        }
-      }
-
-      .fotos {
-        width: 100%;
-        height: auto;
-        margin-top: 75px;
-        margin-bottom: 5px;
-        display: flex;
-        flex-wrap: wrap;
-
-        img {
-            width: 33.3%;
-            height: 450px;
+          &::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: inherit;
+          }
         }
       }
     }
   }
 
+  // --- Cores Temáticas ---
+  .ea-theme {
+    h1 { color: #03a071; }
+    .pilar-card { border-left-color: #03a071; h4 { color: #03a071; } }
+    .info-box h3 { border-bottom-color: #03a071; }
+  }
 
-@media (max-width: 1024px) {
-    .cursos-page {
+  .eaa-theme {
+    h1 { color: #2e7d32; } // Verde Ambiental
+    .pilar-card { border-left-color: #2e7d32; h4 { color: #2e7d32; } }
+    .info-box h3 { border-bottom-color: #2e7d32; }
+  }
 
-        .cursos {
-      
-          h1 {
-            font-size: 1.5rem;
-          }
-    
-          h2 {
-            
-          }
-      
-          p {
+  .eb-theme {
+    h1 { color: #0277bd; } // Azul Tecnologia
+    .pilar-card { border-left-color: #0277bd; h4 { color: #0277bd; } }
+    .info-box h3 { border-bottom-color: #0277bd; }
+  }
 
-          }
-    
-          ul {
-            display: inline-block;
-            gap: 0;
-            width: 80%;
-            padding: 0;
-            .custom-box {
-                margin: 0;
-                padding-bottom: 10px;
-            }
-            li {
-                margin: 0;
-                padding-bottom: 10px;
-    
-    
-                p {
-                   padding: 0;
-                }
-            }
-          }
-    
-          .fotos {
-    
-            img {
-                width: 33.3%;
-                height: 250px;
-            }
-          }
-        }
-      }
+  // --- Galeria de Fotos ---
+  .fotos {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+
+    img {
+      width: 33.33%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  .divider {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 40px 0;
+  }
 }
 
+// --- Responsividade ---
+@media (max-width: 1024px) {
+  .cursos-page {
+    .curso-section .curso-header h1 { font-size: 2.2rem; }
+    .content-split { grid-template-columns: 1fr; gap: 30px; }
+    .fotos img { height: 250px; }
+  }
+}
 
-@media (max-width: 550px) {
-    .cursos-page {
-
-        .cursos {
-      
-          h1 {
-            font-size: 1.5rem;
-            text-align: center;
-            white-space: normal;
-            max-width: 100%;
-            padding: 5px;
-          }
-      
-          p {
-            font-size: 1rem;
-            text-align: left;
-          }
-    
-          ul {
-            display: inline;
-            .custom-box {
-                padding: 0;
-                margin-bottom: 5px;
-                padding: .2rem;
-                background-color: rgb(243, 243, 243);
-                margin-bottom: 10px;
-        
-            }
-
-            li {
-              border-bottom: 1px solid rgba(0, 0, 0, 0.295);
-              margin-bottom: 15px;
-            }
-          }
-    
-          .fotos {
-
-            .mobile-remove {
-              display: none;
-            }
-    
-            img {
-                width: 50%;
-                height: 250px;
-            }
-          }
-        }
-      }
+@media (max-width: 600px) {
+  .cursos-page {
+    .anchor-nav { gap: 8px; button { font-size: 0.8rem; padding: 8px 15px; } }
+    .curso-section { padding: 50px 0; }
+    .curso-section .curso-header h1 { font-size: 1.8rem; }
+    .fotos {
+      img { width: 50%; }
+      .mobile-remove { display: none; }
+    }
+  }
 }

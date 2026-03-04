@@ -1,69 +1,51 @@
 import React from "react";
-import Header from "../componentes/Header";
-import "../styles/Home.scss";
-import Hero from "../componentes/Hero";
 import { Link } from "react-router-dom";
+import Header from "../componentes/Header";
+import Hero from "../componentes/Hero";
 import StatsCounter from "../componentes/StatsCounter";
+import Footer from "../componentes/Footer";
+import NewsletterComponent from "../componentes/NewsletterComponent";
+import ContatoForms from "../componentes/ContatoForms";
+
+import "../styles/Home.scss";
+import "../styles/buttons.scss";
+
 import Imagem1 from "../assets/coneeagri.jpeg";
 import Imagem2 from "../assets/assembleia.jpg";
 import Imagem3 from "../assets/coneeagri2.jpeg";
 import Imagem4 from "../assets/21.jpg";
-import Imagem8 from "../assets/c2.jpeg";
-import Imagem9 from "../assets/c4.jpeg";
 import abeag from "../assets/abeag.png";
-import crea from "../assets/sbea.png";
-import Contador from "../componentes/Contador";
-import Footer from "../componentes/Footer";
-import NewsletterComponent from "../componentes/NewsletterComponent";
-import "../styles/buttons.scss";
+import sbea from "../assets/sbea.png";
 
-import ContatoForms from "../componentes/ContatoForms";
-import Banner_coneeagri from "../componentes/Banner_coneeagri";
-import Rifa from "../componentes/Rifa";
+import Foto1 from "../assets/coneeagri/recente/foto1.jpg";
+import Foto2 from "../assets/coneeagri/recente/foto2.jpg";
+import Foto3 from "../assets/coneeagri/recente/foto3.jpg";
+import Foto4 from "../assets/coneeagri/recente/foto4.jpg";
+import Foto5 from "../assets/coneeagri/recente/foto5.jpg";
+import Foto6 from "../assets/coneeagri/recente/foto6.jpg";
 
 const cardsData = [
   {
     slug: "representacao-estudantil",
-    title:
-      "Realização de assembleias gerais, convocação para votação e representação institucional",
-    content:
-      "A FEEAGRI atua como a voz dos estudantes das Engenharias Agrícola, Agrícola e Ambiental e de Biossistemas, promovendo a união e defendendo os interesses acadêmicos e profissionais em nível nacional [...]",
-    spn: "by FEEAGRI • December 20, 2024",
+    title: "Voz Ativa e Liderança",
+    content: "Atuamos na defesa dos interesses estudantis perante órgãos profissionais e acadêmicos, garantindo que o estudante seja protagonista nas decisões que moldam nossas carreiras.",
     img: Imagem2,
   },
   {
     slug: "organizacao-de-eventos",
-    title:
-      "Promoção do Congresso Nacional dos Estudantes de ENgenharia Agrícola, Agrícola e Ambiental e Engenharia de Biossistemas",
-    content:
-      "O CONEEAGRI é mais do que um evento: é o ponto de encontro para estudantes e profissionais de todo o Brasil compartilharem conhecimentos, experiências e fortalecerem os laços em prol do desenvolvimento técnico e científico [...]",
-    spn: "by FEEAGRI • December 20, 2024",
+    title: "Conexão e Conhecimento",
+    content: "O CONEEAGRI é o nosso maior marco anual, conectando centenas de acadêmicos e profissionais para debater o futuro das engenharias e as fronteiras da inovação tecnológica.",
     img: Imagem3,
   },
   {
     slug: "capacitacao-e-desenvolvimento",
-    title: "Capacitação e desenvolvimento para um futuro sustentável no Agro",
-    content:
-      "Através de iniciativas voltadas à capacitação e desenvolvimento técnico, a FEEAGRI fomenta a formação de profissionais qualificados e conscientes, preparados para enfrentar os desafios da sustentabilidade no agro. Trabalhamos para unir [...]",
-    spn: "by FEEAGRI • December 20, 2024",
+    title: "Futuro Sustentável",
+    content: "Fomentamos a formação de profissionais qualificados e conscientes, preparados para os desafios do agronegócio moderno e da gestão sustentável de recursos naturais.",
     img: Imagem4,
   },
 ];
 
 export default function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },
-    ],
-  };
-
   return (
     <div>
       <Header />
@@ -71,67 +53,22 @@ export default function Home() {
 
       <div className="stats-section">
         <div className="card">
-          <h2>
-            <strong>+</strong>
-            <StatsCounter finalNumber={30} />
-          </h2>
+          <h2><strong>+</strong><StatsCounter finalNumber={30} /></h2>
           <p>Instituições de Ensino</p>
         </div>
         <div className="card">
-          <h2>
-            <strong>+</strong>
-            <StatsCounter finalNumber={5000} />
-          </h2>
+          <h2><strong>+</strong><StatsCounter finalNumber={5000} /></h2>
           <p>Alunos em todo o Brasil</p>
         </div>
         <div className="card">
-          <h2>
-            <strong>+</strong>
-            <StatsCounter finalNumber={10} />
-          </h2>
+          <h2><strong>+</strong><StatsCounter finalNumber={38} /></h2>
           <p>Edições do CONEEAGRI</p>
         </div>
         <div className="card">
-          <h2>
-            <strong>+</strong>
-            <StatsCounter finalNumber={12} />
-          </h2>
+          <h2><strong>+</strong><StatsCounter finalNumber={13} /></h2>
           <p>Anos de História</p>
         </div>
       </div>
-
-      <Rifa />
-      {/* <div className="content">
-        <div className="cardContent">
-          <div className="text title">
-            <h2>
-              FEEAGRI <br />
-              <strong>NACIONAL</strong>
-            </h2>
-
-            <h2 className="mobile">
-              FEEAGRI <strong>NACIONAL</strong>
-            </h2>
-          </div>
-          <div className="text">
-            <p>
-              A FEEAGRI foi fundada com o propósito de unificar os estudantes de
-              Engenharia Agrícola, Engenharia Agrícola e Ambiental e Engenharia
-              de Biossistemas de todo o Brasil, fortalecendo a
-              representatividade de nossas áreas em cenários acadêmicos e
-              profissionais. Desde a sua criação, tem atuado na organização do
-              CONEEAGRI, evento anual que reúne acadêmicos, pesquisadores e
-              profissionais do setor.
-            </p>
-            <button className="button_primary">
-              {" "}
-              <Link to={`/about`} className="">
-                Saiba mais
-              </Link>{" "}
-            </button>
-          </div>
-        </div>
-      </div> */}
 
       <main>
         <div className="container">
@@ -142,101 +79,67 @@ export default function Home() {
               <strong className="gradientText">Tecnologia</strong>
             </h2>
           </div>
+          
           <div className="separador"></div>
+
           <div className="featured">
-            <div className="featured-main">
-              <div className="featured-main-content">
-                <h3>Nossas atividades</h3>
+          <div className="featured-main">
+            <div className="featured-main-content">
+              <h3>O que nos move</h3>
+              <h2>
+                Representamos a força das Engenharias Agrária e de Biossistemas em todo o território nacional.
+              </h2>
+              <p>
+                Unimos estudantes de diversas instituições para fortalecer a formação acadêmica e profissional. 
+                Através de nossa rede nacional, atuamos na integração de tecnologia, inovação e sustentabilidade, 
+                preparando as novas gerações para liderar a transformação no campo e na indústria.
+              </p>
+            </div>
+            <img src={Imagem1} alt="Liderança Estudantil FEEAGRI" />
+          </div>
 
-                <h2>
-                  A Federação dos Estudantes atua na representação estudantil, promovendo assembléias gerais, representação em eventos e na promoção do CONEEAGRI.
-                </h2>
-                <p>
-                A Federação é composta, essencialmente, pelo Conselho Diretivo e pela Delegação de Estudantes. Anualmente, são realizadas eleições para a renovação do Conselho. O Conselho Diretivo é formado pelo Presidente, Vice-Presidente, Secretário-Geral, Coordenador Financeiro, Coordenadora Científica e seus respectivos suplentes. Cada instituição ativa possui um delegado representante na Delegação de Estudantes.
-                </p>
-          
+          <div className="featured-secondary">
+            {cardsData.map((card, index) => (
+              <div className="card" key={index}>
+                <img src={card.img} alt={card.title} />
+                <h3>
+                  <Link to={`/atividades/${card.slug}`}>{card.title}</Link>
+                </h3>
+                <p>{card.content}</p>
               </div>
-              <img src={Imagem1} alt="Main Feature" />
-            </div>
-
-            <div className="featured-secondary">
-              {cardsData.map((card, index) => (
-                <div className="card">
-                  <img src={card.img} alt="Feature 2" />
-                  <h3>
-                    <Link to={`/atividades/${card.slug}`}>{card.title}</Link>
-                  </h3>
-                  <p>{card.content}</p>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
-
-        <Banner_coneeagri/>
-
-        <div className="contadorSection">
-          <h2>
-            <strong>XXXVIII</strong> CONEEAGRI & II ENPEAG
-          </h2>
-          <h3>
-            Universidade Federal de Pelotas - Pelotas/RS <br />
-            De 27 à 30 de outubro de 2025
-          </h3>
-          {/* <Contador /> */}
-          <button className="button_secundary_red">
-            <Link to={`https://www.even3.com.br/38-coneeagri-e-2-enpeag-611476/`} target="__blank"> Página do Evento</Link>
-          </button>
-          <button className="button_secundary_red">
-            <Link to={`https://drive.google.com/file/d/1pjyp4IczYHwohWZKW0ebNX-YHxAfIaRu/view`} target="__blank"> Edital Submissão </Link>
-          </button>
         </div>
 
-        <div className="congressos-section">
-          <div className="congressos-content">
-            <h2>
-              Conheça as últimas edições do CONEEAGRI e a edição especial do I
-              ENPEAG.
-            </h2>
-          </div>
-            <div className="congressos-content">
-            <p>
-              <strong>Unindo estudantes de todo o Brasil</strong>
-              <br />
-              A última edição do CONEEAGRI e o I ENPEAG realizados na UFPR -
-              Campus Jandaia do Sul, representam marcos na integração dos
-              estudantes de Engenharia Agrícola, Agrícola e Ambiental e de
-              Biossistemas. Esses eventos promovem a troca de conhecimento, o
-              fortalecimento da rede acadêmica e a valorização das áreas de
-              atuação. Juntos, celebramos a união e o avanço das nossas
-              profissões, com um olhar voltado para inovação e sustentabilidade.
-              <br />{" "}
-              <button className="button_primary">
-                <Link to={`/congressos`} className="">
-                  Todas as edições
-                </Link>
-              </button>
-            </p>
-          </div>
-          <div className="congressos-images">
-            <div className="main-image">
-            <img
-                src={Imagem9}
-                className="mobile-remove"
-                alt="Crop Management"
-              />
-              
-            </div>
-            <div className="main-image">
-            <img
-                src={Imagem8}
-                className="mobile-remove"
-                alt="Crop Management"
-              />
-
-            </div>
-          
+        <div className="pos-evento-section" style={{ padding: '60px 0', textAlign: 'center', backgroundColor: '#f8f9fa' }}>
+          <div className="container">
+            <h2><strong>XXXVIII</strong> CONEEAGRI & II ENPEAG</h2>
+            <p style={{ marginBottom: '30px' }}>Pelotas/RS | 27 a 30 de outubro de 2025</p>
             
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+              gap: '20px',
+              marginBottom: '40px' 
+            }}>
+              <img src={Foto1} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 1" />
+              <img src={Foto2} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 2" />
+              <img src={Foto3} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 3" />
+              <img src={Foto4} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 4" />
+              <img src={Foto5} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 5" />
+              <img src={Foto6} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 6" />
+            </div>
+
+            <a 
+              href="https://www.flickr.com/photos/confea/albums/72177720330020769/with/54890387698" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="button_secundary_red"
+              style={{ textDecoration: 'none', display: 'inline-block' }}
+            >
+              Ver Álbum Completo no Flickr
+            </a>
           </div>
         </div>
 
@@ -244,23 +147,21 @@ export default function Home() {
           <div className="parceiros-content">
             <div className="parceiros-texto">
               <h2>Nossos Parceiros</h2>
-              <p>
-                Contamos com o apoio das principais instituições agrárias que acreditam na nossa missão de promover a engenharia
-                agrícola e ambiental.
-              </p>
+              <p>Contamos com o apoio das principais instituições agrárias que acreditam na nossa missão.</p>
             </div>
             <div className="parceiros-imagem">
-              <img src={abeag} alt="Parceiros" />
-              <img src={crea} alt="Parceiros" />
+              <img src={abeag} alt="ABEAG" />
+              <img src={sbea} alt="SBEA / CREA" />
             </div>
           </div>
         </div>
-<NewsletterComponent />
+
+        <NewsletterComponent />
+        
         <div className="contato-section">
           <ContatoForms />
         </div>
       </main>
-
 
       <Footer />
     </div>

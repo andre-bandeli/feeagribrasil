@@ -117,18 +117,13 @@ export default function Home() {
             <h2><strong>XXXVIII</strong> CONEEAGRI & II ENPEAG</h2>
             <p style={{ marginBottom: '30px' }}>Pelotas/RS | 27 a 30 de outubro de 2025</p>
             
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-              gap: '20px',
-              marginBottom: '40px' 
-            }}>
-              <img src={Foto1} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 1" />
-              <img src={Foto2} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 2" />
-              <img src={Foto3} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 3" />
-              <img src={Foto4} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 4" />
-              <img src={Foto5} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 5" />
-              <img src={Foto6} style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px' }} alt="Evento 6" />
+            <div  className="grid-album">
+              <img src={Foto1} alt="Evento 1" />
+              <img src={Foto2} alt="Evento 2" />
+              <img src={Foto3} alt="Evento 3" />
+              <img src={Foto4} alt="Evento 4" />
+              <img src={Foto5} alt="Evento 5" />
+              <img src={Foto6} alt="Evento 6" />
             </div>
 
             <a 
@@ -138,7 +133,7 @@ export default function Home() {
               className="button_secundary_red"
               style={{ textDecoration: 'none', display: 'inline-block' }}
             >
-              Ver Álbum Completo no Flickr
+              Ver Album Completo no Flickr
             </a>
           </div>
         </div>

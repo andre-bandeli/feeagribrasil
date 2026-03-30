@@ -38,12 +38,10 @@ export default function CongressoDestaque({ imagemFallback }) {
 
   if (isLoading || !congresso) return null
 
-  const BASE_URL = process.env.REACT_APP_API_URL.replace('/api/v1', '')
-  const imagem = congresso.imagem_destaque || imagemFallback
-
+  const BASE_URL = (process.env.REACT_APP_API_URL || '').replace('/api/v1', '')
+  const imagem = congresso.imagem_destaque
     ? `${BASE_URL}${congresso.imagem_destaque}`
     : imagemFallback
-
   return (
     <section className="featuredSec-main">
       <div className="featuredSec-main-content">

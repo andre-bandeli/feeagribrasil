@@ -7,57 +7,105 @@ import { useCongressoDetalhe } from '../../hooks/useCongressos'
 import '../../styles/CongressosPage.scss'
 import '../../styles/SecundaryPage.scss'
 
+function SkeletonLoader() {
+  return (
+    <div className="skeleton-wrapper">
+      <div className="skeleton skeleton-hero" />
+      <div className="skeleton-content">
+        <div className="skeleton skeleton-title" />
+        <div className="skeleton skeleton-subtitle" />
+        <div className="skeleton skeleton-img" />
+        <div className="skeleton skeleton-text" />
+        <div className="skeleton skeleton-text short" />
+      </div>
+    </div>
+  )
+}
+
 export default function CongressosPage() {
-  const { id } = useParams()
   const { slug } = useParams()
   const { congresso, isLoading, error } = useCongressoDetalhe(slug)
 
-  console.log('slug:', slug)
-  console.log('isLoading:', isLoading)
-  console.log('error:', error)
-  console.log('congresso:', congresso)
-
   if (isLoading) return (
-    <div>
+    <div className="page-wrapper">
       <Header />
-      <div className="containerSecundaryPage">
-        <p>Carregando...</p>
-      </div>
+      <SkeletonLoader />
       <Footer />
     </div>
   )
 
   if (error || !congresso) return (
-    <div>
+    <div className="page-wrapper">
       <Header />
-      <div className="containerSecundaryPage">
-        <h1>Congresso não encontrado</h1>
-        <Link to="/congressos">← Voltar para congressos</Link>
+      <div className="error-state">
+        <div className="error-inner">
+          <span className="error-code">404</span>
+          <h1>Congresso não encontrado</h1>
+          <p>O congresso que você procura não existe ou foi removido.</p>
+          <Link to="/congressos" className="back-link">
+            <span className="arrow">←</span> Voltar para congressos
+          </Link>
+        </div>
       </div>
       <Footer />
     </div>
   )
 
   return (
-    <div>
+    <div className="page-wrapper">
       <Header />
-      <div className="secundaryPage"></div>
-      <div className="containerSecundaryPage">
-        <h2>{congresso.titulo}</h2>
-        <h3>{congresso.descricao_curta}</h3>
+
+      {/* ── Hero Banner ── */}
+      <section className="hero-banner">
         {congresso.imagem_destaque && (
-          <img src={congresso.imagem_destaque} alt={congresso.titulo} />
+          <img
+            className="hero-bg"
+            src={congresso.imagem_destaque}
+            alt={congresso.titulo}
+          />
         )}
-        <div className="container">
-          <div className="content">
-            <h2>{congresso.numero_romano} CONEEAGRI</h2>
-            <div dangerouslySetInnerHTML={{ __html: congresso.descricao_completa }} />
-          </div>
-          <div className="widgets">
-            <WidgetCongressos />
-          </div>
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
+            <Link to="/">Início</Link>
+            <span>/</span>
+            <Link to="/congressos">Congressos</Link>
+            <span>/</span>
+            <span>{congresso.numero_romano} CONEEAGRI</span>
+          </nav>
+          <h1 className="hero-title">{congresso.titulo}</h1>
+          <p className="hero-subtitle">{congresso.descricao_curta}</p>
+          <div className="hero-tag">{congresso.numero_romano} CONEEAGRI</div>
         </div>
-      </div>
+      </section>
+
+      {/* ── Main Content ── */}
+      <main className="main-container">
+        <div className="content-grid">
+
+          {/* Article */}
+          <article className="article-body">
+            <header className="article-header">
+              <h2 className="article-title">
+                {congresso.numero_romano} CONEEAGRI
+              </h2>
+              <div className="article-divider" />
+            </header>
+            <div
+              className="article-html"
+              dangerouslySetInnerHTML={{ __html: congresso.descricao_completa }}
+            />
+          </article>
+
+          {/* Sidebar */}
+          <aside className="sidebar">
+            <div className="sidebar-sticky">
+              <WidgetCongressos />
+            </div>
+          </aside>
+        </div>
+      </main>
+
       <Footer />
     </div>
   )

@@ -24,7 +24,7 @@ export default function Congressos() {
       <section className="congressos-hero" aria-label="Cabeçalho da página de eventos">
         <div className="congressos-hero__overlay" />
         <div className="congressos-hero__content">
-          <span className="congressos-hero__eyebrow">Ações Nacionais</span>
+          <span className="congressos-hero__eyebrow">Congresso Nacional</span>
           <h1 className="congressos-hero__title">
             <span className="congressos-hero__title--outline">Memórias</span>
             <span className="congressos-hero__title--solid">CONEEAGRI</span>

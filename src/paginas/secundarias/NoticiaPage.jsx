@@ -4,47 +4,125 @@ import useSWR from 'swr'
 import api from '../../lib/api'
 import Header from '../../componentes/Header'
 import Footer from '../../componentes/Footer'
+import '../../styles/NoticiaPage.scss'
 
 const fetcher = url => api.get(url).then(r => r.data)
 
-export default function NoticiaPage() {
-  const { slug } = useParams()
-  const { data: noticia, error, isLoading } = useSWR(
-    slug ? `/noticias/${slug}/` : null,
-    fetcher,
-    { revalidateOnFocus: false }
-  )
+function formatarData(data) {
+  return new Date(data).toLocaleDateString('pt-BR', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+  })
+}
 
-  if (isLoading) return (
-    <div><Header /><div style={{ padding: '4rem', textAlign: 'center' }}>Carregando...</div><Footer /></div>
-  )
-
-  if (error || !noticia) return (
-    <div><Header /><div style={{ padding: '4rem', textAlign: 'center' }}>
-      <h1>Notícia não encontrada</h1>
-      <Link to="/congressos">← Voltar</Link>
-    </div><Footer /></div>
-  )
-
+function NoticiaLoading() {
   return (
-    <div>
+    <div className="noticia-page">
       <Header />
-      <main style={{ width: '90%', maxWidth: '800px', margin: '4rem auto 8rem' }}>
-        {noticia.imagem_capa && (
-          <img src={noticia.imagem_capa} alt={noticia.titulo}
-            style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '10px', marginBottom: '2rem' }} />
-        )}
-        <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: '2.2rem', lineHeight: 1.2 }}>
-          {noticia.titulo}
-        </h1>
-        <p style={{ color: '#888', fontSize: '0.85rem', margin: '0.5rem 0 2rem' }}>
-          {new Date(noticia.data_publicacao).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+      <main className="noticia-page__main">
+        <div className="noticia-page__skeleton">
+          <div className="skeleton skeleton--hero" />
+          <div className="skeleton skeleton--title" />
+          <div className="skeleton skeleton--meta" />
+          <div className="skeleton skeleton--body" />
+          <div className="skeleton skeleton--body skeleton--body--short" />
+        </div>
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+function NoticiaNotFound() {
+  return (
+    <div className="noticia-page">
+      <Header />
+      <main className="noticia-page__main noticia-page__main--empty">
+        <p className="noticia-page__not-found-label">404</p>
+        <h1 className="noticia-page__not-found-title">Notícia não encontrada</h1>
+        <p className="noticia-page__not-found-sub">
+          O conteúdo que você buscou não existe ou foi removido.
         </p>
-        <div dangerouslySetInnerHTML={{ __html: noticia.conteudo }} />
-        <Link to="/congressos" style={{ display: 'inline-block', marginTop: '3rem', color: '#5a9e6f' }}>
+        <Link to="/congressos" className="noticia-page__back-btn">
           ← Voltar para eventos
         </Link>
       </main>
+      <Footer />
+    </div>
+  )
+}
+
+export default function NoticiaPage() {
+  const { slug } = useParams()
+
+  const { data: noticia, error, isLoading } = useSWR(
+    slug ? `/noticias/${slug}/` : null,
+    fetcher,
+    { revalidateOnFocus: false, shouldRetryOnError: false }
+  )
+
+  if (isLoading) return <NoticiaLoading />
+  if (error || !noticia) return <NoticiaNotFound />
+
+  return (
+    <div className="noticia-page">
+      <Header />
+
+      {noticia.imagem_capa && (
+        <div className="noticia-page__hero">
+          <img
+            src={noticia.imagem_capa}
+            alt={noticia.titulo}
+            className="noticia-page__hero-img"
+          />
+          <div className="noticia-page__hero-overlay" />
+        </div>
+      )}
+
+      <main className="noticia-page__main">
+        <article className="noticia-page__article">
+
+          <header className="noticia-page__header">
+            <Link to="/congressos" className="noticia-page__back">
+              ← Eventos
+            </Link>
+
+            {noticia.congresso && (
+              <span className="noticia-page__tag">
+                {noticia.congresso_nome ?? 'CONEEAGRI'}
+              </span>
+            )}
+
+            <h1 className="noticia-page__title">{noticia.titulo}</h1>
+
+            {noticia.chamada && (
+              <p className="noticia-page__chamada">{noticia.chamada}</p>
+            )}
+
+            <div className="noticia-page__meta">
+              <time className="noticia-page__date" dateTime={noticia.data_publicacao}>
+                {formatarData(noticia.data_publicacao)}
+              </time>
+            </div>
+
+            <div className="noticia-page__divider" aria-hidden="true" />
+          </header>
+
+          <div
+            className="noticia-page__content"
+            dangerouslySetInnerHTML={{ __html: noticia.conteudo }}
+          />
+
+          <footer className="noticia-page__footer">
+            <Link to="/congressos" className="noticia-page__back-btn">
+              ← Voltar para eventos
+            </Link>
+          </footer>
+
+        </article>
+      </main>
+
       <Footer />
     </div>
   )

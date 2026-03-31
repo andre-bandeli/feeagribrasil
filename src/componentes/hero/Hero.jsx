@@ -42,6 +42,9 @@ const slides = [
   },
 ];
 
+const FULL_NAME =
+  "Federação Brasileira dos Estudantes de Engenharia Agrícola, Agrícola e Ambiental e de Biossistemas";
+
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -50,13 +53,11 @@ export default function Hero() {
 
   useEffect(() => {
     startRef.current = performance.now();
-
     const tick = (now) => {
       const pct = Math.min(((now - startRef.current) / AUTOPLAY_SPEED) * 100, 100);
       setProgress(pct);
       if (pct < 100) rafRef.current = requestAnimationFrame(tick);
     };
-
     rafRef.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafRef.current);
   }, [currentSlide]);
@@ -117,8 +118,10 @@ export default function Hero() {
         ))}
       </Slider>
 
+      {/* Logo */}
       <img src={logo_white} alt="FEEAGRI" className="Hero__brand" />
 
+      {/* Indicadores de progresso */}
       <div className="Hero__indicators" aria-label="Navegação de slides">
         {slides.map((_, index) => (
           <div
@@ -142,10 +145,23 @@ export default function Hero() {
         ))}
       </div>
 
+      {/* Scroll indicator */}
       <div className="Hero__scroll" aria-hidden="true">
         <span className="Hero__scroll-mouse">
           <span className="Hero__scroll-wheel" />
         </span>
+      </div>
+
+      {/* Faixa institucional — marquee contínuo */}
+      <div className="Hero__banner" aria-hidden="true">
+        <div className="Hero__banner-track">
+          {[0, 1, 2, 3].map((n) => (
+            <span key={n} className="Hero__banner-item">
+              {FULL_NAME}
+              <span className="Hero__banner-sep">✦</span>
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );

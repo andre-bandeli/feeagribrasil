@@ -1,293 +1,447 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: .5rem 2rem;
-  background-color: rgb(19, 19, 19);
-  color: yellow;
+// ─── Tokens ──────────────────────────────────────────────────────────────────
+$ease-expo:  cubic-bezier(0.19, 1, 0.22, 1);
+$ease-quart: cubic-bezier(0.77, 0, 0.175, 1);
+
+$green-deep:   #111d11;
+$green-mid:    #1a2e1a;
+$green-accent: #3d6b32;
+$gold:         #3ac0a3;
+$gold-light:   #dfc278;
+$off-white:    #f0ece3;
+$nav-height:   72px;
+$nav-height-sm: 58px;
+
+// ─── Navbar principal ────────────────────────────────────────────────────────
+.Navbar {
   position: fixed;
-  width: 100%;
-  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  transition:
+    background  0.45s $ease-quart,
+    border-color 0.45s $ease-quart,
+    box-shadow  0.45s $ease-quart,
+    height      0.3s  $ease-quart;
 
-  .logo {
-    width: auto;
-    height: 100%;
-    align-items: center;
+  // ── Estado: topo da página (transparente) ────────────────────────────────
+  &.is-top {
+  background-color: rgba(22, 22, 22, 0.863);
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  
+  // Adiciona o efeito de desfoque no que está atrás do elemento
+  backdrop-filter: blur(5px);
+  
+  // Suporte para navegadores Safari antigos
+  -webkit-backdrop-filter: blur(5px); 
+}
 
-    h2 {
-      margin-top: 10px;
-      margin-bottom: 0;
-      letter-spacing: 1px;
-
-      a {
-        color: yellow;
-        text-decoration: none;
-      }
-    }
-    h3 {
-      font-size: 12px;
-      font-weight: 300;
-      margin-top: 0;
-      color: rgb(230, 230, 230);
-    }
+  // ── Estado: scrollado (sólido + glass) ──────────────────────────────────
+  &.is-scrolled {
+    height: $nav-height - 10px;
+    background: rgba($green-deep, 0.94);
+    backdrop-filter: blur(20px) saturate(1.6);
+    -webkit-backdrop-filter: blur(20px) saturate(1.6);
+    border-bottom: 1px solid rgba($gold, 0.18);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
   }
 
-  .menu-links {
+  // ─── Logo ──────────────────────────────────────────────────────────────
+  &__logo {
     display: flex;
-    width: auto;
-    height: 50px;
-    margin-right: 5rem;
-
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin-right: 0px;
-    }
-
-    ul li {
-      margin: 0;
-    }
-
-    ul li a {
-      text-decoration: none;
-      font-size: 14px;
-      color: white;
-      font-weight: 300;
-      letter-spacing: 1px;
-
-      &:hover {
-        color: rgba(75, 255, 129, 0.801);
-        transition: 0.2s;
-      }
-
-      .fa {
-        display: none;
-      }
-    }
-
-    &.active {
-      display: block;
-    }
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
   }
 
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    margin-top: 5px;
-    cursor: pointer;
+  &__logo-mark {
+    width: 38px;
+    height: 38px;
+    background: $gold;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    
 
-    .bar {
-      width: 100%;
-      height: 4px;
-      background-color: yellow;
+    // Borda interna sutil
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
       border-radius: 4px;
     }
   }
-}
 
-@media screen and (max-width: 1440px) {
-  .navbar {
-    .menu-links {
-      width: 100%;
-      display: flex;
-      ul {
-        width: 100%;
+  &__logo-letter {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: $green-deep;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    
+  }
+
+  &__logo-text {
+    display: flex;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.1;
+    
+
+    strong {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #e4e001;
+      letter-spacing: .5em;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+    }
+
+    .Navbar__flag {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+    span {
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 230, 4, 0.966);
+      margin-top: 1px;
+    }
+  }
+
+  // ─── Links desktop ─────────────────────────────────────────────────────
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+
+      a {
         display: flex;
-        gap: 1.5rem;
-        li{ 
-          display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.72);
+        text-decoration: none;
+        position: relative;
+        transition: color 0.2s ease;
 
-          a {
-            font-size: .9rem;
-            margin: auto;
-          }
+        &:hover {
+          color: #ffffff;
         }
+      }
+
+      // Underline dourado animado
+      .Navbar__underline {
+        position: absolute;
+        bottom: 4px;
+        left: 16px;
+        right: 16px;
+        height: 1.5px;
+        background: $gold;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s $ease-expo;
+        border-radius: 2px;
+      }
+
+      a:hover .Navbar__underline {
+        transform: scaleX(1);
+      }
+
+      // Item ativo
+      &.is-current a {
+        color: $gold;
+      }
+
+      &.is-current .Navbar__underline {
+        transform: scaleX(1);
       }
     }
   }
-}
 
-@media screen and (max-width: 1440px) {
-  .navbar {
-    height: 50px;
+  // ─── Hamburger ─────────────────────────────────────────────────────────
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.2s ease, background 0.2s ease;
 
-    .logo {
-      h2 {
-        margin-top: 5px;
-      }
+    span {
+      display: block;
+      height: 1.5px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 2px;
+      transform-origin: center;
+      transition: transform 0.35s $ease-expo, opacity 0.25s ease, width 0.3s ease;
+
+      &:nth-child(1) { width: 100%; }
+      &:nth-child(2) { width: 70%; }
+      &:nth-child(3) { width: 100%; }
     }
 
-    .menu-links {
-      position: fixed;
-      top: 65px;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: calc(100vh - 55px);
-      margin-right: 0;
-      background-color: rgb(19, 19, 19);
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      overflow-y: auto;
-
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-
-      ul {
-        flex-direction: column;
-        gap: .5rem;
-        width: 80%;
-        margin: auto;
-        margin-left: 33px;
-        margin-top: 20px;
-        padding: 20px 0;
-
-        li {
-          margin-top: 1rem;
-          text-align: left;
-          margin-left: 0;
-          display: flex;
-          
-          a {
-            font-size: 1.3rem;
-            padding: 10px 0;
-            margin-left: 15px;
-
-            .fa {
-              display:inline-block;
-              color: rgba(69, 219, 114, 0.801);
-              margin-right: 15px;
-            }
-          }
-        }
-      }
+    &:hover {
+      border-color: rgba($gold, 0.5);
+      background: rgba($gold, 0.08);
     }
 
-    .menu-links::-webkit-scrollbar {
-    display: none; /* Chrome, Safari e Edge */
-    }
-  
-    .menu-links.active {
-      display: flex;
-    }
+    &.is-open {
+      border-color: rgba($gold, 0.4);
 
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 21px;
-      margin-right: 75px;
-      cursor: pointer;
-
-      .bar {
+      span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
         width: 100%;
-        height: 3px;
-        background-color: rgb(90, 88, 88);
-        border-radius: 4px;
       }
-
-      .close-icon {
-        font-size: 1.5rem;
-        color: rgba(190, 188, 186, 0.616);
-        z-index: 999;
-        margin-top: -5px;
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+        width: 100%;
       }
     }
   }
 }
 
-@media screen and (max-width: 1280px) and (max-height: 800px) {
-  .navbar {
+// ─── Menu mobile ─────────────────────────────────────────────────────────────
+.Navbar__mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  width: min(380px, 88vw);
+  background: $green-deep;
+  border-left: 1px solid rgba($gold, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.5s $ease-expo;
+  overflow-y: auto;
+  scrollbar-width: none;
 
-    .menu-links {
-      width: auto;
-    }
-    .hamburger {
+  &::-webkit-scrollbar { display: none; }
 
-      .close-icon {
-        margin-top: 0px;
-      }
-    }
+  &.is-open {
+    transform: translateX(0);
   }
-}
 
-@media screen and (max-width: 950px) {
-  .navbar {
-    .logo {
-      h2 {
-        font-size: 1.2rem;
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: calc(#{$nav-height-sm} + 24px) 0 40px;
+  }
+
+  // Cabeçalho do menu
+  &-header {
+    padding: 0 36px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    margin-bottom: 8px;
+  }
+
+  &-eyebrow {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $gold;
+  }
+
+  // Lista de links
+  &-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+
+    li {
+      opacity: 0;
+      transform: translateX(20px);
+      transition:
+        opacity   0.4s $ease-expo calc(var(--i) * 50ms + 100ms),
+        transform 0.4s $ease-expo calc(var(--i) * 50ms + 100ms);
+
+      .is-open & {
+        opacity: 1;
+        transform: translateX(0);
       }
-    }
-    .menu-links {
-      top: 55px;
-      height: calc(100vh - 35px);
-      ul {
-        flex-direction: column;
-        gap: .5rem;
 
-        li {
-          margin-top: 25px;
-          a {
-            font-size: 1.5rem;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 36px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: background 0.2s ease, padding-left 0.25s $ease-expo;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background: $gold;
+          transform: scaleY(0);
+          transition: transform 0.25s $ease-expo;
+        }
+
+        &:hover {
+          background: rgba($gold, 0.06);
+          padding-left: 42px;
+
+          &::before {
+            transform: scaleY(1);
           }
         }
       }
+
+      &.is-current a {
+        background: rgba($gold, 0.08);
+        padding-left: 42px;
+
+        &::before { transform: scaleY(1); }
+
+        .Navbar__mobile-label { color: $gold; }
+        .Navbar__mobile-icon  { color: $gold; }
+      }
+    }
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  &-label {
+    flex: 1;
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.2s ease;
+  }
+
+  &-arrow {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.2);
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  li a:hover &-arrow {
+    color: $gold;
+    transform: translateX(3px);
+  }
+
+  // Rodapé do menu
+  &-footer {
+    padding: 28px 36px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: auto;
+
+    p {
+      font-size: 0.68rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.25);
+      letter-spacing: 0.02em;
+      margin: 0;
     }
   }
 }
 
+// ─── Backdrop ────────────────────────────────────────────────────────────────
+.Navbar__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
 
-@media screen and (max-width: 550px) {
-  .navbar {
-    height: auto;
-    padding: 1rem 1rem;
-    .logo {
-      h2 {
-        font-size: 1rem;
-        margin-top: 5px;
-        margin-left: 25px;
-      }
-      h3 {
-        display: none;
-      }
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+// ─── Responsivo ──────────────────────────────────────────────────────────────
+
+// Mostra hamburger em telas menores que 1100px
+@media (max-width: 1100px) {
+  .Navbar {
+    height: $nav-height-sm;
+    padding: 0 32px;
+
+    &.is-scrolled {
+      height: $nav-height-sm - 6px;
     }
-    .menu-links {
-      top: 40px;
-      height: calc(100vh - 45px);
-      ul {
-        margin-top: 15px;
-        margin-bottom: 25px;
-        gap: 25px;
-        li {
-          margin-top: 1rem;
-          a {
-            font-size: 1.3rem;
-          }
-        }
-      }
+
+    &__links {
+      display: none;
     }
-    .hamburger {
-      width: 25px;
-      height: 15px;
-      margin-right: 50px;
-      .close-icon {
-        font-size: 1.7rem;
-        margin-top: -10px;
-      }
+
+    &__burger {
+      display: flex;
     }
   }
 }
 
-@media screen and (max-width: 344px) {
-  .navbar {
-    .hamburger {
-      margin-right: 50px;
+@media (max-width: 550px) {
+  .Navbar {
+    padding: 0 20px;
+
+    &__logo-text span {
+      display: none;
     }
+  }
+
+  .Navbar__mobile {
+    width: 100vw;
+    border-left: none;
   }
 }

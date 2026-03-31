@@ -1,17 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f46ed09.css",
-    "main.js": "/static/js/main.0f441377.js",
+    "main.css": "/static/css/main.db38d7ec.css",
+    "main.js": "/static/js/main.229994f5.js",
+    "static/media/bg4.jpg": "/static/media/bg4.82fc450b454ff7cd5091.jpg",
+    "static/media/bg3.jpg": "/static/media/bg3.26c00ace2cbd4a236ee0.jpg",
     "static/media/foto4.jpg": "/static/media/foto4.30961a0cfc38745655d4.jpg",
     "static/media/foto6.jpg": "/static/media/foto6.bbceb685f14e4248d734.jpg",
     "static/media/foto3.jpg": "/static/media/foto3.dcbcafd6096506e920a8.jpg",
+    "static/media/bg15.jpg": "/static/media/bg15.f5fa730f149dd3365096.jpg",
     "static/media/foto2.jpg": "/static/media/foto2.f5fa730f149dd3365096.jpg",
     "static/media/iot.png": "/static/media/iot.76576b800126a10e3f94.png",
     "static/media/foto1.jpg": "/static/media/foto1.1a65431db261b264e520.jpg",
     "static/media/fertilizante.jpg": "/static/media/fertilizante.5be5ea0d6ae599780027.jpg",
     "static/media/foto5.jpg": "/static/media/foto5.aa97298f15c3edaabb4a.jpg",
+    "static/media/bg13.jpg": "/static/media/bg13.772be444f101fca93bb4.jpg",
     "static/media/back6.jpg": "/static/media/back6.eaad83db72eee222bb54.jpg",
+    "static/media/bg12.jpg": "/static/media/bg12.eaad83db72eee222bb54.jpg",
     "static/media/irrigation.jpg": "/static/media/irrigation.62e76645ea8f644da55b.jpg",
+    "static/media/bg5.jpg": "/static/media/bg5.17f559bab444678a792a.jpg",
     "static/media/17.jpg": "/static/media/17.59e0d7bbe7b5641499f1.jpg",
     "static/media/alimento.jpg": "/static/media/alimento.8f81c7462371bc969d0b.jpg",
     "static/media/agropecuaria.jpg": "/static/media/agropecuaria.6d5c025cc93f73263b46.jpg",
@@ -46,11 +52,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.3f46ed09.css.map": "/static/css/main.3f46ed09.css.map",
-    "main.0f441377.js.map": "/static/js/main.0f441377.js.map"
+    "main.db38d7ec.css.map": "/static/css/main.db38d7ec.css.map",
+    "main.229994f5.js.map": "/static/js/main.229994f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f46ed09.css",
-    "static/js/main.0f441377.js"
+    "static/css/main.db38d7ec.css",
+    "static/js/main.229994f5.js"
   ]
 }

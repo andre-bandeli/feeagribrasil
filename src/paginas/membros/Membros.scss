@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
 @import '../../styles/variables.scss';
 
 // ─── Tokens ───────────────────────────────────────────────────────────────────
@@ -14,7 +14,7 @@
   --mb-muted:        #6b6b5a;
   --mb-borda:        #ddd8cc;
 
-  --mb-display: 'Cormorant Garamond', Georgia, serif;
+  --mb-display: 'Barlow', system-ui, sans-serif;
   --mb-body:    'Inter', system-ui, sans-serif;
 
   --mb-ease: 0.28s cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,187 +1,488 @@
-@import "../../styles/variables";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import '../../styles/variables.scss';
 
-.cursos-page {
-  display: block;
-  background-color: #fff;
+// ─── Design shift ─────────────────────────────────────────────────────────────
+// DE: editorial/magazine (Cormorant itálico, bege quente, bordas finas)
+// PARA: ficha-técnica industrial (Barlow Condensed, neutro frio, blocos sólidos)
 
-  .anchor-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+// ─── Página ───────────────────────────────────────────────────────────────────
+.cr-page {
+  font-family: 'Barlow', system-ui, sans-serif;
+  background: #ebebeb;
+  color: #111;
+  min-height: 100vh;
+}
 
-    button {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
+// ─── Hero ─────────────────────────────────────────────────────────────────────
+.cr-hero {
+  position: relative;
+  min-height: 56vh;
+  display: flex;
+  align-items: flex-end;
+  background-color: #0a160e;
+  overflow: hidden;
 
-      &:hover {
-        background: white;
-        color: #000;
-        transform: translateY(-2px);
-      }
+  h1 {font-size: 6rem;
+
+    @media (max-width: 550px) {
+      font-size: 2rem;
+      
     }
   }
 
-  .curso-section {
-    padding: 80px 0;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, .028) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, .028) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none;
+  }
+
+  // Plano inclinado de acento
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38%;
+    height: 100%;
+    background: linear-gradient(145deg, transparent 55%, rgba(1, 133, 78, .06) 55%);
+    pointer-events: none;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, .92) 0%,
+      rgba(10, 22, 14, .5) 55%,
+      transparent 100%
+    );
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 88%;
     max-width: 1200px;
     margin: 0 auto;
-    width: 90%;
-
-    .curso-header {
-      text-align: center;
-      margin-bottom: 50px;
-
-      h1 {
-        font-size: 2.8rem;
-        margin-bottom: 20px;
-        font-weight: 800;
-      }
-
-      .intro {
-        font-size: 1.2rem;
-        color: #555;
-        max-width: 800px;
-        margin: 0 auto;
-        line-height: 1.6;
-      }
-    }
-  }
-
-  .pilar-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 60px;
-
-    .pilar-card {
-      background: #f9f9f9;
-      padding: 25px;
-      border-radius: 12px;
-      border-left: 5px solid #ccc;
-      transition: transform 0.3s ease;
-
-      h4 {
-        margin-bottom: 10px;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      p {
-        font-size: 0.95rem;
-        color: #666;
-        line-height: 1.4;
-      }
-
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      }
-    }
-  }
-
-  .content-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 60px;
-
-    .info-box {
-      h3 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #eee;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-
-        li {
-          padding: 8px 0;
-          padding-left: 25px;
-          position: relative;
-          font-size: 1.05rem;
-          color: #444;
-
-          &::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: inherit;
-          }
-        }
-      }
-    }
-  }
-
-  // --- Cores Temáticas ---
-  .ea-theme {
-    h1 { color: #03a071; }
-    .pilar-card { border-left-color: #03a071; h4 { color: #03a071; } }
-    .info-box h3 { border-bottom-color: #03a071; }
-  }
-
-  .eaa-theme {
-    h1 { color: #2e7d32; } // Verde Ambiental
-    .pilar-card { border-left-color: #2e7d32; h4 { color: #2e7d32; } }
-    .info-box h3 { border-bottom-color: #2e7d32; }
-  }
-
-  .eb-theme {
-    h1 { color: #0277bd; } // Azul Tecnologia
-    .pilar-card { border-left-color: #0277bd; h4 { color: #0277bd; } }
-    .info-box h3 { border-bottom-color: #0277bd; }
-  }
-
-  // --- Galeria de Fotos ---
-  .fotos {
+    padding: 0 0 15vh;
     display: flex;
-    gap: 15px;
-    margin-top: 40px;
-
-    img {
-      width: 33.33%;
-      height: 350px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
+    flex-direction: column;
+    gap: .8rem;
   }
 
-  .divider {
-    border: 0;
-    height: 1px;
-    background: #eee;
-    margin: 40px 0;
+  &__eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: #01854e;
+  }
+
+  &__title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(4.5rem, 11vw, 9rem);
+    font-weight: 700;
+    font-style: normal;           // Sem itálico — título reto e pesado
+    color: #fff;
+    line-height: .92;
+    letter-spacing: -.01em;
+    margin: 0;
+  }
+
+  &__sub {
+    font-family: 'Barlow', sans-serif;
+    font-size: clamp(.8rem, 1.15vw, .92rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, .38);
+    line-height: 1.85;
+    max-width: 500px;
+    margin: .4rem 0 0;
+    border-left: 3px solid #01854e;
+    padding-left: 1rem;
   }
 }
 
-// --- Responsividade ---
-@media (max-width: 1024px) {
-  .cursos-page {
-    .curso-section .curso-header h1 { font-size: 2.2rem; }
-    .content-split { grid-template-columns: 1fr; gap: 30px; }
-    .fotos img { height: 250px; }
+// ─── Nav ──────────────────────────────────────────────────────────────────────
+.cr-nav {
+
+  top: 0;
+  z-index: 20;
+  background: #111;
+  border-bottom: 2px solid #01854e; 
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: .7rem 6%;
+  display: flex;   
+  justify-content: center;
+  align-items: center;  
+  gap: 2rem;               
+  padding: 20px 0;         
+  width: 100%;
+
+  &__label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: #01854e;
+    flex-shrink: 0;
   }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  &__sep {
+    color: #333;
+    font-size: .7rem;
+    padding: 0 .5rem;
+  }
+
+  button {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .45);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: .35rem .8rem;
+    transition: color .15s, background .15s;
+
+    &:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, .07);
+    }
+  }
+}
+
+// ─── Main ─────────────────────────────────────────────────────────────────────
+.cr-main {
+  width: 88%;
+  max-width: 1100px;
+  margin: 0 auto;
+    margin-bottom: 125px;
+}
+
+.cr-divider {
+  height: 2px;
+  background: #d4d0c8;
+}
+
+// ─── Seção de curso ───────────────────────────────────────────────────────────
+.cr-cs {
+  padding: 5.5rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+
+  // Marca d'água — upright condensed, não itálico cursivo
+  &__wm {
+    position: absolute;
+    top: 2.5rem;
+    right: -1.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -.04em;
+    pointer-events: none;
+    user-select: none;
+    opacity: .045;
+    color: #1a1a0f;
+  }
+}
+
+// ─── Topo (meta + headline) ───────────────────────────────────────────────────
+// Barra lateral colorida substitui o estilo editorial arejado
+.cr-cs__top {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  margin-bottom: 3rem;
+  align-items: start;
+  border-left: 4px solid;
+
+  .cr-cs--ea  & { border-left-color: #01854e; }
+  .cr-cs--eaa & { border-left-color: #2a8a2a; }
+  .cr-cs--eb  & { border-left-color: #185fa5; }
+}
+
+.cr-cs__meta {
+  padding: 0 2rem 0 1.5rem;
+  border-right: 1px solid #d4d0c8;
+}
+
+.cr-cs__index {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-bottom: .85rem;
+}
+
+.cr-cs__sigla {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  font-style: normal;           // Upright — sem itálico
+  line-height: .95;
+  letter-spacing: -.02em;
+  margin-bottom: .5rem;
+
+  .cr-cs--ea  & { color: #01854e; }
+  .cr-cs--eaa & { color: #2a8a2a; }
+  .cr-cs--eb  & { color: #185fa5; }
+}
+
+.cr-cs__fullname {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #999;
+  line-height: 2;
+}
+
+.cr-cs__lead {
+  padding-left: 2rem;
+}
+
+.cr-cs__headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;       // Uppercase — peso e autoridade
+  letter-spacing: .02em;
+  color: #111;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.cr-cs__corpo {
+  font-family: 'Barlow', sans-serif;
+  font-size: .86rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.9;
+  max-width: 560px;
+}
+
+// ─── Grid central — estilo ficha técnica ──────────────────────────────────────
+.cr-cs__mid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #c8c4bc;
+  border-radius: 0;                 // Sem border-radius — mais industrial
+  overflow: hidden;
+  margin-bottom: 2.75rem;
+}
+
+.cr-cs__col {
+  padding: 1.75rem;
+
+  &:first-child { border-right: 1px solid #c8c4bc; }
+}
+
+// Cabeçalho da coluna como barra sólida colorida (não label cinza tímido)
+.cr-cs__col-label {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .9);
+  // Quebra o padding e vai de borda a borda
+  margin: -1.75rem -1.75rem 1.5rem;
+  padding: .55rem 1.75rem;
+
+  .cr-cs--ea  & { background: #016b40; }
+  .cr-cs--eaa & { background: #246024; }
+  .cr-cs--eb  & { background: #124e8a; }
+}
+
+// ─── Áreas de formação — estilo lista de peças ────────────────────────────────
+.cr-area {
+  display: flex;
+  gap: .9rem;
+  padding: .8rem 0;
+  border-bottom: 1px solid #e8e4dc;
+
+  &:last-child { border-bottom: none; }
+
+  &__num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: #ccc;
+    flex-shrink: 0;
+    width: 22px;
+    text-align: right;
+    padding-top: 3px;
+  }
+
+  &__nome {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #111;
+    margin: 0 0 .2rem;
+  }
+
+  &__desc {
+    font-family: 'Barlow', sans-serif;
+    font-size: .71rem;
+    font-weight: 400;
+    color: #888;
+    line-height: 1.55;
+    margin: 0;
+  }
+}
+
+// ─── Atuação profissional ─────────────────────────────────────────────────────
+.cr-atuacao {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  padding: .65rem 0;
+  border-bottom: 1px solid #e8e4dc;
+
+  &:last-child { border-bottom: none; }
+
+  &__dash {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    color: #aaa;
+  }
+
+  &__text {
+    font-family: 'Barlow', sans-serif;
+    font-size: .78rem;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.5;
+  }
+}
+
+// ─── Pull quote — bloco sólido escuro em vez de borda fina delicada ──────────
+.cr-cs__pull {
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+  background: #111;
+
+  border-left: 5px solid;
+  .cr-cs--ea  & { border-left-color: #01854e; }
+  .cr-cs--eaa & { border-left-color: #2a8a2a; }
+  .cr-cs--eb  & { border-left-color: #185fa5; }
+
+  p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;           // Sem itálico
+    font-weight: 500;
+    color: rgba(255, 255, 255, .82);
+    line-height: 1.55;
+    letter-spacing: .01em;
+    margin: 0;
+  }
+}
+
+// ─── Fotos ────────────────────────────────────────────────────────────────────
+.cr-cs__fotos {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: .5rem;
+  height: 300px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;             // Sem arredondamento — mais industrial
+    display: block;
+    filter: saturate(.9) contrast(1.05);
+  }
+}
+
+// ─── Responsivo ───────────────────────────────────────────────────────────────
+@media (max-width: 860px) {
+  .cr-cs__top {
+    grid-template-columns: 1fr;
+    border-left: none;
+    border-top: 4px solid;
+
+    .cr-cs--ea  & { border-top-color: #01854e; }
+    .cr-cs--eaa & { border-top-color: #2a8a2a; }
+    .cr-cs--eb  & { border-top-color: #185fa5; }
+  }
+
+  .cr-cs__meta {
+    border-right: none;
+    border-bottom: 1px solid #d4d0c8;
+    padding: 1.5rem 1.5rem 1.25rem;
+  }
+
+  .cr-cs__lead {
+    padding: 1.5rem;
+  }
+
+  .cr-cs__mid {
+    grid-template-columns: 1fr;
+
+    .cr-cs__col:first-child {
+      border-right: none;
+      border-bottom: 1px solid #c8c4bc;
+    }
+  }
+
+  .cr-cs__fotos { height: 220px; }
 }
 
 @media (max-width: 600px) {
-  .cursos-page {
-    .anchor-nav { gap: 8px; button { font-size: 0.8rem; padding: 8px 15px; } }
-    .curso-section { padding: 50px 0; }
-    .curso-section .curso-header h1 { font-size: 1.8rem; }
-    .fotos {
-      img { width: 50%; }
-      .mobile-remove { display: none; }
-    }
+  .cr-main { width: 92%; }
+
+  .cr-nav {
+    padding: .6rem 4%;
+    overflow-x: auto;
+    gap: .6rem;
+
+    button { font-size: .72rem; white-space: nowrap; }
+  }
+
+  .cr-cs {
+    padding: 3.5rem 0 3rem;
+    &__wm { font-size: 11rem; }
+  }
+
+  .cr-cs__fotos {
+    grid-template-columns: 1fr;
+    height: auto;
+
+    img:last-child { display: none; }
+    img:first-child { height: 220px; }
   }
 }

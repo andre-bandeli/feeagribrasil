@@ -1,219 +1,179 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Header from "../../componentes/header/Header";
-import Footer from "../../componentes/footer/Footer";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Header from '../../componentes/header/Header'
+import Footer from '../../componentes/footer/Footer'
+import './Cursos.scss'
 
-import "./Cursos.scss";
-import "../../componentes/header/HeaderSecundario.scss";
+import imagem1 from '../../assets/7.jpeg'
+import imagem2 from '../../assets/back2.webp'
+import imagem3 from '../../assets/back6.jpg'
+import imagem7 from '../../assets/back8.jpg'
+import imagem8 from '../../assets/4.jpg'
+import imagem9 from '../../assets/back13.jpg'
 
-import imagem1 from "../../assets/7.jpeg";
-import imagem2 from "../../assets/back2.webp";
-import imagem3 from "../../assets/back6.jpg";
-import imagem7 from "../../assets/back8.jpg";
-import imagem8 from "../../assets/4.jpg";
-import imagem9 from "../../assets/back13.jpg";
+const scrollTo = id => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+
+const cursos = [
+  {
+    id: 'ea',
+    index: '01 / 03',
+    sigla: 'EA',
+    nomeCompleto: ['Engenharia', 'Agrícola'],
+    headline: 'Da semente ao sistema — a engenharia que move o campo brasileiro',
+    corpo: 'O Brasil é o celeiro do mundo. Mas isso não acontece por acaso — acontece porque engenheiros agrícolas desenvolvem as máquinas, os sistemas de irrigação, as instalações e os processos que tornam a produção agropecuária nacional a mais eficiente e competitiva do planeta. A EA é a engenharia clássica aplicada ao agro: rigorosa, prática e indispensável.',
+    pullQuote: 'O Brasil possui mais de 340 milhões de hectares de área agricultável. Projetar os sistemas que fazem essa escala funcionar é o desafio diário do engenheiro agrícola.',
+    areas: [
+      { num: 'I',   nome: 'Máquinas e Mecanização',  desc: 'Projeto, seleção e operação de tratores, colheitadeiras e implementos agrícolas.' },
+      { num: 'II',  nome: 'Recursos Hídricos',        desc: 'Irrigação, drenagem e aproveitamento sustentável da água na agricultura.' },
+      { num: 'III', nome: 'Construções Rurais',        desc: 'Projetos de silos, galpões, estábulos e ambientes de produção animal.' },
+      { num: 'IV',  nome: 'Pós-Colheita',             desc: 'Secagem, armazenamento e processamento primário de grãos e produtos agrícolas.' },
+    ],
+    atuacao: [
+      'Indústrias de máquinas agrícolas como John Deere, Case e AGCO',
+      'Empresas de irrigação e consultoria hídrica',
+      'Cooperativas e tradings do agronegócio',
+      'Gestão técnica de fazendas e propriedades rurais',
+      'Embrapa, universidades e centros de P&D',
+    ],
+    fotos: [imagem1, imagem2],
+  },
+  {
+    id: 'eaa',
+    index: '02 / 03',
+    sigla: 'EAA',
+    nomeCompleto: ['Engenharia', 'Agrícola e', 'Ambiental'],
+    headline: 'Produzir sem destruir — a engenharia da responsabilidade territorial',
+    corpo: 'A expansão do agronegócio brasileiro só é sustentável quando acompanhada de técnica ambiental rigorosa. O engenheiro agrícola e ambiental é o profissional que sabe onde a produção termina e a conservação começa — e como fazer os dois coexistirem. Atua em licenciamento, recuperação de áreas, gestão de bacias e no nascente mercado de carbono.',
+    pullQuote: 'Com o mercado de carbono em franca expansão e o CAR consolidado, nunca houve tanta demanda por profissionais que entendam tanto de produção quanto de legislação ambiental.',
+    areas: [
+      { num: 'I',   nome: 'Gestão de Recursos Hídricos', desc: 'Hidrologia, manejo de bacias e qualidade da água em sistemas agrícolas.' },
+      { num: 'II',  nome: 'Controle Ambiental',           desc: 'Tratamento de efluentes, gestão de resíduos sólidos e passivos ambientais.' },
+      { num: 'III', nome: 'Conservação do Solo',           desc: 'Erosão, recuperação de áreas degradadas e planejamento de uso da terra.' },
+      { num: 'IV',  nome: 'Geotecnologias',               desc: 'Sensoriamento remoto, SIG e monitoramento ambiental por satélite e drone.' },
+    ],
+    atuacao: [
+      'IBAMA, ICMBio e órgãos estaduais de meio ambiente',
+      'Empresas de licenciamento e consultoria ambiental',
+      'Comitês de bacia hidrográfica e ANA',
+      'Startups e empresas de crédito de carbono',
+      'Agroindústrias com passivo ambiental regulado',
+    ],
+    fotos: [imagem7, imagem8],
+  },
+  {
+    id: 'eb',
+    index: '03 / 03',
+    sigla: 'EB',
+    nomeCompleto: ['Engenharia', 'de', 'Biossistemas'],
+    headline: 'Onde a biologia encontra o código — a engenharia do agro do futuro',
+    corpo: 'A Engenharia de Biossistemas é a mais nova e a mais multidisciplinar das três. Nasceu da necessidade de formar profissionais capazes de transitar entre a biologia, a automação e a biotecnologia aplicadas à produção de alimentos e energia. É a engenharia das agtechs, dos biorreatores, das fazendas verticais e da agricultura de precisão em sua forma mais avançada.',
+    pullQuote: 'A convergência entre biotecnologia, automação e produção de alimentos criou um campo de atuação que mal existia há uma geração. O engenheiro de biossistemas nasceu exatamente para ocupá-lo.',
+    areas: [
+      { num: 'I',   nome: 'Automação e Controle',   desc: 'Sistemas embarcados, sensores, IoT e controle de processos biológicos.' },
+      { num: 'II',  nome: 'Bioenergia',              desc: 'Biogás, bioetanol, biodiesel e aproveitamento energético de resíduos agrícolas.' },
+      { num: 'III', nome: 'Biotecnologia Aplicada',  desc: 'Fermentação, bioprocessos e desenvolvimento de biomateriais e bioinsumos.' },
+      { num: 'IV',  nome: 'Sistemas de Produção',   desc: 'Estufas inteligentes, aquaponia, hidroponia e fazendas verticais controladas.' },
+    ],
+    atuacao: [
+      'Agtechs e startups de tecnologia agrícola',
+      'Indústrias de biocombustíveis e bioenergia',
+      'Empresas farmacêuticas e de biotecnologia',
+      'Centros de P&D em automação agrícola',
+      'Setor elétrico e empresas de energia renovável',
+    ],
+    fotos: [imagem9, imagem3],
+  },
+]
 
 export default function Cursos() {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <div className="cursos-page">
+    <div className="cr-page">
       <Header />
-      
-      <div className="HeaderSecundario custom-background">
-        <div className="links">
-          <h3>
-            <Link to="/">Home</Link> | <Link to="/cursos">Cursos</Link>
-          </h3>
-        </div>
-        <div className="container">
-          <h2>EA | EAA | EB</h2>
-          <p>
-            Explore as Engenharias que moldam o futuro do agronegócio e da sustentabilidade.
+
+      <section className="cr-hero">
+        <div className="cr-hero__overlay" />
+        <div className="cr-hero__content">
+          <span className="cr-hero__eyebrow">Ciências Agrárias</span>
+          <h1 className="cr-hero__title">Eixos de Formação</h1>
+          <p className="cr-hero__sub">
+            Três engenharias. Uma missão comum: formar os profissionais que alimentam,
+            conservam e reinventam o campo brasileiro.
           </p>
-          
-          <nav className="anchor-nav">
-            <button onClick={() => scrollToSection('ea')}>Eng. Agrícola</button>
-            <button onClick={() => scrollToSection('eaa')}>Eng. Agrícola e Ambiental</button>
-            <button onClick={() => scrollToSection('eb')}>Eng. de Biossistemas</button>
-          </nav>
         </div>
-      </div>
+      </section>
 
-      <main className="container-main">
-        {/* --- ENGENHARIA AGRÍCOLA --- */}
-        <section id="ea" className="curso-section ea-theme">
-          <div className="curso-header">
-            <h1>Engenharia Agrícola (EA)</h1>
-            <p className="intro">
-              Focada na otimização da produção agropecuária através da aplicação de princípios da engenharia clássica em máquinas, recursos hídricos e construções rurais.
-            </p>
-          </div>
+      <nav className="cr-nav" aria-label="Ir para curso">
+        <span className="cr-nav__label">Cursos</span>
+        <div className="cr-nav__links">
+          <button onClick={() => scrollTo('ea')}>Engenharia Agrícola</button>
+          <span className="cr-nav__sep">·</span>
+          <button onClick={() => scrollTo('eaa')}>Agrícola e Ambiental</button>
+          <span className="cr-nav__sep">·</span>
+          <button onClick={() => scrollTo('eb')}>Biossistemas</button>
+        </div>
+      </nav>
 
-          <div className="pilar-grid">
-            <div className="pilar-card">
-              <h4>Exatas e Terra</h4>
-              <p>Cálculo, Física, Estatística, Topografia e Sensoriamento Remoto.</p>
-            </div>
-            <div className="pilar-card">
-              <h4>Ciências Agrárias</h4>
-              <p>Botânica, Fitotecnia, Zootecnia e Mecanização Agrícola.</p>
-            </div>
-            <div className="pilar-card">
-              <h4>Engenharia Pura</h4>
-              <p>Mecânica, CAD, Hidráulica, Termodinâmica e Projeto de Máquinas.</p>
-            </div>
-            <div className="pilar-card">
-              <h4>Gestão</h4>
-              <p>Economia Agrícola, Administração Rural e Logística.</p>
-            </div>
-          </div>
+      <main className="cr-main">
+        {cursos.map((c, idx) => (
+          <article key={c.id} id={c.id} className={`cr-cs cr-cs--${c.id}`}>
+            <span className="cr-cs__wm" aria-hidden="true">{c.sigla}</span>
 
-          <div className="content-split">
-            <div className="info-box">
-              <h3>Aplicações Práticas</h3>
-              <ul>
-                <li>Tratores e colheitadeiras autônomas.</li>
-                <li>Sistemas de irrigação de precisão.</li>
-                <li>Ambiência e eficiência em instalações rurais.</li>
-                <li>Pós-colheita e armazenamento de grãos.</li>
-              </ul>
+            <div className="cr-cs__top">
+              {/* Meta separada com padding próprio para a borda lateral funcionar */}
+              <div className="cr-cs__meta">
+                <p className="cr-cs__index">{c.index}</p>
+                <p className="cr-cs__sigla">{c.sigla}</p>
+                <p className="cr-cs__fullname">
+                  {c.nomeCompleto.map((l, i) => <span key={i}>{l}<br /></span>)}
+                </p>
+              </div>
+              <div className="cr-cs__lead">
+                <h2 className="cr-cs__headline">{c.headline}</h2>
+                <p className="cr-cs__corpo">{c.corpo}</p>
+              </div>
             </div>
-            <div className="info-box">
-              <h3>Mercado de Trabalho</h3>
-              <ul>
-                <li>Indústria de Máquinas e Implementos.</li>
-                <li>Cooperativas e Consultoria.</li>
-                <li>Gestão de Propriedades Rurais.</li>
-                <li>Pesquisa e Desenvolvimento (P&D).</li>
-              </ul>
-            </div>
-          </div>
 
-          <div className="fotos">
-            <img src={imagem1} alt="Mecanização" />
-            <img src={imagem2} alt="Irrigação" />
-            <img src={imagem3} alt="Solo" className="mobile-remove" />
-          </div>
-        </section>
+            <div className="cr-cs__mid">
+              <div className="cr-cs__col">
+                <span className="cr-cs__col-label">Áreas de formação</span>
+                {c.areas.map(a => (
+                  <div key={a.num} className="cr-area">
+                    <span className="cr-area__num">{a.num}</span>
+                    <div>
+                      <p className="cr-area__nome">{a.nome}</p>
+                      <p className="cr-area__desc">{a.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="cr-cs__col">
+                <span className="cr-cs__col-label">Onde atua o profissional</span>
+                {c.atuacao.map((a, i) => (
+                  <div key={i} className="cr-atuacao">
+                    <span className="cr-atuacao__dash">—</span>
+                    <span className="cr-atuacao__text">{a}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-        <hr className="divider" />
+            <blockquote className="cr-cs__pull">
+              <p>{c.pullQuote}</p>
+            </blockquote>
 
-        {/* --- ENGENHARIA AGRÍCOLA E AMBIENTAL --- */}
-        <section id="eaa" className="curso-section eaa-theme">
-          <div className="curso-header">
-            <h1>Engenharia Agrícola e Ambiental (EAA)</h1>
-            <p className="intro">
-              O equilíbrio entre a produtividade no campo e a conservação dos recursos naturais, atuando no controle da poluição e gestão de bacias.
-            </p>
-          </div>
+            {c.fotos.length > 0 && (
+              <div className="cr-cs__fotos">
+                <img src={c.fotos[0]} alt="" />
+                {c.fotos[1] && <img src={c.fotos[1]} alt="" />}
+              </div>
+            )}
 
-          <div className="pilar-grid">
-            <div className="pilar-card">
-              <h4>Base Tecnológica</h4>
-              <p>Cálculo, Química Orgânica, Hidrologia e Geotecnologias.</p>
-            </div>
-            <div className="pilar-card">
-              <h4>Foco Ambiental</h4>
-              <p>Ecologia, Tratamento de Resíduos, Saneamento e Licenciamento.</p>
-            </div>
-            <div className="pilar-card">
-              <h4>Conservação</h4>
-              <p>Manejo de Bacias, Recuperação de Áreas e Gestão da Água.</p>
-            </div>
-            <div className="pilar-card">
-              <h4>Produção</h4>
-              <p>Construções Sustentáveis e Máquinas de Baixo Impacto.</p>
-            </div>
-          </div>
-
-          <div className="content-split">
-            <div className="info-box">
-              <h3>Aplicações Práticas</h3>
-              <ul>
-                <li>Recuperação de áreas degradadas e controle erosivo.</li>
-                <li>Gestão de efluentes agroindustriais.</li>
-                <li>Monitoramento ambiental via drones e satélites.</li>
-                <li>Sistemas integrados de produção sustentável.</li>
-              </ul>
-            </div>
-            <div className="info-box">
-              <h3>Mercado de Trabalho</h3>
-              <ul>
-                <li>Órgãos Ambientais e Reguladores.</li>
-                <li>Gestão de Recursos Hídricos.</li>
-                <li>Empresas de Crédito de Carbono.</li>
-                <li>Licenciamento Ambiental em Agroindústrias.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="fotos">
-            <img src={imagem7} alt="Recursos Naturais" />
-            <img src={imagem8} alt="Preservação" />
-            <img src={imagem9} alt="Tecnologia Verde" className="mobile-remove" />
-          </div>
-        </section>
-
-        <hr className="divider" />
-
-        {/* --- ENGENHARIA DE BIOSSISTEMAS --- */}
-        <section id="eb" className="curso-section eb-theme">
-          <div className="curso-header">
-            <h1>Engenharia de Biossistemas (EB)</h1>
-            <p className="intro">
-              A interface entre a engenharia moderna e os processos biológicos. Foca em sistemas complexos, biotecnologia e automação inteligente.
-            </p>
-          </div>
-
-          <div className="pilar-grid">
-            <div className="pilar-card">
-              <h4>Ciências da Vida</h4>
-              <p>Biologia Molecular, Bioquímica, Genética e Microbiologia.</p>
-            </div>
-            <div className="pilar-card">
-              <h4>Tecnologia de Ponta</h4>
-              <p>Automação, Controle de Processos e Inteligência Artificial.</p>
-            </div>
-            <div className="pilar-card">
-              <h4>Bioenergia</h4>
-              <p>Termodinâmica, Biocombustíveis e Energias Renováveis.</p>
-            </div>
-            <div className="pilar-card">
-              <h4>Sistemas</h4>
-              <p>Modelagem Matemática e Engenharia de Bioprocessos.</p>
-            </div>
-          </div>
-
-          <div className="content-split">
-            <div className="info-box">
-              <h3>Aplicações Práticas</h3>
-              <ul>
-                <li>Estufas inteligentes com controle de clima automatizado.</li>
-                <li>Produção de bioenergia (biogás/biodiesel).</li>
-                <li>Desenvolvimento de bioplásticos e biomateriais.</li>
-                <li>Sensores biológicos e nanotecnologia no campo.</li>
-              </ul>
-            </div>
-            <div className="info-box">
-              <h3>Mercado de Trabalho</h3>
-              <ul>
-                <li>Agtechs e Startups de Inovação.</li>
-                <li>Indústria de Bioprocessos e Farmacêutica.</li>
-                <li>Setor de Energias Limpas.</li>
-                <li>Automação e Robótica Agrícola.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+            {idx < cursos.length - 1 && <div className="cr-divider" />}
+          </article>
+        ))}
       </main>
 
       <Footer />
     </div>
-  );
+  )
 }

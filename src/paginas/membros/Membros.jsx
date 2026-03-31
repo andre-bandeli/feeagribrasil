@@ -5,6 +5,8 @@ import Header from '../../componentes/header/Header'
 import Footer from '../../componentes/footer/Footer'
 import CardMembro from '../../componentes/membros/CardMembro'
 import { useTodasGestoes } from '../../hooks/useMembros'
+import PageHero from '../../componentes/PageHero/PageHero'
+
 
 import './Membros.scss'
 
@@ -24,21 +26,16 @@ export default function Membros() {
     <div className="mb-page">
       <Header />
 
-      <section className="mb-hero">
-        <div className="mb-hero__overlay" />
-        <div className="mb-hero__content">
-          <span className="mb-hero__eyebrow">Federação dos Estudantes</span>
-          <h1 className="mb-hero__title">Conselho Diretivo</h1>
-          <p className="mb-hero__sub">
-            Conheça as pessoas que constroem a FEEAGRI — os representantes
-            de cada gestão dedicados à federação dos estudantes de
-            Engenharia Agrícola do Brasil.
-          </p>
-          <Link to="/membros/delegacao" className="mb-hero__btn">
-            Ver delegados →
-          </Link>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Federação dos Estudantes"
+        title="Conselho Diretivo"
+        subtitle="Conheça as pessoas que constroem a FEEAGRI — os representantes de cada gestão dedicados à federação dos estudantes de Engenharia Agrícola do Brasil."
+        wm="MB"
+      >
+        <Link to="/membros/delegacao" className="mb-hero__btn">
+          Ver delegados →
+        </Link>
+      </PageHero>
 
       <main className="mb-main">
 

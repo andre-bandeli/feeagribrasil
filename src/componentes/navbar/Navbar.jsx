@@ -9,8 +9,8 @@ import './Navbar.scss';
 const NAV_ITEMS = [
   { label: 'Home',        path: '/',            icon: FaHome },
   { label: 'Sobre',       path: '/about',       icon: FaInfoCircle },
-  { label: 'Cursos',      path: '/cursos',      icon: FaSeedling },
   { label: 'Congressos',  path: '/congressos',  icon: FaCalendarAlt },
+  { label: 'Cursos',      path: '/cursos',      icon: FaSeedling },
   { label: 'Membros',     path: '/membros',     icon: FaUsers },
   { label: 'Instituições',path: '/instituicoes',icon: FaUniversity },
   { label: 'Publicações', path: '/newsletter',  icon: FaNewspaper },
@@ -63,12 +63,12 @@ export default function Navbar() {
         ref={menuRef}
       >
         {/* ── Logo ──────────────────────────────────────────────────── */}
-<Link to="/" className="Navbar__logo" onClick={() => setMenuOpen(false)}>
-  <div className="Navbar__logo-text">
-    <strong>FEEAGRI</strong>
-    {/* Se preferir usar imagem: <img src="caminho/bandeira.svg" alt="Brasil" className="Navbar__flag-img" /> */}
-  </div>
-</Link>
+        <Link to="/" className="Navbar__logo" onClick={() => setMenuOpen(false)}>
+          <div className="Navbar__logo-text">
+            <strong>FEEAGRI</strong>
+            {/* Se preferir usar imagem: <img src="caminho/bandeira.svg" alt="Brasil" className="Navbar__flag-img" /> */}
+          </div>
+        </Link>
 
         {/* ── Links desktop ─────────────────────────────────────────── */}
         <ul className="Navbar__links">

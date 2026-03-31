@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Header from '../../componentes/header/Header'
 import Footer from '../../componentes/footer/Footer'
 import './Cursos.scss'
+import PageHero from '../../componentes/PageHero/PageHero'
+
 
 import imagem1 from '../../assets/7.jpeg'
 import imagem2 from '../../assets/back2.webp'
@@ -90,28 +92,23 @@ export default function Cursos() {
     <div className="cr-page">
       <Header />
 
-      <section className="cr-hero">
-        <div className="cr-hero__overlay" />
-        <div className="cr-hero__content">
-          <span className="cr-hero__eyebrow">Ciências Agrárias</span>
-          <h1 className="cr-hero__title">Eixos de Formação</h1>
-          <p className="cr-hero__sub">
-            Três engenharias. Uma missão comum: formar os profissionais que alimentam,
-            conservam e reinventam o campo brasileiro.
-          </p>
-        </div>
-      </section>
-
-      <nav className="cr-nav" aria-label="Ir para curso">
-        <span className="cr-nav__label">Cursos</span>
-        <div className="cr-nav__links">
-          <button onClick={() => scrollTo('ea')}>Engenharia Agrícola</button>
-          <span className="cr-nav__sep">·</span>
-          <button onClick={() => scrollTo('eaa')}>Agrícola e Ambiental</button>
-          <span className="cr-nav__sep">·</span>
-          <button onClick={() => scrollTo('eb')}>Biossistemas</button>
-        </div>
-      </nav>
+     <PageHero
+        eyebrow="Ciências Agrárias"
+        title="Eixos de Formação"
+        subtitle="Três engenharias. Uma missão comum: formar os profissionais que alimentam, conservam e reinventam o campo brasileiro."
+        wm="EA"
+      >
+        {/* nav de âncoras inline dentro do hero */}
+        <nav className="cr-nav" aria-label="Ir para curso">
+          <div className="cr-nav__links">
+            <button onClick={() => scrollTo('ea')}>Engenharia Agrícola</button>
+            <span className="cr-nav__sep">·</span>
+            <button onClick={() => scrollTo('eaa')}>Agrícola e Ambiental</button>
+            <span className="cr-nav__sep">·</span>
+            <button onClick={() => scrollTo('eb')}>Biossistemas</button>
+          </div>
+        </nav>
+      </PageHero>
 
       <main className="cr-main">
         {cursos.map((c, idx) => (

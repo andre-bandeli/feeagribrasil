@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react'
 import Header from '../../componentes/header/Header'
 import Footer from '../../componentes/footer/Footer'
 import './Instituicoes.scss'
+import PageHero from '../../componentes/PageHero/PageHero'
+
 
 const institutionsData = [
   // Engenharia Agrícola
@@ -80,21 +82,12 @@ export default function Instituicoes() {
     <div className="it-page">
       <Header />
 
-      {/* ── Hero ── */}
-      <section className="it-hero" aria-label="Cabeçalho da página de instituições">
-        <div className="it-hero__overlay" />
-        <div className="it-hero__content">
-          <span className="it-hero__eyebrow">Rede Nacional</span>
-          <h1 className="it-hero__title">
-            <span className="it-hero__title--solid">Instituições</span>
-          </h1>
-          <p className="it-hero__subtitle">
-            Conheça as universidades e institutos que formam engenheiros agrícolas,
-            agrícolas e ambientais e de biossistemas em todo o Brasil.
-          </p>
-          <div className="it-hero__line" aria-hidden="true" />
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Rede Nacional"
+        title="Instituições"
+        subtitle="Conheça as universidades e institutos que formam engenheiros agrícolas, agrícolas e ambientais e de biossistemas em todo o Brasil."
+        wm="IT"
+      />
 
       {/* ── Controles ── */}
       <div className="it-controls">

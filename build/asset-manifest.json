@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.278f5285.css",
-    "main.js": "/static/js/main.169ed6bd.js",
+    "main.css": "/static/css/main.b164820a.css",
+    "main.js": "/static/js/main.f4d8a798.js",
     "static/media/bg4.jpg": "/static/media/bg4.82fc450b454ff7cd5091.jpg",
     "static/media/bg3.jpg": "/static/media/bg3.26c00ace2cbd4a236ee0.jpg",
     "static/media/foto4.jpg": "/static/media/foto4.30961a0cfc38745655d4.jpg",
@@ -18,9 +18,7 @@
     "static/media/17.jpg": "/static/media/17.59e0d7bbe7b5641499f1.jpg",
     "static/media/4.jpg": "/static/media/4.5c12c361c797df29ec3b.jpg",
     "static/media/21.jpg": "/static/media/21.57e59a9559918fd2b74a.jpg",
-    "static/media/9.webp": "/static/media/9.388cdb5c08f43fd6ca19.webp",
     "static/media/back8.jpg": "/static/media/back8.81ae2cbdd7d938e96d49.jpg",
-    "static/media/6.webp": "/static/media/6.b391328d2283c438548c.webp",
     "static/media/assembleia.jpg": "/static/media/assembleia.4411971912629560c3d0.jpg",
     "static/media/logo_colored.png": "/static/media/logo_colored.8df9044f979bdb694ec0.png",
     "static/media/back2.webp": "/static/media/back2.0dcbeca494cf67ce5c57.webp",
@@ -29,7 +27,6 @@
     "static/media/back13.jpg": "/static/media/back13.13b9cf612ab4e27addfd.jpg",
     "static/media/logo_white.png": "/static/media/logo_white.e69abc8636320f82d397.png",
     "static/media/coneeagri.jpeg": "/static/media/coneeagri.34e5c27edc0f66c53e27.jpeg",
-    "static/media/5.webp": "/static/media/5.e469e6ffaee2b37918cd.webp",
     "static/media/7.jpeg": "/static/media/7.5b2f496f7a93d9693cb1.jpeg",
     "static/media/abeag.png": "/static/media/abeag.cec2bc6a5c9bb0ad303c.png",
     "static/media/user.jpg": "/static/media/user.27857b76db7bf0121f74.jpg",
@@ -40,11 +37,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.278f5285.css.map": "/static/css/main.278f5285.css.map",
-    "main.169ed6bd.js.map": "/static/js/main.169ed6bd.js.map"
+    "main.b164820a.css.map": "/static/css/main.b164820a.css.map",
+    "main.f4d8a798.js.map": "/static/js/main.f4d8a798.js.map"
   },
   "entrypoints": [
-    "static/css/main.278f5285.css",
-    "static/js/main.169ed6bd.js"
+    "static/css/main.b164820a.css",
+    "static/js/main.f4d8a798.js"
   ]
 }

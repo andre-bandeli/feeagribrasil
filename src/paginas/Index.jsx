@@ -7,7 +7,7 @@ import Footer from "../componentes/footer/Footer";
 import NewsletterComponent from "../componentes/NewsletterComponent";
 import ContatoForms from "../componentes/ContatoForms";
 
-import "../styles/Home.scss";
+import "./Index.scss";
 import "../styles/buttons.scss";
 
 import Imagem1 from "../assets/coneeagri.jpeg";
@@ -45,7 +45,7 @@ const cardsData = [
   },
 ];
 
-export default function Home() {
+export default function Index() {
   return (
     <div>
       <Header />

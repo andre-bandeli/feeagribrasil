@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./paginas/Home";
+import Index from "./paginas/Index";
 import About from "./paginas/about/About";
 import Congressos from "./paginas/congressos/Congressos";
-import Parceiros from "./paginas/Parceiros";
+import Parceiros from "./paginas/parceiros/Parceiros";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Membros from "./paginas/membros/Membros";
@@ -12,7 +12,7 @@ import SlidePage from "./paginas/secundarias/SlidePage";
 import CongressosPage from "./paginas/secundarias/CongressosCard";
 import Delegacao from "./paginas/membros/Delegacao";
 import Content from "./paginas/secundarias/Content";
-import Suporte from "./paginas/Suporte";
+import Suporte from "./paginas/auxiliar/Suporte";
 import DelegacaoSup from "./paginas/membros/DelegacaoSup";
 import NoticiaPage from "./paginas/secundarias/NoticiaPage"
 import ConselhoDiretivo from "./paginas/membros/ConselhoDiretivo";
@@ -28,7 +28,7 @@ function App() {
     <>
       <Analytics />
       <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Index />} />
       <Route path="/About" element={<About />} />
       <Route path="/cursos" element={<Cursos />} />
       <Route path="/atividades/:slug" element={<Content />} />

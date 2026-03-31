@@ -367,16 +367,16 @@
 
 // ─── Logo ─────────────────────────────────────────────────────────────────────
 .ab-logo {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 5rem 0 6rem;
+  display: flex;
+  width: 80%;
+  padding: 3rem;
+  margin: auto;
 
   img {
     width: 340px;
     max-width: 100%;
     height: auto;
-    display: block;
+    margin: auto;
   }
 }
 

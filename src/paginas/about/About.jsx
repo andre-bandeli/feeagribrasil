@@ -137,6 +137,10 @@ export default function About() {
           </aside>
         </div>
 
+        <div className="ab-logo">
+          <img src={logo} alt="Logo FEEAGRI" />
+        </div>
+
         {/* Valores */}
         <section className="ab-valores">
           <div className="ab-valores__header">
@@ -152,12 +156,8 @@ export default function About() {
               </div>
             ))}
           </div>
+          
         </section>
-
-        {/* Logo */}
-        <div className="ab-logo">
-          <img src={logo} alt="Logo FEEAGRI" />
-        </div>
 
       </main>
 

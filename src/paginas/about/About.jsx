@@ -130,11 +130,11 @@ export default function About() {
 
           </div>
 
-          <aside className="ab-body__aside">
+          {/* <aside className="ab-body__aside">
             <div className="ab-widget-wrap">
               <WidgetCustom />
             </div>
-          </aside>
+          </aside> */}
         </div>
 
         <div className="ab-logo">

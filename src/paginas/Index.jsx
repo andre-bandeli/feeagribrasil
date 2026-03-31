@@ -51,7 +51,7 @@ export default function Index() {
       <Header />
       <Hero />
 
-      <div className="stats-section">
+      {/* <div className="stats-section">
         <div className="card">
           <h2><strong>+</strong><StatsCounter finalNumber={30} /></h2>
           <p>Instituições de Ensino</p>
@@ -68,7 +68,7 @@ export default function Index() {
           <h2><strong>+</strong><StatsCounter finalNumber={13} /></h2>
           <p>Anos de História</p>
         </div>
-      </div>
+      </div> */}
 
       <main>
         <div className="container">

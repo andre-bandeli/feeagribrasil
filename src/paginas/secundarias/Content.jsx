@@ -1,40 +1,65 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import Header from "../../componentes/header/Header";
-import "../../styles/SecundaryPage.scss";
-import Footer from "../../componentes/footer/Footer";
-import contentData from "./contentData";
-import WidgetCustom from "../../componentes/widget/WidgetCustom";
+import React from 'react'
+import { useParams, Link } from 'react-router-dom'
+import Header from '../../componentes/header/Header'
+import Footer from '../../componentes/footer/Footer'
+import contentData from './contentData'
+import './Content.scss'
 
 export default function Content() {
-  const { slug } = useParams();
-  const card = contentData.find((card) => card.slug === slug);
+  const { slug } = useParams()
+  const card = contentData.find(c => c.slug === slug)
 
   if (!card) {
-    return <h1>Notícia não encontrada</h1>;
+    return (
+      <div className="ct-page">
+        <Header />
+        <div className="ct-notfound">
+          <h1>Página não encontrada</h1>
+          <Link to="/">← Voltar para o início</Link>
+        </div>
+        <Footer />
+      </div>
+    )
   }
 
   return (
-    <div>
+    <div className="ct-page">
       <Header />
-      <div className="secundaryPage"></div>
-      <div className="containerSecundaryPage">
-        <h2>{card.title}</h2>
-        <h3>{card.content}</h3>
-        <img src={card.img} alt={card.title} />
-        <div className="container">
-          <div className="content">
-            <h2 className="custom">{card.titleTxt}</h2>
-            <p>{card.text}</p>
-            <p>{card.text2}</p>
-            <p>{card.text3}</p>
-          </div>
-          <div className="widgets">
-            <WidgetCustom />
-          </div>
+
+      {/* ── Hero com imagem de fundo ───────────────────────────────────── */}
+      <section
+        className="ct-hero"
+        style={{ '--ct-bg': `url(${card.img})` }}
+        aria-label={card.title}
+      >
+        <div className="ct-hero__overlay" />
+        <div className="ct-hero__content">
+          <nav className="ct-hero__breadcrumb" aria-label="Navegação">
+            <Link to="/">Home</Link>
+            <span aria-hidden="true"> / </span>
+            <span>Atividades</span>
+          </nav>
+          <p className="ct-hero__spn">{card.spn}</p>
+          <h1 className="ct-hero__title">{card.title}</h1>
+          <p className="ct-hero__lead">{card.content}</p>
+          <div className="ct-hero__line" aria-hidden="true" />
         </div>
-      </div>
+      </section>
+
+      {/* ── Corpo do artigo ───────────────────────────────────────────── */}
+      <main className="ct-main">
+        <article className="ct-article">
+          <h2 className="ct-article__title">{card.titleTxt}</h2>
+
+          <div className="ct-article__body">
+            {[card.text, card.text2, card.text3].filter(Boolean).map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        </article>
+      </main>
+
       <Footer />
     </div>
-  );
+  )
 }

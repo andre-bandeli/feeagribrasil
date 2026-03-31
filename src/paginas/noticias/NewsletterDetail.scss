@@ -1,0 +1,229 @@
+// src/paginas/noticias/NewsletterDetail.scss
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+// Reutiliza os mesmos tokens do Newsletter.scss
+:root {
+  --nld-display: 'Playfair Display', Georgia, serif;
+  --nld-body:    'DM Sans', system-ui, sans-serif;
+  --nld-terra:   #1a1a0f;
+  --nld-accent:  #01854e;
+  --nld-musgo:   #3d6b4f;
+  --nld-muted:   #6b6b5a;
+  --nld-borda:   #ddd8cc;
+  --nld-fundo:   #f7f5f0;
+  --nld-ease:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nld-page {
+  font-family: var(--nld-body);
+  color: var(--nld-terra);
+  background: var(--nld-fundo);
+  min-height: 100vh;
+}
+
+// ─── Layout central ───────────────────────────────────────────────────────────
+.nld-main {
+  width: 90%;
+  max-width: 780px;   // coluna de leitura confortável
+  margin: 0 auto;
+  padding: 3rem 0 6rem;
+}
+
+// ─── Breadcrumb ───────────────────────────────────────────────────────────────
+.nld-breadcrumb {
+  margin-bottom: 2.5rem;
+
+  a {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--nld-musgo);
+    text-decoration: none;
+    transition: color var(--nld-ease);
+
+    &:hover { color: var(--nld-accent); }
+  }
+}
+
+// ─── Skeleton ─────────────────────────────────────────────────────────────────
+@keyframes nldShimmer {
+  from { background-position: -600px 0; }
+  to   { background-position:  600px 0; }
+}
+
+$sh: linear-gradient(90deg, #ece7df 25%, #f4f0ea 50%, #ece7df 75%);
+
+.nld-skeleton {
+  &__hero {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    border-radius: 10px;
+    background: $sh;
+    background-size: 1200px 100%;
+    animation: nldShimmer 1.5s infinite linear;
+    margin-bottom: 2rem;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__line {
+    height: 14px;
+    border-radius: 4px;
+    background: $sh;
+    background-size: 1200px 100%;
+    animation: nldShimmer 1.5s infinite linear;
+  }
+}
+
+// ─── Erro ─────────────────────────────────────────────────────────────────────
+.nld-error {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--nld-muted);
+
+  p   { font-size: 1rem; margin: 0 0 1rem; }
+  a   {
+    color: var(--nld-accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+// ─── Cabeçalho do artigo ──────────────────────────────────────────────────────
+.nld-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--nld-borda);
+
+  &__num {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--nld-accent);
+    padding: 0.25em 0.8em;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-family: var(--nld-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--nld-terra);
+    margin: 0 0 0.75rem;
+  }
+
+  &__chamada {
+    font-family: var(--nld-display);
+    font-style: italic;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: var(--nld-muted);
+    line-height: 1.6;
+    margin: 0 0 1rem;
+  }
+
+  &__date {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--nld-muted);
+  }
+}
+
+// ─── Imagem de capa ───────────────────────────────────────────────────────────
+.nld-cover {
+  margin: 0 0 2.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+// ─── Corpo do conteúdo (HTML da API) ─────────────────────────────────────────
+.nld-content {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #2a2a1f;
+
+  h2, h3, h4 {
+    font-family: var(--nld-display);
+    color: var(--nld-terra);
+    margin: 2.5rem 0 0.75rem;
+    line-height: 1.25;
+  }
+  h2 { font-size: 1.55rem; }
+  h3 { font-size: 1.25rem; }
+
+  p  { margin: 0 0 1.25rem; }
+
+  a  {
+    color: var(--nld-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+
+  ul, ol {
+    padding-left: 1.5rem;
+    margin: 0 0 1.25rem;
+    li { margin-bottom: 0.4rem; }
+  }
+
+  blockquote {
+    border-left: 3px solid var(--nld-accent);
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.25rem;
+    font-style: italic;
+    color: var(--nld-muted);
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--nld-borda);
+    margin: 2rem 0;
+  }
+}
+
+// ─── Rodapé do artigo ─────────────────────────────────────────────────────────
+.nld-footer {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--nld-borda);
+
+  &__back {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--nld-musgo);
+    text-decoration: none;
+    transition: color var(--nld-ease);
+
+    &:hover { color: var(--nld-accent); }
+  }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .nld-main { width: 92%; padding: 2rem 0 4rem; }
+  .nld-header__title { font-size: 1.8rem; }
+}

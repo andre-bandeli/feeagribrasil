@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Header from '../componentes/header/Header'
 import Hero from '../componentes/hero/Hero'
 import Footer from '../componentes/footer/Footer'
-import NewsletterComponent from '../componentes/NewsletterComponent'
+import NewsletterComponent from '../componentes/noticias/NewsletterComponent'
 import ContatoForms from '../componentes/contatos/ContatoForms'
 import { useNewsletter } from '../hooks/useNewsletter'
 
@@ -253,7 +253,25 @@ export default function Index() {
         </section>
 
         {/* ── 06 · Newsletter inscrição ──────────────────────────────── */}
-        <NewsletterComponent />
+        <section className="nl-subscribe" aria-label="Inscreva-se na newsletter">
+                <div className="nl-subscribe__bg" aria-hidden="true" />
+                <div className="nl-subscribe__inner">
+                  <div className="nl-subscribe__text">
+                    <span className="nl-subscribe__label">Fique por dentro</span>
+                    <h2 className="nl-subscribe__heading">
+                      Receba cada edição<br />diretamente no seu e-mail
+                    </h2>
+                    <p className="nl-subscribe__body">
+                      Notícias do CONEEAGRI, oportunidades de estágio, chamadas de trabalhos,
+                      cursos e tudo que movimenta a Engenharia Agrícola nacional — sem custo,
+                      sem spam.
+                    </p>
+                  </div>
+                  <div className="nl-subscribe__glass">
+                    <NewsletterComponent />
+                  </div>
+                </div>
+        </section>
 
         {/* ── 07 · Contato ───────────────────────────────────────────── */}
         <section className="ix-contato">

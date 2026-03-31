@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import '../styles/variables.scss';
+
+// ─── Tokens (espelha About.scss) ─────────────────────────────────────────────
+:root {
+  --ix-terra:    #1a1a0f;
+  --ix-floresta: #1c3a2a;
+  --ix-musgo:    #3d6b4f;
+  --ix-brotos:   #5a9e6f;
+  --ix-folha:    #8fcc9e;
+  --ix-accent:   #01854e;
+  --ix-palha:    #f2ead8;
+  --ix-fundo:    #f7f5f0;
+  --ix-branco:   #ffffff;
+  --ix-muted:    #6b6b5a;
+  --ix-borda:    #ddd8cc;
+  --ix-gold:     #c8a84b;
+
+  --ix-display: 'Playfair Display', Georgia, serif;
+  --ix-body:    'DM Sans', system-ui, sans-serif;
+  --ix-ease:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// ─── Globals ──────────────────────────────────────────────────────────────────
+.ix-page {
+  font-family: var(--ix-body);
+  color: var(--ix-terra);
+  background: var(--ix-fundo);
+}
+
+.ix-container {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+// ─── Átomos reutilizáveis ─────────────────────────────────────────────────────
+.ix-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ix-musgo);
+  margin-bottom: 0.6rem;
+
+  &::before {
+    content: '——  ';
+    color: var(--ix-accent);
+  }
+
+  &--light {
+    color: var(--ix-folha);
+    &::before { color: rgba(143, 204, 158, 0.55); }
+  }
+}
+
+.ix-heading {
+  font-family: var(--ix-display);
+  font-size: clamp(1.65rem, 2.6vw, 2.4rem);
+  font-weight: 700;
+  color: var(--ix-terra);
+  line-height: 1.15;
+  margin: 0;
+
+  &--light { color: var(--ix-palha); }
+}
+
+.ix-section-header {
+  margin-bottom: 3rem;
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+// ─── 01 · Missão ──────────────────────────────────────────────────────────────
+.ix-missao {
+  padding: 7rem 0 6rem;
+  border-bottom: 1px solid var(--ix-borda);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #3a3a30;
+      margin: 0;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--ix-accent);
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: gap var(--ix-ease), color var(--ix-ease);
+
+    svg {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      transition: transform var(--ix-ease);
+    }
+
+    &:hover {
+      gap: 12px;
+      svg { transform: translateX(3px); }
+    }
+  }
+
+  &__img-wrap {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover img { transform: scale(1.03); }
+  }
+
+  &__img-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(var(--ix-floresta), 0.92);
+    background: rgba(28, 58, 42, 0.92);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &-num {
+      font-family: var(--ix-display);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--ix-gold);
+      line-height: 1;
+    }
+
+    &-txt {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: rgba(242, 234, 216, 0.8);
+      line-height: 1.4;
+    }
+  }
+}
+
+// ─── 02 · Pilares ─────────────────────────────────────────────────────────────
+.ix-pilares {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--ix-borda);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.ix-pilar {
+  display: flex;
+  flex-direction: column;
+
+  &__img-wrap {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 1.25rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover img { transform: scale(1.05); }
+  }
+
+  &__num {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-family: var(--ix-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--ix-palha);
+    background: rgba(28, 58, 42, 0.7);
+    backdrop-filter: blur(4px);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+
+    h3 {
+      font-family: var(--ix-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.2;
+
+      a {
+        color: var(--ix-terra);
+        text-decoration: none;
+        transition: color var(--ix-ease);
+
+        &:hover { color: var(--ix-accent); }
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--ix-muted);
+      margin: 0;
+    }
+  }
+}
+
+// ─── 03 · Publicações ─────────────────────────────────────────────────────────
+.ix-pub {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--ix-borda);
+
+  &__ver-todas {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ix-accent);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: opacity var(--ix-ease);
+
+    &:hover { opacity: 0.7; }
+  }
+
+  &__erro {
+    font-size: 0.9rem;
+    color: #b00;
+    margin-bottom: 1.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+// Card de publicação
+.ix-pub-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--ix-branco);
+  border: 1px solid var(--ix-borda);
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.25s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(26, 26, 15, 0.1);
+    border-color: rgba(1, 133, 78, 0.3);
+  }
+
+  &__img-wrap {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--ix-floresta);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    &:hover img { transform: scale(1.04); }
+
+    &--skel {
+      aspect-ratio: 16 / 9;
+      background: var(--ix-borda);
+    }
+  }
+
+  &__img-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--ix-floresta), var(--ix-musgo));
+  }
+
+  &__num {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--ix-palha);
+    background: rgba(28, 58, 42, 0.75);
+    backdrop-filter: blur(4px);
+    padding: 3px 8px;
+    border-radius: 100px;
+  }
+
+  &__body {
+    padding: 1rem 1.1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    flex: 1;
+  }
+
+  &__data {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ix-musgo);
+  }
+
+  &__title {
+    font-family: var(--ix-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ix-terra);
+    line-height: 1.3;
+    margin: 0;
+
+    // Trunca em 2 linhas
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__chamada {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--ix-muted);
+    margin: 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__cta {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ix-accent);
+  }
+
+  // Skeleton
+  &--skel {
+    pointer-events: none;
+    animation: ix-pulse 1.6s ease-in-out infinite;
+  }
+
+  &__skel-line {
+    height: 10px;
+    background: var(--ix-borda);
+    border-radius: 4px;
+    margin-bottom: 8px;
+
+    &--short  { width: 40%; }
+    &--medium { width: 70%; }
+  }
+}
+
+@keyframes ix-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+// ─── 04 · Evento / Álbum ──────────────────────────────────────────────────────
+.ix-evento {
+  padding: 6rem 0;
+  background: var(--ix-floresta);
+
+  &__local {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(242, 234, 216, 0.55);
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  &__album {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+
+    // Primeira foto ocupa 2 colunas e 2 linhas (destaque)
+    &-foto:first-child,
+    .ix-evento__foto--0 {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+
+  &__foto {
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+
+    &--0 {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+
+      &:hover { transform: scale(1.05); }
+    }
+  }
+
+  &__footer {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--ix-gold);
+    color: var(--ix-floresta);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: background var(--ix-ease), color var(--ix-ease),
+                border-color var(--ix-ease), gap var(--ix-ease);
+
+    svg {
+      width: 16px;
+      height: 16px;
+      transition: transform var(--ix-ease);
+    }
+
+    &:hover {
+      background: transparent;
+      color: var(--ix-gold);
+      border-color: var(--ix-gold);
+      gap: 14px;
+
+      svg { transform: translateX(3px); }
+    }
+  }
+}
+
+// ─── 05 · Parceiros ───────────────────────────────────────────────────────────
+.ix-parceiros {
+  padding: 5rem 0;
+  border-top: 1px solid var(--ix-borda);
+  border-bottom: 1px solid var(--ix-borda);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--ix-muted);
+      margin: 0;
+      max-width: 420px;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+.ix-parceiro {
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  transition: opacity var(--ix-ease);
+
+  &:hover { opacity: 1; }
+
+  img {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+
+.ix-contato {
+    width: 100%;
+    display: flex;
+    background-image: linear-gradient(to right top, #070809, #080d12, #091118, #0a141d, #0b1723);
+
+}
+
+
+// ─── Responsivo ───────────────────────────────────────────────────────────────
+@media (max-width: 1100px) {
+  .ix-pub__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .ix-missao__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .ix-pilares__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ix-parceiros__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .ix-parceiros__logos {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .ix-missao,
+  .ix-pilares,
+  .ix-pub,
+  .ix-evento,
+  .ix-parceiros {
+    padding: 4rem 0;
+  }
+
+  .ix-evento__album {
+    grid-template-columns: repeat(2, 1fr);
+
+    .ix-evento__foto--0 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  }
+
+  .ix-section-header__row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .ix-pilares__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ix-pub__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ix-evento__album {
+    grid-template-columns: 1fr;
+
+    .ix-evento__foto--0 {
+      grid-column: span 1;
+    }
+  }
+}

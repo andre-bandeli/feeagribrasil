@@ -1,26 +1,26 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./paginas/Home";
-import About from "./paginas/About";
-import Congressos from "./paginas/Congressos";
-import Parceiros from "./paginas/Parceiros";
+import Index from "./paginas/Index";
+import About from "./paginas/about/About";
+import Congressos from "./paginas/congressos/Congressos";
+import Parceiros from "./paginas/parceiros/Parceiros";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Membros from "./paginas/Membros";
-import Newsletter from "./paginas/Newsletter";
+import Membros from "./paginas/membros/Membros";
+import Newsletter from "./paginas/noticias/Newsletter";
 import SlidePage from "./paginas/secundarias/SlidePage";
 import CongressosPage from "./paginas/secundarias/CongressosCard";
-import Delegacao from "./paginas/Delegacao";
+import Delegacao from "./paginas/membros/Delegacao";
 import Content from "./paginas/secundarias/Content";
-import Suporte from "./paginas/Suporte";
-import DelegacaoSup from "./paginas/DelegacaoSup";
+import Suporte from "./paginas/auxiliar/Suporte";
+import DelegacaoSup from "./paginas/membros/DelegacaoSup";
 import NoticiaPage from "./paginas/secundarias/NoticiaPage"
-import ConselhoDiretivo from "./paginas/ConselhoDiretivo";
-import NewsletterPost from "./paginas/NewsletterPosts";
-import NewsletterPost2 from "./paginas/NewsletterPosts2";
-import NewsletterPost3 from "./paginas/NewsletterPosts3";
-import Instituicoes from "./paginas/Instituicoes";
-import Cursos from "./paginas/Cursos";
+import ConselhoDiretivo from "./paginas/membros/ConselhoDiretivo";
+import NewsletterPost from "./paginas/noticias/NewsletterPosts";
+import NewsletterPost2 from "./paginas/noticias/NewsletterPosts2";
+import NewsletterPost3 from "./paginas/noticias/NewsletterPosts3";
+import Instituicoes from "./paginas/instituicoes/Instituicoes";
+import Cursos from "./paginas/cursos/Cursos";
 import { Analytics } from "@vercel/analytics/react"
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
     <>
       <Analytics />
       <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Index />} />
       <Route path="/About" element={<About />} />
       <Route path="/cursos" element={<Cursos />} />
       <Route path="/atividades/:slug" element={<Content />} />

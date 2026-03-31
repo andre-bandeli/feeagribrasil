@@ -2,9 +2,9 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import useSWR from 'swr'
 import api from '../../lib/api'
-import Header from '../../componentes/Header'
-import Footer from '../../componentes/Footer'
-import '../../styles/NoticiaPage.scss'
+import Header from '../../componentes/header/Header'
+import Footer from '../../componentes/footer/Footer'
+import '../../paginas/noticias/NoticiaPage.scss'
 
 const fetcher = url => api.get(url).then(r => r.data)
 

@@ -1,0 +1,447 @@
+// ─── Tokens ──────────────────────────────────────────────────────────────────
+$ease-expo:  cubic-bezier(0.19, 1, 0.22, 1);
+$ease-quart: cubic-bezier(0.77, 0, 0.175, 1);
+
+$green-deep:   #111d11;
+$green-mid:    #1a2e1a;
+$green-accent: #3d6b32;
+$gold:         #3ac0a3;
+$gold-light:   #dfc278;
+$off-white:    #f0ece3;
+$nav-height:   72px;
+$nav-height-sm: 58px;
+
+// ─── Navbar principal ────────────────────────────────────────────────────────
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  transition:
+    background  0.45s $ease-quart,
+    border-color 0.45s $ease-quart,
+    box-shadow  0.45s $ease-quart,
+    height      0.3s  $ease-quart;
+
+  // ── Estado: topo da página (transparente) ────────────────────────────────
+  &.is-top {
+  background-color: rgba(22, 22, 22, 0.863);
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  
+  // Adiciona o efeito de desfoque no que está atrás do elemento
+  backdrop-filter: blur(5px);
+  
+  // Suporte para navegadores Safari antigos
+  -webkit-backdrop-filter: blur(5px); 
+}
+
+  // ── Estado: scrollado (sólido + glass) ──────────────────────────────────
+  &.is-scrolled {
+    height: $nav-height - 10px;
+    background: rgba($green-deep, 0.94);
+    backdrop-filter: blur(20px) saturate(1.6);
+    -webkit-backdrop-filter: blur(20px) saturate(1.6);
+    border-bottom: 1px solid rgba($gold, 0.18);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  // ─── Logo ──────────────────────────────────────────────────────────────
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  &__logo-mark {
+    width: 38px;
+    height: 38px;
+    background: $gold;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    
+
+    // Borda interna sutil
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+    }
+  }
+
+  &__logo-letter {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: $green-deep;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    
+  }
+
+  &__logo-text {
+    display: flex;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.1;
+    
+
+    strong {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #e4e001;
+      letter-spacing: .5em;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+    }
+
+    .Navbar__flag {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+
+    span {
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 230, 4, 0.966);
+      margin-top: 1px;
+    }
+  }
+
+  // ─── Links desktop ─────────────────────────────────────────────────────
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+
+      a {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.72);
+        text-decoration: none;
+        position: relative;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+
+      // Underline dourado animado
+      .Navbar__underline {
+        position: absolute;
+        bottom: 4px;
+        left: 16px;
+        right: 16px;
+        height: 1.5px;
+        background: $gold;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s $ease-expo;
+        border-radius: 2px;
+      }
+
+      a:hover .Navbar__underline {
+        transform: scaleX(1);
+      }
+
+      // Item ativo
+      &.is-current a {
+        color: $gold;
+      }
+
+      &.is-current .Navbar__underline {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  // ─── Hamburger ─────────────────────────────────────────────────────────
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.2s ease, background 0.2s ease;
+
+    span {
+      display: block;
+      height: 1.5px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 2px;
+      transform-origin: center;
+      transition: transform 0.35s $ease-expo, opacity 0.25s ease, width 0.3s ease;
+
+      &:nth-child(1) { width: 100%; }
+      &:nth-child(2) { width: 70%; }
+      &:nth-child(3) { width: 100%; }
+    }
+
+    &:hover {
+      border-color: rgba($gold, 0.5);
+      background: rgba($gold, 0.08);
+    }
+
+    &.is-open {
+      border-color: rgba($gold, 0.4);
+
+      span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+        width: 100%;
+      }
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ─── Menu mobile ─────────────────────────────────────────────────────────────
+.Navbar__mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  width: min(380px, 88vw);
+  background: $green-deep;
+  border-left: 1px solid rgba($gold, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.5s $ease-expo;
+  overflow-y: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar { display: none; }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: calc(#{$nav-height-sm} + 24px) 0 40px;
+  }
+
+  // Cabeçalho do menu
+  &-header {
+    padding: 0 36px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    margin-bottom: 8px;
+  }
+
+  &-eyebrow {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $gold;
+  }
+
+  // Lista de links
+  &-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+
+    li {
+      opacity: 0;
+      transform: translateX(20px);
+      transition:
+        opacity   0.4s $ease-expo calc(var(--i) * 50ms + 100ms),
+        transform 0.4s $ease-expo calc(var(--i) * 50ms + 100ms);
+
+      .is-open & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 36px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: background 0.2s ease, padding-left 0.25s $ease-expo;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background: $gold;
+          transform: scaleY(0);
+          transition: transform 0.25s $ease-expo;
+        }
+
+        &:hover {
+          background: rgba($gold, 0.06);
+          padding-left: 42px;
+
+          &::before {
+            transform: scaleY(1);
+          }
+        }
+      }
+
+      &.is-current a {
+        background: rgba($gold, 0.08);
+        padding-left: 42px;
+
+        &::before { transform: scaleY(1); }
+
+        .Navbar__mobile-label { color: $gold; }
+        .Navbar__mobile-icon  { color: $gold; }
+      }
+    }
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  &-label {
+    flex: 1;
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.2s ease;
+  }
+
+  &-arrow {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.2);
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  li a:hover &-arrow {
+    color: $gold;
+    transform: translateX(3px);
+  }
+
+  // Rodapé do menu
+  &-footer {
+    padding: 28px 36px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: auto;
+
+    p {
+      font-size: 0.68rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.25);
+      letter-spacing: 0.02em;
+      margin: 0;
+    }
+  }
+}
+
+// ─── Backdrop ────────────────────────────────────────────────────────────────
+.Navbar__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+// ─── Responsivo ──────────────────────────────────────────────────────────────
+
+// Mostra hamburger em telas menores que 1100px
+@media (max-width: 1100px) {
+  .Navbar {
+    height: $nav-height-sm;
+    padding: 0 32px;
+
+    &.is-scrolled {
+      height: $nav-height-sm - 6px;
+    }
+
+    &__links {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .Navbar {
+    padding: 0 20px;
+
+    &__logo-text span {
+      display: none;
+    }
+  }
+
+  .Navbar__mobile {
+    width: 100vw;
+    border-left: none;
+  }
+}

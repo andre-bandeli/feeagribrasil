@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../componentes/Header'
-import '../styles/instituicoes.scss'
-import Footer from '../componentes/Footer';
+import Header from '../../componentes/header/Header'
+import './instituicoes.scss'
+import Footer from '../../componentes/footer/Footer';
 import { Link } from "react-router-dom";
 
 const institutionsData = [

@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "../componentes/Header";
-import Footer from "../componentes/Footer";
+import Header from "../../componentes/header/Header";
+import Footer from "../../componentes/footer/Footer";
 import { Link } from "react-router-dom";
-import "../styles/auxiliar.scss";
+import "../../styles/auxiliar.scss";
 
-import imagem from '../assets/combustivel.jpeg';
-import imagem2 from '../assets/ml_agro.jpg';
-import imagem3 from '../assets/clima.jpg';
-import imagem4 from '../assets/coneeagri.jpg';
-import logo from '../assets/logo_colored.png';
+import imagem from '../../assets/combustivel.jpeg';
+import imagem2 from '../../assets/ml_agro.jpg';
+import imagem3 from '../../assets/clima.jpg';
+import imagem4 from '../../assets/coneeagri.jpg';
+import logo from '../../assets/logo_colored.png';
 
 export default function NewsletterPost() {
   return (

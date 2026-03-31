@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../componentes/Header";
+import Header from "../componentes/header/Header";
 import "../styles/Parceiros.scss";
-import Footer from "../componentes/Footer";
+import Footer from "../componentes/footer/Footer";
 import { Link } from "react-router-dom";
 import '../styles/buttons.scss'
 

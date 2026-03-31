@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../componentes/Header";
-import Footer from "../componentes/Footer";
+import Header from "../../componentes/header/Header";
+import Footer from "../../componentes/footer/Footer";
 
-import "../styles/cursosPage.scss";
-import "../styles/HeaderSecundario.scss";
+import "./Cursos.scss";
+import "../../componentes/header/HeaderSecundario.scss";
 
-import imagem1 from "../assets/7.jpeg";
-import imagem2 from "../assets/back2.webp";
-import imagem3 from "../assets/back6.jpg";
-import imagem7 from "../assets/back8.jpg";
-import imagem8 from "../assets/4.jpg";
-import imagem9 from "../assets/back13.jpg";
+import imagem1 from "../../assets/7.jpeg";
+import imagem2 from "../../assets/back2.webp";
+import imagem3 from "../../assets/back6.jpg";
+import imagem7 from "../../assets/back8.jpg";
+import imagem8 from "../../assets/4.jpg";
+import imagem9 from "../../assets/back13.jpg";
 
 export default function Cursos() {
   const scrollToSection = (id) => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Navbar.scss';
+import './Navbar.scss';
 import { Link } from "react-router-dom";
 import { FaHome, FaInfoCircle, FaUsers, FaUniversity, FaHandshake, FaNewspaper, FaCalendarAlt } from 'react-icons/fa';
 

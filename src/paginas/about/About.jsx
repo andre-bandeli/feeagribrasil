@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../componentes/Header";
-import "../styles/HeaderSecundario.scss";
-import "../styles/About.scss";
-import Footer from "../componentes/Footer";
-import WidgetCustom from "../componentes/WidgetCustom";
+import Header from "../../componentes/header/Header";
+import "../../componentes/header/HeaderSecundario.scss";
+import "./About.scss";
+import Footer from "../../componentes/footer/Footer";
+import WidgetCustom from "../../componentes/widget/WidgetCustom";
 import { Link } from "react-router-dom";
-import logo from '../assets/logo_colored.png'
+import logo from '../../assets/logo_colored.png'
 
 
 export default function About() {

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Newsletter.scss";
+import "../paginas/noticias/Newsletter.scss";
 import leaf from "../assets/leaf.png";
 import { FaWhatsapp } from "react-icons/fa";
 

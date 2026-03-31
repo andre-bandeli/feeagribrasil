@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/widget.scss";
+import "./widget.scss";
 
 export default function WidgetCongressos() {
   const contentData = [

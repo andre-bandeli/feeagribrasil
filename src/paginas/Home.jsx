@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../componentes/Header";
-import Hero from "../componentes/Hero";
+import Header from "../componentes/header/Header";
+import Hero from "../componentes/hero/Hero";
 import StatsCounter from "../componentes/StatsCounter";
-import Footer from "../componentes/Footer";
+import Footer from "../componentes/footer/Footer";
 import NewsletterComponent from "../componentes/NewsletterComponent";
 import ContatoForms from "../componentes/ContatoForms";
 

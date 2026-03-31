@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
-import "../styles/Hero.scss";
+import "./Hero.scss";
 import { Link } from "react-router-dom";
-import "../styles/buttons.scss";
+import "../../styles/buttons.scss";
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import Hero1 from "../assets/6.webp";
-import Hero2 from "../assets/5.webp";
-import Hero3 from "../assets/9.webp";
+import Hero1 from "../../assets/6.webp";
+import Hero2 from "../../assets/5.webp";
+import Hero3 from "../../assets/9.webp";
 
-import logo_white from '../assets/logo_white.png'
+import logo_white from '../../assets/logo_white.png'
 
 export default function Hero() {
   const slides = [

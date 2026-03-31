@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Header from "../../componentes/Header";
+import Header from "../../componentes/header/Header";
 import "../../styles/SecundaryPage.scss";
-import Footer from "../../componentes/Footer";
+import Footer from "../../componentes/footer/Footer";
 import contentData from "./contentData";
-import WidgetCustom from "../../componentes/WidgetCustom";
+import WidgetCustom from "../../componentes/widget/WidgetCustom";
 
 export default function Content() {
   const { slug } = useParams();

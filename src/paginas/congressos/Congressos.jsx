@@ -1,16 +1,16 @@
 import React from 'react'
-import Header from '../componentes/Header'
-import Footer from '../componentes/Footer'
-import CongressoCard from '../componentes/congressos/CongressoCard'
-import CongressoDestaque from '../componentes/congressos/CongressoDestaque'
-import CongressoSkeleton from '../componentes/congressos/CongressoSkeleton'
-import NoticiaDestaque from '../componentes/congressos/NoticiaDestaque'
-import { useCongressos } from '../hooks/useCongressos'
-import FotoPelotas from '../assets/coneeagri/recente/foto6.jpg'
+import Header from '../../componentes/header/Header'
+import Footer from '../../componentes/footer/Footer'
+import CongressoCard from '../../componentes/congressos/CongressoCard'
+import CongressoDestaque from '../../componentes/congressos/CongressoDestaque'
+import CongressoSkeleton from '../../componentes/congressos/CongressoSkeleton'
+import NoticiaDestaque from '../../componentes/congressos/NoticiaDestaque'
+import { useCongressos } from '../../hooks/useCongressos'
+import FotoPelotas from '../../assets/coneeagri/recente/foto6.jpg'
 
-import '../styles/HeaderSecundario.scss'
-import '../styles/Congressos.scss'
-import '../styles/buttons.scss'
+import '../../componentes/header/HeaderSecundario.scss'
+import './Congressos.scss'
+import '../../styles/buttons.scss'
 
 const SKELETON_COUNT = 6
 

@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../componentes/Header";
-import Footer from "../componentes/Footer";
-import "../styles/auxiliar.scss";
-import logo from '../assets/logo_colored.png';
-import imagem_iot from '../assets/iot.png';
-import arduino from '../assets/arduino.png';
-import sensor from '../assets/sensor.png';
-import rest from '../assets/rest.png';
+import Header from "../../componentes/header/Header";
+import Footer from "../../componentes/footer/Footer";
+import "../../styles/auxiliar.scss";
+import logo from '../../assets/logo_colored.png';
+import imagem_iot from '../../assets/iot.png';
+import arduino from '../../assets/arduino.png';
+import sensor from '../../assets/sensor.png';
+import rest from '../../assets/rest.png';
 
 export default function NewsletterPost() {
   return (

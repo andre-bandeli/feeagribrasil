@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../componentes/Header";
-import Footer from "../componentes/Footer";
-import "../styles/auxiliar.scss";
+import Header from "../../componentes/header/Header";
+import Footer from "../../componentes/footer/Footer";
+import "../../styles/auxiliar.scss";
 
-import imagem from '../assets/irrigation.jpg';
-import imagem2 from '../assets/fertilizante.jpg';
-import imagem3 from '../assets/agropecuaria.jpg';
-import imagem4 from '../assets/alimento.jpg';
-import logo from '../assets/logo_colored.png';
+import imagem from '../../assets/irrigation.jpg';
+import imagem2 from '../../assets/fertilizante.jpg';
+import imagem3 from '../../assets/agropecuaria.jpg';
+import imagem4 from '../../assets/alimento.jpg';
+import logo from '../../assets/logo_colored.png';
 
 export default function NewsletterPost() {
   return (

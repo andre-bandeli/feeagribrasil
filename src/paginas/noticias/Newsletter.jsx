@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../componentes/Header";
-import "../styles/HeaderSecundario.scss";
-import NewsletterComponent from "../componentes/NewsletterComponent";
-import Footer from "../componentes/Footer";
+import Header from "../../componentes/header/Header";
+import "../../componentes/header/HeaderSecundario.scss";
+import NewsletterComponent from "../../componentes/NewsletterComponent";
+import Footer from "../../componentes/footer/Footer";
 import { Link } from "react-router-dom";
 
 export default function Newsletter() {

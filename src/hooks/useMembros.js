@@ -33,3 +33,33 @@ export function useGestaoAtiva() {
     error: error ?? null,
   }
 }
+
+/**
+ * Busca todas as gestões cadastradas no backend, ordenadas da mais
+ * recente para a mais antiga (o backend deve ordenar por -ano ou similar).
+ *
+ * Cada gestão já traz `membros` e `delegados` aninhados,
+ * igual ao useGestaoAtiva — mesmo serializer, sem request extra.
+ *
+ * Retorno:
+ *   gestoes[] → { id, ano, nome?, ativa, membros[], delegados[] }
+ */
+export function useTodasGestoes() {
+  const { data, error, isLoading } = useSWR(
+    '/membros/gestoes/',
+    fetcher,
+    {
+      revalidateOnFocus: false,
+      shouldRetryOnError: false,
+    }
+  )
+
+  // Suporta tanto lista paginada { count, results[] } quanto array direto
+  const gestoes = data?.results ?? data ?? []
+
+  return {
+    gestoes,
+    isLoading,
+    error: error ?? null,
+  }
+}

@@ -1,0 +1,367 @@
+// ============================================
+// NEWSLETTER PROFISSIONAL - ESTILO FEEAGRI
+// ============================================
+
+.auxiliar {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  background: rgb(240, 244, 245);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+// ============================================
+// CONTAINER PRINCIPAL
+// ============================================
+.newsletter-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+  
+  @media (max-width: 768px) {
+    padding: 100px 16px 40px;
+  }
+}
+
+// ============================================
+// HEADER DA NEWSLETTER
+// ============================================
+.newsletter-header {
+  text-align: center;
+  margin-bottom: 48px;
+  
+  .logo-container {
+    margin-bottom: 32px;
+    
+    img {
+      width: 280px;
+      max-width: 100%;
+      height: auto;
+      
+      @media (max-width: 768px) {
+        width: 200px;
+      }
+    }
+  }
+  
+  .organization-name {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6c757d;
+    margin-bottom: 24px;
+    font-weight: 400;
+    
+    @media (max-width: 768px) {
+      font-size: 12px;
+      padding: 0 16px;
+    }
+  }
+  
+  .edition-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #006d4c 0%, #00955f 100%);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 12px rgba(0, 109, 76, 0.2);
+    
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding: 10px 24px;
+    }
+  }
+  
+  .introduction {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #495057;
+    margin: 0 auto;
+    max-width: 700px;
+    
+    @media (max-width: 768px) {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+}
+
+// ============================================
+// ÍNDICE / RESUMO
+// ============================================
+.table-of-contents {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 48px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #006d4c;
+  
+  @media (max-width: 768px) {
+    padding: 24px 20px;
+    margin: 32px 0;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #212529;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ecef;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    a {
+      color: #006d4c;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s ease;
+      
+      &:before {
+        content: "→";
+        margin-right: 12px;
+        font-weight: bold;
+        transition: transform 0.2s ease;
+      }
+      
+      &:hover {
+        color: #00955f;
+        
+        &:before {
+          transform: translateX(4px);
+        }
+      }
+      
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// ============================================
+// DIVISOR DE SEÇÃO
+// ============================================
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #dee2e6 50%, transparent 100%);
+  margin: 64px 0;
+  
+  @media (max-width: 768px) {
+    margin: 48px 0;
+  }
+}
+
+// ============================================
+// ARTIGO / CONTEÚDO
+// ============================================
+.newsletter-article {
+  background: white;
+  border-radius: 16px;
+  padding: 48px;
+  margin-bottom: 48px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  
+  @media (max-width: 768px) {
+    padding: 32px 24px;
+    margin-bottom: 32px;
+    border-radius: 12px;
+  }
+  
+  // Título do Artigo
+  .article-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #212529;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+  
+  // Subtítulo
+  .article-subtitle {
+    font-size: 18px;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    font-weight: 400;
+    
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+  }
+  
+  // Container de Imagem
+  .article-image {
+    width: 100%;
+    margin: 32px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    @media (max-width: 768px) {
+      margin: 24px 0;
+      border-radius: 8px;
+    }
+  }
+  
+  // Parágrafos
+  p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #495057;
+    margin-bottom: 20px;
+    text-align: left;
+    
+    @media (max-width: 768px) {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+  }
+  
+  // Subtítulos de Seção (h4)
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #006d4c;
+    margin: 40px 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e9ecef;
+    
+    @media (max-width: 768px) {
+      font-size: 18px;
+      margin: 32px 0 16px 0;
+    }
+  }
+  
+  // Listas
+  ul, ol {
+    margin: 24px 0;
+    padding-left: 24px;
+    
+    li {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #495057;
+      margin-bottom: 12px;
+      
+      strong {
+        color: #006d4c;
+        font-weight: 600;
+      }
+      
+      @media (max-width: 768px) {
+        font-size: 15px;
+      }
+    }
+  }
+  
+  // Destaques
+  strong {
+    font-weight: 600;
+    color: #212529;
+  }
+}
+
+// ============================================
+// CALL TO ACTION / BOTÕES
+// ============================================
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #006d4c 0%, #00955f 100%);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 109, 76, 0.2);
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 109, 76, 0.3);
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 14px 24px;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// ============================================
+// DESTAQUE / INFO BOX
+// ============================================
+.info-box {
+  background: #f8f9fa;
+  border-left: 4px solid #f7cb08;
+  padding: 24px;
+  border-radius: 8px;
+  margin: 32px 0;
+  
+  p {
+    margin: 0;
+    color: #495057;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+    margin: 24px 0;
+  }
+}
+
+// ============================================
+// FOOTER DA NEWSLETTER
+// ============================================
+.newsletter-footer {
+  text-align: center;
+  padding: 48px 0;
+  color: #6c757d;
+  font-size: 14px;
+  
+  @media (max-width: 768px) {
+    padding: 32px 0;
+    font-size: 13px;
+  }
+}

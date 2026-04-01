@@ -1,0 +1,91 @@
+.nlc {
+  display: flex;
+  flex-direction: column;
+
+  // ── Variante default (home e outros contextos) ────────────────────────
+  &--default {
+    background: #1c3a2a;
+    border-radius: 14px;
+    padding: 2rem;
+
+    .nlc__label   { color: #8fcc9e; }
+    .nlc__heading { color: #f2ead8; }
+    .nlc__body    { color: rgba(242, 234, 216, 0.6); }
+    .nlc__fine    { color: rgba(242, 234, 216, 0.35); }
+  }
+
+  // ── Variante glass (dentro de nl-subscribe__glass) ────────────────────
+  // Sem fundo próprio — herda o vidro do pai
+  &--glass {
+    .nlc__label   { color: #8fcc9e; }
+    .nlc__heading { color: #f2ead8; }
+    .nlc__body    { color: rgba(242, 234, 216, 0.58); }
+    .nlc__fine    { color: rgba(242, 234, 216, 0.35); }
+  }
+
+  // ── Partes compartilhadas ─────────────────────────────────────────────
+  &__label {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+
+    &::before {
+      content: '——  ';
+      opacity: 0.45;
+    }
+  }
+
+  &__heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+  }
+
+  &__body {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    margin: 0 0 1.75rem;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
+    background: #25d366;
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.3);
+
+    &:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+    }
+
+    &:active { transform: translateY(0); }
+  }
+
+  &__btn-icon {
+    font-size: 1.15rem;
+    flex-shrink: 0;
+  }
+
+  &__fine {
+    margin: 1rem 0 0;
+    font-size: 0.68rem;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+}
